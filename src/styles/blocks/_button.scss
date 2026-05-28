@@ -1,0 +1,20 @@
+.button {
+  padding: 10px;
+  font-weight: 500;
+  background-color: var(--color-light);
+  border: var(--border);
+  border-radius: var(--border-radius);
+
+  &--about {
+    background-color: #9252e6;
+    color: var(--color-dark);
+  }
+  &--start {
+    background-color: #3f55e5;
+    color: var(--color-dark);
+  }
+  &--other {
+    background-color: #24c4e8;
+    color: var(--color-dark);
+  }
+}

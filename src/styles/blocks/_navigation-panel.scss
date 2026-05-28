@@ -1,0 +1,20 @@
+.roulette-navigation-panel {
+  padding: 10px;
+  background-color: var(--color-light);
+  border: var(--border);
+  border-radius: var(--border-radius);
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  &__item {
+    // если нужно что-то специфичное для ячейки списка
+  }
+
+  &__button {
+    width: 100%; // позиционирование кнопки внутри панели
+  }
+}
