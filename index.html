@@ -10,44 +10,120 @@
   <body>
     <!-- Пока без это <header class="page-header"></header> -->
 
-    <main class="page">
+    <main class="main-page">
       <div class="roulette-header">
-        <h1 class="roulette-header__title">
-          Car Roulette
-        </h1>
+        <h1 class="roulette-header__title">Car Roulette</h1>
       </div>
 
-      <div class="roulette-container">
-        <nav class="roulette-navigation-panel">
-          <ul class="roulette-navigation-panel__list">
-            <li class="roulette-navigation-panel__item">
+      <div class="roulette-container" data-js-tabs>
+        <nav class="roulette-nav">
+          <ul class="roulette-nav__list">
+            <li class="roulette-nav__item">
               <button
-                class="button button--about roulette-navigation-panel__button"
+                class="button button--about roulette-nav__button roulette-nav__button--active"
+                data-js-tabs-button
               >
                 О проекте
               </button>
             </li>
-            <li class="roulette-navigation-panel__item">
+            <li class="roulette-nav__item">
               <button
-                class="button button--start roulette-navigation-panel__button"
+                class="button button--start roulette-nav__button"
+                data-js-tabs-button
               >
-                Старт
+                Машины
               </button>
             </li>
-            <li class="roulette-navigation-panel__item">
+            <li class="roulette-nav__item">
               <button
-                class="button button--other roulette-navigation-panel__button"
+                class="button button--other roulette-nav__button"
+                data-js-tabs-button
               >
-                Другое
+                Карточки
               </button>
             </li>
           </ul>
         </nav>
 
         <div class="roulette-content">
-          <div class="roulette-content__main"></div>
+          <div class="roulette-content__main">
+            <div class="rule-page page page--active" data-js-tabs-content>
+              <h2 class="rule-page__title">Правила</h2>
+              <p>
+                Дисциплины: Драг-гонка, гонка по асфальту, гонка по бездорожью,
+                битва стиля, подъем в гору, дрифт, флаги, вышибала.
+              </p>
+              <p>
+                Машины: В списке у каждой машины должен быть написан рейтинг и
+                подпись "эксклюзив" или "платная" если как таковое свойство есть
+                у машины.
+              </p>
+              <p>
+                Карточки: Рулетка состоит из количества игроков которое
+                находится в игре . Крутится и выпадает рандомный игрок, например
+                выпал игрок под номером 1 - в свою очередь у него появляется
+                выбор: Использовать карту ИЛИ Заново крутить рулетку ИЛИ
+                Покинуть рулетку в этом раунде и сохранить карты.
+              </p>
+              <p>
+                Допустим игроков 3: игрок под номером 1 использует карту "-1
+                балл" на игрока под номером 2, ход переключается на игрока под
+                номером 2 - он может отразить карту игрока под номером 1 с
+                помощью карты "Зеркало" либо же контратаковать приняв урон, либо
+                заново крутить рулетку приняв урон, либо покинуть рулетку в этом
+                раунде приняв урон.<br />Другой пример: Выпадает игрок 1, он
+                выбирает использовать карту "Повышение изначального класса на
+                максимум". После этого рулетка заново крутится и может выпасть
+                каждый из трёх игроков, то есть даже игрок 1 может выпадать
+                много раз подряд до тех пор пока не выпадет другой игрок ИЛИ
+                карты игрока 1 не закончатся и он автоматически покинет рулетку
+                в этом раунде ИЛИ игрок 1 сам не покинет рулетку в этом раунде.
+              </p>
+              <p>
+                Элитные карточки: Мощные карты которые используются ограниченное
+                количество раз либо действуют пассивно на весь матч.
+              </p>
+              <p>
+                Способы получения:<br />1) Крафт - из обычных карт (в основном
+                из 3-х)<br />2) Ящик Пандоры - есть шанс выбить оттуда Элитную
+                карту.
+              </p>
+              <p>
+                Ящик Пандоры: Открывается двумя способами:<br />1) 1 ключ -
+                Большой шанс выбить очень плохой дроп, но маленький шанс выбить
+                что-то стоящее.<br />2) 3 ключа - Гарантировано выдается хороший
+                дроп.<br />1 ключ выдаётся игроку занявшему последнее место в
+                раунде. В каждом раунде без исключения выдаётся 1 ключ.
+              </p>
+              <p>
+                Модификаторы: Дополнительные условия/правила действующее на весь
+                матч и выбираются перед игрой - игроками либо рулеткой.<br />Например:
+                Симуляторные повреждения - игроки включают на весь матч себе
+                симуляторные повреждения и теперь если в гонках врезаться
+                состояние машины может ухудшиться и вы можете потерять
+                максимальную скорость/управление и так далее.
+              </p>
+            </div>
 
-          <div class="roulette-content__footer"></div>
+            <div class="car-page page" data-js-tabs-content>
+              <h2 class="card-page__title">Машины</h2>
+              <p>SOON</p>
+              <p>SOON</p>
+            </div>
+
+            <div class="card-page page" data-js-tabs-content>
+              <h2 class="card-page__title">Карточки</h2>
+              <p>SOON</p>
+              <p>SOON</p>
+            </div>
+          </div>
+
+          <div class="roulette-content__footer">
+            <p class="roulette-content__footer-text">
+              wrote: flodskii;<br />
+              supported by: fyqeki, etc.
+            </p>
+          </div>
         </div>
       </div>
     </main>

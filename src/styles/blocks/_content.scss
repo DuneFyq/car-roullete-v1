@@ -3,12 +3,19 @@
   background-color: var(--color-light);
   border: var(--border);
   border-radius: var(--border-radius);
-  
-  &__main {
 
+  &__main {
+    // убран display: none отсюда
+    .page {
+      display: none;
+
+      &--active {
+        display: block;
+      }
+    }
   }
 
   &__footer {
-
+    // стили футера
   }
 }

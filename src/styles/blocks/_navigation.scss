@@ -1,4 +1,4 @@
-.roulette-navigation-panel {
+.roulette-nav {
   padding: 10px;
   background-color: var(--color-light);
   border: var(--border);
@@ -16,5 +16,10 @@
 
   &__button {
     width: 100%; // позиционирование кнопки внутри панели
+
+    &--active {
+      background-color: var(--color-accent);
+      color: var(--color-dark);
+    }
   }
 }
