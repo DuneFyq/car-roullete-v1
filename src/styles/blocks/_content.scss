@@ -1,21 +1,17 @@
+@use '../helpers' as *;
+
 .roulette-content {
-  padding: 10px;
+  padding: rem(10) rem(16);
   background-color: var(--color-light);
   border: var(--border);
   border-radius: var(--border-radius);
 
-  &__main {
-    // убран display: none отсюда
-    .page {
-      display: none;
-
-      &--active {
-        display: block;
-      }
-    }
-  }
+  display: flex;
+  row-gap: rem(10);
+  flex-direction: column;
+  min-height: rem(18.75); 
 
   &__footer {
-    // стили футера
+    margin-top: auto; 
   }
 }

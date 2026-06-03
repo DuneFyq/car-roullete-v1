@@ -1,0 +1,14 @@
+{
+  "Mazda": [
+    { "model": "De", "years": "1111" },
+    { "model": "Te", "years": "2222" },
+    { "model": "Le", "years": "3333" },
+    { "model": "Fe", "years": "4444" }
+  ],
+  "Toyota": [
+    { "model": "Ge", "years": "5555" },
+    { "model": "Ze", "years": "6666" },
+    { "model": "Pe", "years": "7777" },
+    { "model": "Ne", "years": "8888" }
+  ]
+}

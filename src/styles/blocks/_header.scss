@@ -1,12 +1,14 @@
+@use '../helpers' as *;
+
 .roulette-header {
-  padding: 10px;
+  padding: rem(10);
   background-color: var(--color-light);
   border: var(--border);
   border-radius: var(--border-radius);
 
   &__title {
     text-align: center;
-    font-size: 24px;
+    font-size: rem(26);
     font-weight: 600;
     line-height: 1.2;
     letter-spacing: -0.02em;

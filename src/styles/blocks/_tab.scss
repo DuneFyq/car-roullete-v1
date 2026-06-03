@@ -1,0 +1,88 @@
+@use "../helpers" as *;
+
+.tab {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.tab-rules {
+  &__title {
+    color: var(--color-dark);
+    font-size: rem(60);
+  }
+
+  &__nav {
+    margin-bottom: rem(24);
+    padding: rem(16);
+    background-color: var(--color-gray-5);
+    border-radius: var(--border-radius);
+  }
+
+  &__heading {
+    font-size: rem(40);
+    margin-bottom: rem(8);
+  }
+
+  &__item {
+    margin-bottom: rem(8);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    color: var(--color-link);
+    text-decoration: none;
+    transition: text-decoration 0.2s ease;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-link);
+      outline-offset: rem(2);
+    }
+  }
+
+  &__category {
+    font-size: rem(24);
+    margin-top: rem(24);
+    margin-bottom: rem(12);
+    font-weight: 600;
+  }
+
+  &__text {
+    font-size: rem(16);
+    line-height: 1.6;
+    color: var(--color-dark);
+  }
+}
+
+.tab-cars {
+  &__title {
+    color: var(--color-dark);
+    font-size: rem(60);
+  }
+
+  &__subtitle {
+    color: var(--color-gray-60);
+    font-size: rem(40);
+  }
+}
+
+.tab-cards {
+  &__title {
+    color: var(--color-dark);
+    font-size: rem(60);
+  }
+
+  &__subtitle {
+    color: var(--color-gray-60);
+    font-size: rem(40);
+  }
+}

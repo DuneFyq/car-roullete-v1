@@ -5,9 +5,15 @@
   --color-dark: #141414;
 
   --color-gray: #eeeeee;
+  --color-gray-5: #f0f0f0;
+  --color-gray-10: #E5E4E2;
   --color-gray-50: #7E7E81;
+  --color-gray-60: #393939;
 
-  --color-accent: #FFD11A;
+  --color-accent: #7FC7FF;
+  --color-link: #0066cc;
+
+  --color-dark: var(--color-dark);
 
   --border: 1px solid var(--color-gray);
   --border-radius: 8px;

@@ -1,6 +1,8 @@
+@use '../helpers' as *;
+
 .roulette-container {
   display: grid;
   min-height: 75vh;
   grid-template-columns: 1fr 4fr; 
-  grid-column-gap: 16px;
+  grid-column-gap: rem(16);
 }

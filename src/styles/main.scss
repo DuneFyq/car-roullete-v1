@@ -3,9 +3,11 @@
 @use 'globals';
 @use 'fonts';
 
-@use 'blocks/main-page';
+@use 'blocks/page';
 @use 'blocks/header';
 @use 'blocks/button';
 @use 'blocks/navigation';
 @use 'blocks/content';
 @use 'blocks/container';
+@use 'blocks/history';
+@use 'blocks/tab';

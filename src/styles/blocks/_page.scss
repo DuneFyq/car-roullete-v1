@@ -1,9 +1,11 @@
-.main-page {
+@use '../helpers' as *;
+
+.page {
   display: flex;
   flex-direction: column;
-  row-gap: 24px;
+  row-gap: rem(24);
   width: 100%;
-  padding: 24px;
+  padding: rem(24);
 
   background-color: var(--color-light);
   border: var(--border);
