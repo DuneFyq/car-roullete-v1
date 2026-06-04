@@ -14,4 +14,9 @@
       opacity: 0.8;
     }
   }
+
+  &--spin {
+    background-color: var(--color-gray-10);
+    width: 20%;
+  }
 }
