@@ -21,7 +21,7 @@ class CarSpinController extends BaseSpinController {
   protected spin(): void {
     const brand = randomFromIterable(this.cars.keys());
     const models = this.cars.get(brand)!;
-    const { model, years } = randomFromArray(models);
+    const { model, years } = randomFromArray(models) ?? {};
 
     this.resultElement.value = `${brand} ${model} ${years}`;
   }
@@ -37,6 +37,7 @@ class CarSpinCollection {
   private async fetchCars(): Promise<CarMap> {
     const res = await fetch("./cars/forza-horizon-6.json");
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    
     const raw = (await res.json()) as Record<string, CarModel[]>;
     return new Map(Object.entries(raw));
   }

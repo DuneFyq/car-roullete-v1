@@ -6,25 +6,38 @@
   border: var(--border);
   border-radius: var(--border-radius);
 
+  @include mobile {
+    padding: rem(6);
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
-    row-gap: rem(10);
+    gap: 10px;
+
+    @include mobile {
+      flex-direction: row;
+      gap: 20px;
+      justify-content: space-between;
+    }
   }
 
   &__item {
-    // если нужно что-то специфичное для ячейки списка
+    inset: 0;
+    margin: 0;
   }
 
   &__button {
-    width: 100%; // позиционирование кнопки внутри панели
+    width: 100%;
 
     &--active {
       background-color: var(--color-accent);
       color: var(--color-dark);
 
-      &:hover {
-        opacity: 0.8;
+      @include hover {
+        &:hover {
+          opacity: 0.8;
+        }
       }
     }
   }

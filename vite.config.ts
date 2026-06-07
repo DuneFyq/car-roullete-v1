@@ -1,9 +1,13 @@
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: "/car-roullete-v1/",
+  root: 'src', 
+  base: '/car-roullete-v1/', 
   build: {
+    outDir: '../dist',
+    emptyOutDir: true,
     rollupOptions: {
-      input: "./src/index.html",},
-  },
+      input: 'index.html', 
+    },
+  }
 });

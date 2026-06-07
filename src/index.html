@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>car-roullete-v1</title>
-    <script type="module" src="/src/scripts/main.ts" defer></script>
+    <script type="module" src="/scripts/main.ts" defer></script>
   </head>
   <body>
     <!-- Пока без это <header class="tab-header"></header> -->
@@ -23,7 +23,7 @@
                 class="button button--tab roulette-nav__button roulette-nav__button--active"
                 data-js-tabs-button
               >
-                О проекте
+                Правила
               </button>
             </li>
             <li class="roulette-nav__item">
@@ -91,10 +91,23 @@
                   >
                     Дисциплины:
                   </h3>
-                  <p class="tab-rules__text">
-                    Драг-гонка, гонка по асфальту, гонка по бездорожью, битва
-                    стиля, подъем в гору, дрифт, флаги, вышибала.
-                  </p>
+                  <ul class="tab-rules__discipline-list">
+                    <li class="tab-rules__discipline-item">Драг-гонка</li>
+                    <li class="tab-rules__discipline-item">
+                      Гонка по асфальту
+                    </li>
+                    <li class="tab-rules__discipline-item">
+                      Гонка по бездорожью
+                    </li>
+                    <li class="tab-rules__discipline-item">Битва стиля</li>
+                    <li class="tab-rules__discipline-item">Подъём в гору</li>
+                    <li class="tab-rules__discipline-item">Дрифт</li>
+                    <li class="tab-rules__discipline-item">Флаги</li>
+                    <li class="tab-rules__discipline-item">Вышибалы</li>
+                    <li class="tab-rules__discipline-item">
+                      - Подробнее о дисциплинах у создателей -
+                    </li>
+                  </ul>
                 </div>
                 <div class="tab-rules__item">
                   <h3
@@ -200,39 +213,59 @@
             <div class="tab tab--cars" data-js-tabs-content data-js-car-spin>
               <article class="tab-cars">
                 <h2 class="tab-cars__title">Машины</h2>
-                <h3 class="tab-cars__subtitle">Рандомные машины</h3>
+                <h3 class="tab-cars__subtitle">Случайные машины</h3>
                 <input
                   class="tab-cars__input"
                   name="car-result"
                   data-js-spin-result
                   readonly
                 />
-                <button class="button button--spin tab-cars__spin-button" data-js-spin-button>
-                  Крутить
-                </button>
-                <p>
-                  <input
-                    class="tab-cars__exclude-checkbox"
-                    name="exclude-premium"
-                    type="checkbox"
-                  />искл. premium, forza edition
-                </p>
+                <div class="tab-cars__interaction">
+                  <button
+                    class="button button--spin tab-cars__spin-button"
+                    data-js-spin-button
+                  >
+                    Крутить
+                  </button>
 
-                <div class="history">
-                  <h3 class="history__title">История</h3>
-                  <p>
-                    <input
-                      class="history__hide-checkbox"
-                      name="hide"
-                      type="checkbox"
-                    />скрыть
-                  </p>
-                  <ul class="history__list">
-                    <li class="history__item">
-                      <p class="type">Car</p>
-                      <p class="content">Toyota</p>
-                    </li>
-                  </ul>
+                  <label class="tab-cars__filter-row">
+                    <span class="tab-cars__filter-text"
+                      >искл. premium, forza edition</span
+                    >
+                    <span class="switch tab-cars__switch-wrapper">
+                      <input
+                        class="switch__input"
+                        name="exclude-premium"
+                        type="checkbox"
+                      />
+                      <span class="switch__slider"></span>
+                    </span>
+                  </label>
+
+                  <div class="history">
+                    <h3 class="history__title">История</h3>
+                    <label class="history__hide-row">
+                      <span class="history__hide-text">скрыть</span>
+                      <span class="switch tab-cars__switch-wrapper">
+                        <input
+                          class="switch__input"
+                          name="hide-history"
+                          type="checkbox"
+                        />
+                        <span class="switch__slider"></span>
+                      </span>
+                    </label>
+                    <ul class="history__list" data-js-history-list>
+                      <il class="history__item">
+                        <p class="car__mark">Toyota</p>
+                        <p class="car__model">Pe 7777</p>
+                      </il>
+                      <il class="history__item">
+                        <p class="car__mark">Toyota</p>
+                        <p class="car__model">Pe 7777</p>
+                      </il>
+                    </ul>
+                  </div>
                 </div>
               </article>
             </div>
@@ -240,14 +273,17 @@
             <div class="tab tab--cards" data-js-tabs-content data-js-card-spin>
               <article class="tab-cards">
                 <h2 class="tab-cards__title">Карточки</h2>
-                <h3 class="tab-cards__subtitle">Радомные карточки</h3>
+                <h3 class="tab-cards__subtitle">Случайные карточки</h3>
                 <input
                   class="tab-cards__input"
                   name="card-result"
                   data-js-spin-result
                   readonly
                 />
-                <button class="button button--spin tab-cards__spin-button" data-js-spin-button>
+                <button
+                  class="button button--spin tab-cards__spin-button"
+                  data-js-spin-button
+                >
                   Крутить
                 </button>
 
@@ -255,13 +291,13 @@
                 <ul class="tab-cards__list">
                   <li class="card">
                     <div class="card__content">
-                      <p class="card__title">Название</p>
+                      <p class="card__name">Название</p>
                       <p class="card__description">Описание</p>
                     </div>
                   </li>
                   <li class="card">
                     <div class="card__content">
-                      <p class="card__title">Название</p>
+                      <p class="card__name">Название</p>
                       <p class="card__description">Описание</p>
                     </div>
                   </li>
@@ -269,23 +305,31 @@
 
                 <div class="history">
                   <h3 class="history__title">История</h3>
-                  <p>
-                    <input
-                      class="history__hide-checkbox"
-                      name="hide"
-                      type="checkbox"
-                    />скрыть
-                  </p>
-                  <ul class="history__list">
-                    <li class="history__item">
-                      <p class="type">Car</p>
-                      <p class="content">Toyota</p>
-                    </li>
+                  <label class="history__hide-row">
+                    <span class="history__hide-text">скрыть</span>
+                    <span class="switch tab-cards__switch-wrapper">
+                      <input
+                        class="switch__input"
+                        name="hide-history"
+                        type="checkbox"
+                      />
+                      <span class="switch__slider"></span>
+                    </span>
+                  </label>
+                  <ul class="history__list" data-js-history-list>
+                    <il class="history__item">
+                      <p class="car__mark">Toyota</p>
+                      <p class="car__model">Pe 7777</p>
+                    </il>
+                    <il class="history__item">
+                      <p class="car__mark">Toyota</p>
+                      <p class="car__model">Pe 7777</p>
+                    </il>
                   </ul>
                 </div>
               </article>
             </div>
-          </div>  
+          </div>
 
           <div class="roulette-content__footer">
             <p class="roulette-content__footer-text">

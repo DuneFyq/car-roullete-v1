@@ -24,8 +24,8 @@ class CardSpinController extends BaseSpinController {
 
   protected spin() {
     const name = randomFromIterable(this.cards.keys());
-    const content = this.cards.get(name)!;
-    const action = content.action;
+    const content = this.cards.get(name);
+    const action = content?.action ?? 'Такой карточки нет';
 
     this.resultElement.value = `${name} ${action}`;
   }

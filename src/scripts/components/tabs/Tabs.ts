@@ -31,8 +31,21 @@ class Tabs {
   constructor(rootElement: HTMLElement) {
     this.rootElement = rootElement;
 
-    this.tabButtonElements = Array.from(this.rootElement.querySelectorAll<HTMLElement>(this.selectors.button)!); 
-    this.contentElements = Array.from(this.rootElement.querySelectorAll<HTMLElement>(this.selectors.content)!);
+    const button = Array.from(
+      this.rootElement.querySelectorAll<HTMLElement>(this.selectors.button),
+    );
+    const content = Array.from(
+      this.rootElement.querySelectorAll<HTMLElement>(this.selectors.content),
+    );
+
+    if (!button || !content) {
+      throw new Error(
+        `Tabs: не найдены элементы внутри ${this.selectors.root}`,
+      );
+    }
+
+    this.tabButtonElements = button;
+    this.contentElements = content;
 
     this.abortController = new AbortController();
 
@@ -71,10 +84,13 @@ class TabsCollection {
     this.init();
   }
 
-  private init() {
-    const elements = document.querySelectorAll<HTMLElement>(ROOT_SELECTOR)!;
+  private init(): void {
+    const elements = document.querySelectorAll<HTMLElement>(ROOT_SELECTOR);
+    if (elements.length === 0) {
+      throw new Error(`Tabs: не найдены элементы ${ROOT_SELECTOR}`);
+    }
 
-    elements.forEach((element) => {
+    elements.forEach((element: HTMLElement) => {
       this.instances.push(new Tabs(element));
     });
   }

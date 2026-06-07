@@ -1,4 +1,4 @@
-@use '../helpers' as *;
+@use "../helpers" as *;
 
 .button {
   padding: rem(10);
@@ -9,14 +9,15 @@
   &--tab {
     background-color: var(--color-gray-10);
     color: var(--color-dark);
-
-    &:hover {
-      opacity: 0.8;
+    
+    @include hover {
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 
   &--spin {
     background-color: var(--color-gray-10);
-    width: 20%;
   }
 }

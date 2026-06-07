@@ -5,4 +5,10 @@
   min-height: 75vh;
   grid-template-columns: 1fr 4fr; 
   grid-column-gap: rem(16);
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
