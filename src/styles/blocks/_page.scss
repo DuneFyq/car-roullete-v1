@@ -1,4 +1,4 @@
-@use '../helpers' as *;
+@use "../helpers" as *;
 
 .page {
   display: flex;
@@ -7,8 +7,13 @@
   width: 100%;
   padding: rem(24);
 
+  @include mobile {
+    padding: rem(16);
+    row-gap: rem(16);
+  }
+
   background-color: var(--color-light);
   border: var(--border);
   border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow)
+  box-shadow: var(--box-shadow);
 }

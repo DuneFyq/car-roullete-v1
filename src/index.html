@@ -50,163 +50,187 @@
             <div class="tab tab--rules tab--active" data-js-tabs-content>
               <article class="tab-rules">
                 <h2 class="tab-rules__title">Правила</h2>
+
+                <!-- Навигация -->
                 <nav class="tab-rules__nav">
-                  <h3 class="tab-rules__heading">Содержание</h3>
-                  <ul class="tab-rules__list">
-                    <li class="tab-rules__item">
+                  <h3 class="tab-rules__nav-heading">Содержание</h3>
+                  <ul class="tab-rules__list tab-rules__list--nav">
+                    <li class="tab-rules__list-item">
                       <a class="tab-rules__link" href="#discipline"
                         >Дисциплины</a
                       >
                     </li>
-                    <li class="tab-rules__item">
+                    <li class="tab-rules__list-item">
                       <a class="tab-rules__link" href="#car">Машины</a>
                     </li>
-                    <li class="tab-rules__item">
+                    <li class="tab-rules__list-item">
                       <a class="tab-rules__link" href="#card">Карточки</a>
                     </li>
-                    <li class="tab-rules__item">
+                    <li class="tab-rules__list-item">
                       <a class="tab-rules__link" href="#player">Игроки</a>
                     </li>
-                    <li class="tab-rules__item">
+                    <li class="tab-rules__list-item">
                       <a class="tab-rules__link" href="#elite-card"
                         >Элитные карточки</a
                       >
                     </li>
-                    <li class="tab-rules__item">
+                    <li class="tab-rules__list-item">
                       <a class="tab-rules__link" href="#pandora"
                         >Ящик пандоры</a
                       >
                     </li>
-                    <li class="tab-rules__item">
+                    <li class="tab-rules__list-item">
                       <a class="tab-rules__link" href="#modifier"
                         >Модификаторы</a
                       >
                     </li>
                   </ul>
                 </nav>
-                <div class="tab-rules__item">
+
+                <!-- Секция: Дисциплины -->
+                <section class="tab-rules__section" id="discipline">
                   <h3
-                    class="tab-rules__category tab-rules__category--discipline"
-                    id="discipline"
+                    class="tab-rules__section-title tab-rules__section-title--discipline"
                   >
                     Дисциплины:
                   </h3>
-                  <ul class="tab-rules__discipline-list">
-                    <li class="tab-rules__discipline-item">Драг-гонка</li>
-                    <li class="tab-rules__discipline-item">
-                      Гонка по асфальту
-                    </li>
-                    <li class="tab-rules__discipline-item">
-                      Гонка по бездорожью
-                    </li>
-                    <li class="tab-rules__discipline-item">Битва стиля</li>
-                    <li class="tab-rules__discipline-item">Подъём в гору</li>
-                    <li class="tab-rules__discipline-item">Дрифт</li>
-                    <li class="tab-rules__discipline-item">Флаги</li>
-                    <li class="tab-rules__discipline-item">Вышибалы</li>
-                    <li class="tab-rules__discipline-item">
+                  <ul class="tab-rules__list tab-rules__list--discipline">
+                    <li class="tab-rules__list-item">Драг-гонка</li>
+                    <li class="tab-rules__list-item">Гонка по асфальту</li>
+                    <li class="tab-rules__list-item">Гонка по бездорожью</li>
+                    <li class="tab-rules__list-item">Битва стиля</li>
+                    <li class="tab-rules__list-item">Подъём в гору</li>
+                    <li class="tab-rules__list-item">Дрифт</li>
+                    <li class="tab-rules__list-item">Флаги</li>
+                    <li class="tab-rules__list-item">Вышибалы</li>
+                    <li class="tab-rules__list-item tab-rules__list-item--note">
                       - Подробнее о дисциплинах у создателей -
                     </li>
                   </ul>
-                </div>
-                <div class="tab-rules__item">
+                </section>
+
+                <!-- Секция: Машины -->
+                <section class="tab-rules__section" id="car">
                   <h3
-                    class="tab-rules__category tab-rules__category--car"
-                    id="car"
+                    class="tab-rules__section-title tab-rules__section-title--car"
                   >
                     Машины
                   </h3>
                   <p class="tab-rules__text">
                     В списке у каждой машины должен быть написан рейтинг и
-                    подпись "эксклюзив" или "платная" если как таковое свойство
+                    подпись "эксклюзив" или "платная", если как таковое свойство
                     есть у машины.
                   </p>
-                </div>
-                <div class="tab-rules__item">
+                </section>
+
+                <!-- Секция: Карточки -->
+                <section class="tab-rules__section" id="card">
                   <h3
-                    class="tab-rules__category tab-rules__category--card"
-                    id="card"
+                    class="tab-rules__section-title tab-rules__section-title--card"
                   >
                     Карточки
                   </h3>
-                  <p class="tab-rules__text">
-                    Рулетка состоит из количества игроков которое находится в
-                    игре . Крутится и выпадает рандомный игрок, например выпал
-                    игрок под номером 1 - в свою очередь у него появляется
-                    выбор: Использовать карту ИЛИ Заново крутить рулетку ИЛИ
-                    Покинуть рулетку в этом раунде и сохранить карты.
-                  </p>
-                </div>
-                <div class="tab-rules__item">
+                  <div class="tab-rules__content">
+                    <p class="tab-rules__text">
+                      Рулетка состоит из количества игроков, которое находится в
+                      игре. Крутится и выпадает рандомный игрок, например, выпал
+                      игрок под номером 1 — в свою очередь, у него появляется
+                      выбор: Использовать карту ИЛИ Заново крутить рулетку ИЛИ
+                      Покинуть рулетку в этом раунде и сохранить карты.<br />
+                      Виды карточек:
+                    </p>
+                    <ul class="tab-rules__list tab-rules__list--cards">
+                      <li class="tab-rules__list-item">
+                        <strong>Buff (Усиление)</strong> — положительные эффекты
+                        для себя.
+                      </li>
+                      <li class="tab-rules__list-item">
+                        <strong>Debuff (Ослабление/Атака)</strong> — негативные
+                        эффекты для соперника.
+                      </li>
+                      <li class="tab-rules__list-item">
+                        <strong>Utility (Утилита/Механика)</strong> — изменение
+                        правил игры, обмен, раскрытие информации, копирование
+                        (может быть как выгодным, так и рискованным).
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+
+                <!-- Секция: Игроки -->
+                <section class="tab-rules__section" id="player">
                   <h3
-                    class="tab-rules__category tab-rules__category--player"
-                    id="player"
+                    class="tab-rules__section-title tab-rules__section-title--player"
                   >
                     Игроки
                   </h3>
                   <p class="tab-rules__text">
-                    Допустим игроков 3 - игрок под номером 1 использует карту
-                    "-1 балл" на игрока под номером 2, ход переключается на
-                    игрока под номером 2 - он может отразить карту игрока под
-                    номером 1 с помощью карты "Зеркало" либо же контратаковать
-                    приняв урон, либо заново крутить рулетку приняв урон, либо
-                    покинуть рулетку в этом раунде приняв урон.<br />Другой
-                    пример: Выпадает игрок 1, он выбирает использовать карту
-                    "Повышение изначального класса на максимум". После этого
-                    рулетка заново крутится и может выпасть каждый из трёх
-                    игроков, то есть даже игрок 1 может выпадать много раз
-                    подряд до тех пор пока не выпадет другой игрок ИЛИ карты
-                    игрока 1 не закончатся и он автоматически покинет рулетку в
-                    этом раунде ИЛИ игрок 1 сам не покинет рулетку в этом
+                    Допустим, игроков 3. Игрок под номером 1 использует карту
+                    "-1 балл" на игрока под номером 2. Ход переключается на
+                    игрока под номером 2: он может отразить карту игрока под
+                    номером 1 с помощью карты "Зеркало", либо контратаковать,
+                    приняв урон, либо заново крутить рулетку, приняв урон, либо
+                    покинуть рулетку в этом раунде, приняв урон.<br /><br />
+                    Другой пример: Выпадает игрок 1, он выбирает использовать
+                    карту "Повышение изначального класса на максимум". После
+                    этого рулетка заново крутится, и может выпасть каждый из
+                    трёх игроков. То есть даже игрок 1 может выпадать много раз
+                    подряд до тех пор, пока не выпадет другой игрок, ИЛИ карты
+                    игрока 1 не закончатся (и он автоматически покинет рулетку в
+                    этом раунде), ИЛИ игрок 1 сам не покинет рулетку в этом
                     раунде.
                   </p>
-                </div>
-                <div class="tab-rules__item">
+                </section>
+
+                <!-- Секция: Элитные карточки -->
+                <section class="tab-rules__section" id="elite-card">
                   <h3
-                    class="tab-rules__category tab-rules__category--elite-card"
-                    id="elite-card"
+                    class="tab-rules__section-title tab-rules__section-title--elite-card"
                   >
                     Элитные карточки
                   </h3>
                   <p class="tab-rules__text">
-                    Мощные карты которые используются ограниченное количество
+                    Мощные карты, которые используются ограниченное количество
                     раз либо действуют пассивно на весь матч.<br />
-                    Способы получения:<br />1) Крафт - из обычных карт (в
-                    основном из 3-х)<br />2) Ящик Пандоры - есть шанс выбить
-                    оттуда Элитную карту.
+                    Способы получения:<br />
+                    1) Крафт — из обычных карт (в основном из 3-х).<br />
+                    2) Ящик Пандоры — есть шанс выбить оттуда Элитную карту.
                   </p>
-                </div>
-                <div class="tab-rules__item">
+                </section>
+
+                <!-- Секция: Ящик Пандоры -->
+                <section class="tab-rules__section" id="pandora">
                   <h3
-                    class="tab-rules__category tab-rules__category--pandora"
-                    id="pandora"
+                    class="tab-rules__section-title tab-rules__section-title--pandora"
                   >
                     Ящик Пандоры
                   </h3>
                   <p class="tab-rules__text">
-                    Открывается двумя способами:<br />1) 1 ключ - Большой шанс
-                    выбить очень плохой дроп, но маленький шанс выбить что-то
-                    стоящее.<br />2) 3 ключа - Гарантировано выдается хороший
-                    дроп.<br />1 ключ выдаётся игроку занявшему последнее место
-                    в раунде. В каждом раунде без исключения выдаётся 1 ключ.
+                    Открывается двумя способами:<br />
+                    1) 1 ключ — Большой шанс выбить очень плохой дроп, но
+                    маленький шанс выбить что-то стоящее.<br />
+                    2) 3 ключа — Гарантировано выдается хороший дроп.<br />
+                    1 ключ выдаётся игроку, занявшему последнее место в раунде.
+                    В каждом раунде без исключения выдаётся 1 ключ.
                   </p>
-                </div>
-                <div class="tab-rules__item">
+                </section>
+
+                <!-- Секция: Модификаторы -->
+                <section class="tab-rules__section" id="modifier">
                   <h3
-                    class="tab-rules__category tab-rules__category--elite-modifier"
-                    id="modifier"
+                    class="tab-rules__section-title tab-rules__section-title--modifier"
                   >
                     Модификаторы
                   </h3>
                   <p class="tab-rules__text">
-                    Дополнительные условия/правила действующее на весь матч и
-                    выбираются перед игрой - игроками либо рулеткой.<br />Например:
-                    Симуляторные повреждения - игроки включают на весь матч себе
-                    симуляторные повреждения и теперь если в гонках врезаться
-                    состояние машины может ухудшиться и вы можете потерять
-                    максимальную скорость/управление и так далее.
+                    Дополнительные условия/правила, действующие на весь матч и
+                    выбираемые перед игрой игроками либо рулеткой.<br />
+                    Например: Симуляторные повреждения — игроки включают на весь
+                    матч себе симуляторные повреждения, и теперь, если в гонках
+                    врезаться, состояние машины может ухудшиться, и вы можете
+                    потерять максимальную скорость, управление и так далее.
                   </p>
-                </div>
+                </section>
               </article>
             </div>
 
@@ -242,7 +266,7 @@
                     </span>
                   </label>
 
-                  <div class="history">
+                  <div class="history" data-js-history>
                     <h3 class="history__title">История</h3>
                     <label class="history__hide-row">
                       <span class="history__hide-text">скрыть</span>
@@ -256,14 +280,7 @@
                       </span>
                     </label>
                     <ul class="history__list" data-js-history-list>
-                      <il class="history__item">
-                        <p class="car__mark">Toyota</p>
-                        <p class="car__model">Pe 7777</p>
-                      </il>
-                      <il class="history__item">
-                        <p class="car__mark">Toyota</p>
-                        <p class="car__model">Pe 7777</p>
-                      </il>
+
                     </ul>
                   </div>
                 </div>
@@ -288,7 +305,20 @@
                 </button>
 
                 <h3 class="tab-cards__list-title">Список имеющихся карточек</h3>
-                <ul class="tab-cards__list">
+                <div class="tab-cards__sub-menu">
+                  <button class="button button--use-all tab-cards__use-all">
+                    Использовать всё
+                  </button>
+                  <button
+                    class="button button--use-specific tab-cards__use-specific"
+                  >
+                    Использовать
+                  </button>
+                  <button class="button button--add-card tab-cards__add-card">
+                    Добавить
+                  </button>
+                </div>
+                <ul class="tab-cards__list" data-js-cards-list>
                   <li class="card">
                     <div class="card__content">
                       <p class="card__name">Название</p>
@@ -303,7 +333,7 @@
                   </li>
                 </ul>
 
-                <div class="history">
+                <div class="history" data-js-history>
                   <h3 class="history__title">История</h3>
                   <label class="history__hide-row">
                     <span class="history__hide-text">скрыть</span>
@@ -317,14 +347,7 @@
                     </span>
                   </label>
                   <ul class="history__list" data-js-history-list>
-                    <il class="history__item">
-                      <p class="car__mark">Toyota</p>
-                      <p class="car__model">Pe 7777</p>
-                    </il>
-                    <il class="history__item">
-                      <p class="car__mark">Toyota</p>
-                      <p class="car__model">Pe 7777</p>
-                    </il>
+ 
                   </ul>
                 </div>
               </article>

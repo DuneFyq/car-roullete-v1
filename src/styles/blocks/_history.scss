@@ -16,6 +16,10 @@
     display: flex;
     flex-direction: row;
     gap: rem(6);
+
+    &--data {
+      color: var(--color-gray-50);
+    }
   }
 
   &__list {

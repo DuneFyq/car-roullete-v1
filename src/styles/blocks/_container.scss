@@ -1,12 +1,16 @@
-@use '../helpers' as *;
+@use "../helpers" as *;
 
 .roulette-container {
   display: grid;
   min-height: 75vh;
-  grid-template-columns: 1fr 4fr; 
+  grid-template-columns: 1fr 4fr;
   grid-column-gap: rem(16);
 
   @include mobile {
+    grid-column-gap: rem(13);
+  }
+
+  @include mobile-s {
     display: flex;
     flex-direction: column;
     gap: 10px;

@@ -17,12 +17,12 @@ export function randomIntInRange(min: number, max: number): number {
  * 
  * @example
  * const map = new Map([['a', 1], ['b', 2]]);
- * const key = randomItem(map.keys());   // 'a' | 'b'
- * const value = randomItem(map.values()); // 1 | 2
+ * const key = randomFromIterable(map.keys());   // 'a' | 'b'
+ * const value = randomFromIterable(map.values()); // 1 | 2
  * 
  * @example
  * const set = new Set([10, 20, 30]);
- * const num = randomItem(set); // 10 | 20 | 30
+ * const num = randomFromIterable(set); // 10 | 20 | 30
  */
 export function randomFromIterable<T>(items: Iterable<T>): T {
   const arr = Array.from(items);
@@ -36,7 +36,7 @@ export function randomFromIterable<T>(items: Iterable<T>): T {
  * **Когда использовать:** только для массивов. Это самый быстрый вариант —
  * не создаёт копию массива, а обращается по индексу напрямую.
  * 
- * Не подходит для Map, Set и других Iterable — используйте {@link randomItem}.
+ * Не подходит для Map, Set и других Iterable — используйте {@link randomFromIterable}.
  * 
  * @param items - Массив элементов (readonly — функция не модифицирует исходный массив)
  * @returns Случайный элемент массива типа T
@@ -61,7 +61,7 @@ export function randomFromArray<T>(items: readonly T[]): T {
  * **Когда использовать:** для plain-объектов `{ a: 1, b: 2 }`.
  * 
  * **Не подходит для Map** — у Map нет строковых ключей в привычном смысле,
- * используйте {@link randomItem} с `map.keys()`.
+ * используйте {@link randomFromIterable} с `map.keys()`.
  * 
  * @param object - Обычный JS-объект с произвольными полями
  * @returns Случайный ключ объекта (всегда string, даже если ключи числовые)

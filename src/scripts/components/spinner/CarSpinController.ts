@@ -1,4 +1,5 @@
 import { BaseSpinController } from "./BaseSpinController";
+import { historyService } from "../../services/LocalStorageService ";
 import { randomFromArray, randomFromIterable } from "../../utils/randomUtils";
 
 export const ROOT_SELECTOR = "[data-js-car-spin]";
@@ -24,6 +25,10 @@ class CarSpinController extends BaseSpinController {
     const { model, years } = randomFromArray(models) ?? {};
 
     this.resultElement.value = `${brand} ${model} ${years}`;
+
+    historyService.addRecord(this.resultElement.value);
+
+    document.dispatchEvent(new CustomEvent("history:updated"));
   }
 }
 
@@ -37,7 +42,7 @@ class CarSpinCollection {
   private async fetchCars(): Promise<CarMap> {
     const res = await fetch("./cars/forza-horizon-6.json");
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    
+
     const raw = (await res.json()) as Record<string, CarModel[]>;
     return new Map(Object.entries(raw));
   }
