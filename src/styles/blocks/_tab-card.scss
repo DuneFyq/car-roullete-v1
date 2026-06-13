@@ -142,7 +142,59 @@
     }
   }
 
-  &__new-card {
-    
+  &__input-wrapper {
+    @include flex-center(false);
+    display: none;
+    position: relative;
+    flex-direction: row;
+    margin-inline: auto;
+    min-width: 40%;
+
+    &--active {
+      display: block;
+    }
+
+    @include mobile {
+      width: 100%;
+      max-width: 100%;
+      height: rem(40);
+    }
+  }
+
+  &__input-name {
+    @include fluid-text(16, 14);
+
+    width: 100%;
+    padding: rem(12);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    outline: none;
+    background-color: transparent;
+    transition: border-color 0.2s ease;
+
+    &:focus {
+      border-color: var(--color-accent);
+    }
+  }
+
+  &__label {
+    @include fluid-text(16, 14);
+
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none;
+    transition: all 0.2s ease-out;
+    background-color: #fff;
+    padding: 0 4px;
+
+    .tab-cards__input-name:focus + &,
+    .tab-cards__input-name:not(:placeholder-shown) + & {
+      @include fluid-text(12, 10);
+      top: 0;
+      color: #007bff;
+    }
   }
 }

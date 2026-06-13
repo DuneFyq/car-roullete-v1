@@ -26,12 +26,8 @@
     { "model": "#122 Class 1 Buggy", "years": "2021" },
     { "model": "#6165 Trick Truck", "years": "2022" }
   ],
-  "AMG Transport Dynamics": [
-    { "model": "M12S Warthog CST", "years": "2554" }
-  ],
-  "Apollo": [
-    { "model": "Intensa Emozione", "years": "2019" }
-  ],
+  "AMG Transport Dynamics": [{ "model": "M12S Warthog CST", "years": "2554" }],
+  "Apollo": [{ "model": "Intensa Emozione", "years": "2019" }],
   "Ariel": [
     { "model": "Atom 500 V8", "years": "2013" },
     { "model": "Nomad", "years": "2016" }
@@ -73,15 +69,9 @@
     { "model": "RS e-tron GT", "years": "2021" },
     { "model": "R8 Coupé V10 GT RWD", "years": "2023" }
   ],
-  "Austin-Healey": [
-    { "model": "3000 MkIII", "years": "1965" }
-  ],
-  "Autozam": [
-    { "model": "AZ-1", "years": "1993" }
-  ],
-  "BAC": [
-    { "model": "Mono", "years": "2014" }
-  ],
+  "Austin-Healey": [{ "model": "3000 MkIII", "years": "1965" }],
+  "Autozam": [{ "model": "AZ-1", "years": "1993" }],
+  "BAC": [{ "model": "Mono", "years": "2014" }],
   "Bentley": [
     { "model": "Bentayga", "years": "2016" },
     { "model": "Continental GT Convertible", "years": "2021" }
@@ -117,9 +107,7 @@
     { "model": "M2 Forza Edition", "years": "2023" },
     { "model": "X6 M Competition", "years": "2024" }
   ],
-  "Buick": [
-    { "model": "Regal GNX", "years": "1987" }
-  ],
+  "Buick": [{ "model": "Regal GNX", "years": "1987" }],
   "Cadillac": [
     { "model": "XTS Limousine", "years": "2013" },
     { "model": "ATS-V", "years": "2016" },
@@ -127,9 +115,7 @@
     { "model": "CT4-V Blackwing", "years": "2022" },
     { "model": "CT5-V Blackwing", "years": "2022" }
   ],
-  "Can-Am": [
-    { "model": "Maverick X RS Turbo R", "years": "2018" }
-  ],
+  "Can-Am": [{ "model": "Maverick X RS Turbo R", "years": "2018" }],
   "Casey Currie Motorsports": [
     { "model": "#4402 Ultra 4 'Trophy Jeep'", "years": "2019" }
   ],
@@ -166,7 +152,10 @@
   "Datsun": [
     { "model": "2000 Roadster", "years": "1969" },
     { "model": "510", "years": "1970" },
-    { "model": "#269 Attacking the Clock Racing 240Z 'All Carbon Hill Climb Beast'", "years": "1972" }
+    {
+      "model": "#269 Attacking the Clock Racing 240Z 'All Carbon Hill Climb Beast'",
+      "years": "1972"
+    }
   ],
   "DeBerti": [
     { "model": "Jeep Wrangler Unlimited", "years": "2013" },
@@ -174,9 +163,7 @@
     { "model": "Ford Super Duty F-250 Lariat 'Transformer'", "years": "2019" },
     { "model": "Toyota Tacoma TRD 'The Performance Truck'", "years": "2019" }
   ],
-  "DeLorean": [
-    { "model": "DMC-12", "years": "1982" }
-  ],
+  "DeLorean": [{ "model": "DMC-12", "years": "1982" }],
   "Dodge": [
     { "model": "Dart HEMI Super Stock", "years": "1968" },
     { "model": "Charger Daytona HEMI", "years": "1969" },
@@ -299,29 +286,21 @@
     { "model": "#91 BMW M2", "years": "2020" },
     { "model": "#64 Forsberg Racing Nissan Z", "years": "2023" }
   ],
-  "Funco Motorsports": [
-    { "model": "F9", "years": "2018" }
-  ],
+  "Funco Motorsports": [{ "model": "F9", "years": "2018" }],
   "GMC": [
     { "model": "Jimmy", "years": "1970" },
     { "model": "Syclone", "years": "1991" },
     { "model": "Typhoon", "years": "1992" },
     { "model": "HUMMER EV Pickup", "years": "2022" }
   ],
-  "Gordon Murray Automotive": [
-    { "model": "T.50", "years": "2020" }
-  ],
-  "GR": [
-    { "model": "GT Prototype", "years": "2025" }
-  ],
+  "Gordon Murray Automotive": [{ "model": "T.50", "years": "2020" }],
+  "GR": [{ "model": "GT Prototype", "years": "2025" }],
   "Hennessey": [
     { "model": "Venom GT", "years": "2012" },
     { "model": "Ford F-150 VelociRaptor 6X6", "years": "2019" },
     { "model": "Venom F5", "years": "2021" }
   ],
-  "Holden": [
-    { "model": "Torana A9X", "years": "1977" }
-  ],
+  "Holden": [{ "model": "Torana A9X", "years": "1977" }],
   "Honda": [
     { "model": "S800", "years": "1970" },
     { "model": "Civic RS", "years": "1974" },
@@ -377,7 +356,10 @@
     { "model": "JT", "years": "2020" }
   ],
   "Jimco": [
-    { "model": "#240 Fastball Racing Class 6100 Spec Trophy Truck", "years": "2019" },
+    {
+      "model": "#240 Fastball Racing Class 6100 Spec Trophy Truck",
+      "years": "2019"
+    },
     { "model": "#179 Hammerhead Class 1", "years": "2020" }
   ],
   "Koenigsegg": [
@@ -389,9 +371,7 @@
     { "model": "Jesko", "years": "2020" },
     { "model": "Gemera", "years": "2024" }
   ],
-  "KTM": [
-    { "model": "X-Bow GT4", "years": "2018" }
-  ],
+  "KTM": [{ "model": "X-Bow GT4", "years": "2018" }],
   "Lamborghini": [
     { "model": "Miura P400", "years": "1967" },
     { "model": "Countach LP5000 QV", "years": "1988" },
@@ -431,9 +411,7 @@
     { "model": "RC F", "years": "2015" },
     { "model": "LC 500", "years": "2021" }
   ],
-  "Lincoln": [
-    { "model": "Continental", "years": "1962" }
-  ],
+  "Lincoln": [{ "model": "Continental", "years": "1962" }],
   "Lotus": [
     { "model": "Elise GT1", "years": "1997" },
     { "model": "Elise Series 1 Sport 190", "years": "1999" },
@@ -443,9 +421,7 @@
     { "model": "Evija Forza Edition", "years": "2020" },
     { "model": "Emira", "years": "2023" }
   ],
-  "Lucid": [
-    { "model": "Air Sapphire", "years": "2024" }
-  ],
+  "Lucid": [{ "model": "Air Sapphire", "years": "2024" }],
   "Maserati": [
     { "model": "Ghibli Cup", "years": "1997" },
     { "model": "MC12", "years": "2004" },
@@ -517,9 +493,7 @@
     { "model": "Manx", "years": "1971" },
     { "model": "Manx 2.0", "years": "2023" }
   ],
-  "MG": [
-    { "model": "Metro 6R4", "years": "1986" }
-  ],
+  "MG": [{ "model": "Metro 6R4", "years": "1986" }],
   "MINI": [
     { "model": "Cooper S", "years": "1965" },
     { "model": "John Cooper Works GP", "years": "2012" },
@@ -528,7 +502,10 @@
     { "model": "John Cooper Works GP", "years": "2021" }
   ],
   "Mitsubishi": [
-    { "model": "#269 Attacking the Clock Racing Minicab Time Attack", "years": "1990" },
+    {
+      "model": "#269 Attacking the Clock Racing Minicab Time Attack",
+      "years": "1990"
+    },
     { "model": "Galant VR-4", "years": "1992" },
     { "model": "Eclipse GSX", "years": "1995" },
     { "model": "Lancer Evolution III GSR", "years": "1995" },
@@ -538,7 +515,10 @@
     { "model": "Lancer Evolution VI GSR TM Edition", "years": "2001" },
     { "model": "Lancer Evolution VIII MR", "years": "2004" },
     { "model": "Lancer Evolution VIII MR Welcome Pack", "years": "2004" },
-    { "model": "#1 Sierra Sierra Enterprises Lancer Evolution Time Attack", "years": "2005" },
+    {
+      "model": "#1 Sierra Sierra Enterprises Lancer Evolution Time Attack",
+      "years": "2005"
+    },
     { "model": "Lancer Evolution IX MR", "years": "2006" },
     { "model": "Lancer Evolution X GSR", "years": "2008" }
   ],
@@ -583,12 +563,8 @@
     { "model": "GT-R Nismo", "years": "2024" },
     { "model": "Z NISMO", "years": "2024" }
   ],
-  "Noble": [
-    { "model": "M600", "years": "2010" }
-  ],
-  "Opel": [
-    { "model": "Manta 400", "years": "1984" }
-  ],
+  "Noble": [{ "model": "M600", "years": "2010" }],
+  "Opel": [{ "model": "Manta 400", "years": "1984" }],
   "Pagani": [
     { "model": "Zonda R", "years": "2009" },
     { "model": "Zonda Cinque Roadster", "years": "2010" },
@@ -599,9 +575,7 @@
     { "model": "P50", "years": "1962" },
     { "model": "P50 Trolli Edition", "years": "1962" }
   ],
-  "Penhall": [
-    { "model": "The Cholla", "years": "2011" }
-  ],
+  "Penhall": [{ "model": "The Cholla", "years": "2011" }],
   "Peugeot": [
     { "model": "205 Turbo 16", "years": "1984" },
     { "model": "205 Rallye", "years": "1991" },
@@ -653,15 +627,9 @@
     { "model": "911 Rallye", "years": "2023" },
     { "model": "911 Turbo S", "years": "2023" }
   ],
-  "Radical": [
-    { "model": "RXC Turbo", "years": "2015" }
-  ],
-  "Ram": [
-    { "model": "1500 TRX", "years": "2024" }
-  ],
-  "Reliant": [
-    { "model": "Supervan III", "years": "1972" }
-  ],
+  "Radical": [{ "model": "RXC Turbo", "years": "2015" }],
+  "Ram": [{ "model": "1500 TRX", "years": "2024" }],
+  "Reliant": [{ "model": "Supervan III", "years": "1972" }],
   "Renault": [
     { "model": "8 Gordini", "years": "1967" },
     { "model": "5 Turbo", "years": "1980" },
@@ -670,22 +638,14 @@
     { "model": "Megane RS 250", "years": "2010" },
     { "model": "Megane R.S.", "years": "2018" }
   ],
-  "Rimac": [
-    { "model": "Nevera", "years": "2021" }
-  ],
-  "Rivian": [
-    { "model": "R1T", "years": "2022" }
-  ],
+  "Rimac": [{ "model": "Nevera", "years": "2021" }],
+  "Rivian": [{ "model": "R1T", "years": "2022" }],
   "RJ Anderson": [
     { "model": "#37 Polaris RZR Pro 2 Truck", "years": "2016" },
     { "model": "#37 Polaris RZR Pro 4 Truck", "years": "2021" }
   ],
-  "Saleen": [
-    { "model": "S7 LM", "years": "2017" }
-  ],
-  "Schuppan": [
-    { "model": "962CR", "years": "1993" }
-  ],
+  "Saleen": [{ "model": "S7 LM", "years": "2017" }],
+  "Schuppan": [{ "model": "962CR", "years": "1993" }],
   "Shelby": [
     { "model": "Cobra 427 S/C", "years": "1965" },
     { "model": "Cobra Daytona Coupe", "years": "1965" }
@@ -695,9 +655,7 @@
     { "model": "700R", "years": "2021" },
     { "model": "RX3", "years": "2021" }
   ],
-  "SRT": [
-    { "model": "Viper GTS", "years": "2013" }
-  ],
+  "SRT": [{ "model": "Viper GTS", "years": "2013" }],
   "Subaru": [
     { "model": "BRAT GL", "years": "1980" },
     { "model": "LEGACY RS", "years": "1990" },
@@ -761,9 +719,7 @@
     { "model": "Sagaris", "years": "2005" },
     { "model": "Griffith", "years": "2018" }
   ],
-  "Ultima": [
-    { "model": "Evolution Coupe 1020", "years": "2015" }
-  ],
+  "Ultima": [{ "model": "Evolution Coupe 1020", "years": "2015" }],
   "Volkswagen": [
     { "model": "Beetle", "years": "1963" },
     { "model": "Type 2 De Luxe", "years": "1963" },
@@ -780,15 +736,35 @@
     { "model": "Golf R", "years": "2021" },
     { "model": "Golf R", "years": "2022" }
   ],
-  "Volvo": [
-    { "model": "242 Turbo Evolution", "years": "1983" }
-  ],
+  "Volvo": [{ "model": "242 Turbo Evolution", "years": "1983" }],
   "Wuling": [
     { "model": "Sunshine S", "years": "2013" },
     { "model": "Sunshine S Forza Edition", "years": "2013" },
     { "model": "Hongguang Mini EV", "years": "2022" }
   ],
-  "Zenvo": [
-    { "model": "TSR-S", "years": "2019" }
+  "Zenvo": [{ "model": "TSR-S", "years": "2019" }],
+  "Premium": [
+    {
+      "Toyota": [
+        { "model": "Te", "years": "1111" },
+        { "model": "Fe", "years": "2222" }
+      ],
+      "Mazda": [
+        { "model": "Ke", "years": "3333" },
+        { "model": "Re", "years": "4444" }
+      ]
+    }
+  ],
+  "Exclusives": [
+    {
+      "Toyota": [
+        { "model": "Te", "years": "1111" },
+        { "model": "Fe", "years": "2222" }
+      ],
+      "Mazda": [
+        { "model": "Ke", "years": "3333" },
+        { "model": "Re", "years": "4444" }
+      ]
+    }
   ]
 }

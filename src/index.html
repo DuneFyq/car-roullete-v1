@@ -279,7 +279,10 @@
                       <span class="switch__slider"></span>
                     </span>
                   </label>
-                  <ul class="history__list" data-js-history-list></ul>
+                  <ul
+                    class="history__list history__list--active"
+                    data-js-history-list
+                  ></ul>
                 </div>
               </article>
             </div>
@@ -322,7 +325,20 @@
                     Добавить
                   </button>
                 </div>
-                <input type="text" class="tab-cards__new-card" />
+
+                <div class="tab-cards__input-wrapper" data-js-input-wrapper>
+                  <input
+                    type="text"
+                    id="name"
+                    class="tab-cards__input-name"
+                    autocomplete="card"
+                    placeholder=" "
+                  />
+                  <label for="name" class="tab-cards__label"
+                    >Введите название карточки</label
+                  >
+                </div>
+
                 <ul class="tab-cards__list" data-js-cards-list></ul>
 
                 <div class="history" data-js-history>
@@ -339,7 +355,10 @@
                       <span class="switch__slider"></span>
                     </span>
                   </label>
-                  <ul class="history__list" data-js-history-list></ul>
+                  <ul
+                    class="history__list history__list--active"
+                    data-js-history-list
+                  ></ul>
                 </div>
               </article>
             </div>

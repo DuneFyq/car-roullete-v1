@@ -13,6 +13,7 @@ interface CustomSpinSelectors extends SpinSelectors {
   readonly result: string;
   readonly list: string;
   readonly subMenu: string;
+  readonly addCardInputWrapper: string;
 }
 
 interface CardContent {
@@ -22,6 +23,7 @@ interface CardContent {
 
 interface TabsStateClasses {
   readonly cardSelected: string;
+  readonly addCardActive: string;
 }
 
 type CardMap = Map<string, CardContent>;
@@ -33,14 +35,17 @@ class CardSpinController extends BaseSpinController {
     result: "[data-js-spin-result]",
     list: "[data-js-cards-list]",
     subMenu: "[data-js-sub-menu]",
+    addCardInputWrapper: "[data-js-input-wrapper]",
   };
 
   private readonly stateClasses: TabsStateClasses = {
     cardSelected: "card__content--selected",
+    addCardActive: "tab-cards__input-wrapper--active",
   };
 
   private readonly cardsList: HTMLElement;
   private readonly subMenu: HTMLElement;
+  private readonly addCardInputWrapper: HTMLElement;
   private readonly cards: CardMap;
 
   constructor(rootElement: HTMLElement, cards: CardMap) {
@@ -52,15 +57,20 @@ class CardSpinController extends BaseSpinController {
     const subMenu = this.rootElement.querySelector<HTMLElement>(
       this.selectors.subMenu,
     );
+    const addCardInputWrapper =
+      this.rootElement.querySelector<HTMLInputElement>(
+        this.selectors.addCardInputWrapper,
+      );
 
-    if (!list || !subMenu) {
+    if (!list || !subMenu || !addCardInputWrapper) {
       throw new Error(
         `SpinController: не найдены элементы внутри ${this.selectors.root}`,
       );
     }
 
-    this.subMenu = subMenu;
     this.cardsList = list;
+    this.subMenu = subMenu;
+    this.addCardInputWrapper = addCardInputWrapper;
     this.cards = cards;
 
     this.render();
@@ -109,13 +119,46 @@ class CardSpinController extends BaseSpinController {
   }
 
   private handleUseAll() {
-    
+    cardService.clearStorage();
+    this.render();
   }
+
   private handleUseSpecific() {
+    const selectedElements = this.cardsList.querySelectorAll(
+      `.card__content.${this.stateClasses.cardSelected}`,
+    );
 
+    const selectedIds = [...selectedElements]
+      .map((contentElement) => {
+        const li = contentElement.closest(".card");
+        return li ? li.classList[1] : null;
+      })
+      .filter(Boolean) as string[];
+
+    console.log("ID выбранных карточек:", selectedIds);
+
+    if (selectedIds.length === 0) return;
+    selectedIds.forEach((id) => {
+      cardService.removeRecord(id)
+    })
+
+    this.render();
   }
-  private handleAddCard() {
 
+  private handleAddCard() {
+    this.addCardInputWrapper.classList.add(this.stateClasses.addCardActive);
+
+    const input = this.addCardInputWrapper.querySelector<HTMLInputElement>(
+      ".tab-cards__input-name",
+    );
+    if (!input) return;
+    if (!this.cards.has(input.value)) return;
+
+    const cardName = input.value;
+    cardService.addRecord(cardName);
+    this.render();
+
+    input.value = "";
   }
 
   private selectObject({ target }: Event) {
@@ -128,6 +171,9 @@ class CardSpinController extends BaseSpinController {
   }
 
   protected spin() {
+    const countCard = cardService.getRecords();
+    if (countCard.length === 35) return;
+
     const name = randomFromIterable(this.cards.keys());
     const content = this.cards.get(name);
     const type = content?.type ?? "Типа не имеет";

@@ -3,6 +3,10 @@
 .card {
   padding-bottom: rem(5);
 
+  &:last-child {
+    padding-bottom: 0;
+  }
+
   &__content {
     @include fluid-text(17, 13);
 
