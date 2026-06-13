@@ -12,11 +12,16 @@ interface CustomSpinSelectors extends SpinSelectors {
   readonly button: string;
   readonly result: string;
   readonly list: string;
+  readonly subMenu: string;
 }
 
 interface CardContent {
   readonly action: string;
   readonly type: string;
+}
+
+interface TabsStateClasses {
+  readonly cardSelected: string;
 }
 
 type CardMap = Map<string, CardContent>;
@@ -27,9 +32,15 @@ class CardSpinController extends BaseSpinController {
     button: "[data-js-spin-button]",
     result: "[data-js-spin-result]",
     list: "[data-js-cards-list]",
+    subMenu: "[data-js-sub-menu]",
+  };
+
+  private readonly stateClasses: TabsStateClasses = {
+    cardSelected: "card__content--selected",
   };
 
   private readonly cardsList: HTMLElement;
+  private readonly subMenu: HTMLElement;
   private readonly cards: CardMap;
 
   constructor(rootElement: HTMLElement, cards: CardMap) {
@@ -38,32 +49,93 @@ class CardSpinController extends BaseSpinController {
     const list = this.rootElement.querySelector<HTMLUListElement>(
       this.selectors.list,
     );
+    const subMenu = this.rootElement.querySelector<HTMLElement>(
+      this.selectors.subMenu,
+    );
 
-    if (!list) {
+    if (!list || !subMenu) {
       throw new Error(
         `SpinController: не найдены элементы внутри ${this.selectors.root}`,
       );
     }
 
+    this.subMenu = subMenu;
     this.cardsList = list;
     this.cards = cards;
 
     this.render();
+    this.init();
   }
 
-  destroy() {
-    this.abortController.abort();
+  protected bindEvents() {
+    super.bindEvents();
+
+    const { signal } = this.abortController;
+    this.cardsList.addEventListener(
+      "click",
+      (event) => this.selectObject(event),
+      { signal },
+    );
+    this.subMenu.addEventListener(
+      "click",
+      (event) => this.bindButtonHandlers(event),
+      { signal },
+    );
+  }
+
+  private bindButtonHandlers(event: Event) {
+    const target = event.target as HTMLElement;
+    const button = target.closest("button");
+
+    if (!button || !this.subMenu.contains(button)) {
+      return;
+    }
+
+    const action = button.dataset.action;
+
+    switch (action) {
+      case "use-all":
+        this.handleUseAll();
+        break;
+      case "use-specific":
+        this.handleUseSpecific();
+        break;
+      case "add-card":
+        this.handleAddCard();
+        break;
+      default:
+        console.warn(`Необработанное действие: ${action}`);
+    }
+  }
+
+  private handleUseAll() {
+    
+  }
+  private handleUseSpecific() {
+
+  }
+  private handleAddCard() {
+
+  }
+
+  private selectObject({ target }: Event) {
+    if (target instanceof HTMLElement) {
+      const parent = target.closest(".card__content");
+      if (!parent) return;
+
+      parent.classList.toggle(this.stateClasses.cardSelected);
+    }
   }
 
   protected spin() {
     const name = randomFromIterable(this.cards.keys());
-    // const content = this.cards.get(name);
-    // const action = content?.action ?? "Такой карточки нет";
+    const content = this.cards.get(name);
+    const type = content?.type ?? "Типа не имеет";
 
-    this.resultElement.value = `${name}`;
+    this.resultElement.value = `${name} - ${type}`;
 
-    historyService.addRecord(this.resultElement.value);
-    cardService.addRecord(this.resultElement.value);
+    historyService.addRecord(name);
+    cardService.addRecord(name);
 
     this.render();
 
@@ -80,16 +152,19 @@ class CardSpinController extends BaseSpinController {
       return;
     }
 
-    const htmlStrings = records.map(
-      (record) => `
-      <li class="card">
+    const htmlStrings = records.map((record) => {
+      const content = this.cards.get(record.result);
+      const type = content?.type ?? "Типа не имеет";
+
+      return `
+      <li class="card ${record.id}">
         <div class="card__content">
           <p class="card__name">${record.result}</p>
-          <p class="card__description">Описание</p>
+          <p class="card__type card__type--${type.toLowerCase()}">${type}</p>
         </div>
       </li>
-    `,
-    );
+    `;
+    });
 
     this.cardsList.innerHTML = htmlStrings.join("");
   }

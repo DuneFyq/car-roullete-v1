@@ -6,6 +6,11 @@ interface Selectors {
   readonly root: string;
   readonly clear: string;
   readonly list: string;
+  readonly hideInput: string;
+}
+
+interface TabsStateClasses {
+  readonly listActive: string;
 }
 
 class HistoryController {
@@ -13,10 +18,17 @@ class HistoryController {
     root: ROOT_SELECTOR,
     clear: "[data-js-clear-history]",
     list: "[data-js-history-list]",
+    hideInput: "[data-js-hide-input]",
+    
+  };
+
+  private readonly stateClasses: TabsStateClasses = {
+    listActive: "history__list--active",
   };
 
   private readonly rootElement: HTMLElement;
   private readonly list: HTMLElement;
+  private readonly hideInput: HTMLInputElement;
   private readonly abortController: AbortController;
 
   constructor(rootElement: HTMLElement) {
@@ -25,14 +37,18 @@ class HistoryController {
     const list = this.rootElement.querySelector<HTMLButtonElement>(
       this.selectors.list,
     );
+    const hideInput = this.rootElement.querySelector<HTMLInputElement>(
+      this.selectors.hideInput,
+    );
 
-    if (!list) {
+    if (!list || !hideInput) {
       throw new Error(
         `SpinController: не найдены элементы внутри ${this.selectors.root}`,
       );
     }
 
     this.list = list;
+    this.hideInput = hideInput;
     this.abortController = new AbortController();
 
     historyService.loadFromStorage();
@@ -50,9 +66,18 @@ class HistoryController {
     const clearBtn = this.rootElement.querySelector(this.selectors.clear);
     clearBtn?.addEventListener("click", () => this.render(), { signal });
 
+    this.hideInput.addEventListener("change", () => this.hideList());
+
     document.addEventListener("history:updated", () => this.render(), {
       signal,
     });
+  }
+
+  private hideList() {
+    this.list.classList.toggle(
+      this.stateClasses.listActive,
+      !this.hideInput.checked
+    );
   }
 
   private render() {
@@ -77,6 +102,15 @@ class HistoryController {
     );
 
     this.list.innerHTML = htmlStrings.join("");
+
+    while (records.length > 10) {
+      const last = records.pop();
+      if (!last) break;
+
+      historyService.removeRecord(last.id);
+    }
+
+    this.hideList();
   }
 }
 

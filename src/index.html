@@ -253,9 +253,7 @@
                   </button>
 
                   <label class="tab-cars__filter-row">
-                    <span class="tab-cars__filter-text"
-                      >искл. premium, forza edition</span
-                    >
+                    <span class="tab-cars__filter-text">искл. premium</span>
                     <span class="switch tab-cars__switch-wrapper">
                       <input
                         class="switch__input"
@@ -265,24 +263,23 @@
                       <span class="switch__slider"></span>
                     </span>
                   </label>
+                </div>
 
-                  <div class="history" data-js-history>
-                    <h3 class="history__title">История</h3>
-                    <label class="history__hide-row">
-                      <span class="history__hide-text">скрыть</span>
-                      <span class="switch tab-cars__switch-wrapper">
-                        <input
-                          class="switch__input"
-                          name="hide-history"
-                          type="checkbox"
-                        />
-                        <span class="switch__slider"></span>
-                      </span>
-                    </label>
-                    <ul class="history__list" data-js-history-list>
-
-                    </ul>
-                  </div>
+                <div class="history" data-js-history>
+                  <h3 class="history__title">История</h3>
+                  <label class="history__hide-row">
+                    <span class="history__hide-text">скрыть</span>
+                    <span class="switch tab-cars__switch-wrapper">
+                      <input
+                        class="switch__input"
+                        name="hide-history"
+                        type="checkbox"
+                        data-js-hide-input
+                      />
+                      <span class="switch__slider"></span>
+                    </span>
+                  </label>
+                  <ul class="history__list" data-js-history-list></ul>
                 </div>
               </article>
             </div>
@@ -305,33 +302,28 @@
                 </button>
 
                 <h3 class="tab-cards__list-title">Список имеющихся карточек</h3>
-                <div class="tab-cards__sub-menu">
-                  <button class="button button--use-all tab-cards__use-all">
+                <div class="tab-cards__sub-menu" data-js-sub-menu>
+                  <button
+                    class="button button--use-all tab-cards__use-all"
+                    data-action="use-all"
+                  >
                     Использовать всё
                   </button>
                   <button
                     class="button button--use-specific tab-cards__use-specific"
+                    data-action="use-specific"
                   >
                     Использовать
                   </button>
-                  <button class="button button--add-card tab-cards__add-card">
+                  <button
+                    class="button button--add-card tab-cards__add-card"
+                    data-action="add-card"
+                  >
                     Добавить
                   </button>
                 </div>
-                <ul class="tab-cards__list" data-js-cards-list>
-                  <li class="card">
-                    <div class="card__content">
-                      <p class="card__name">Название</p>
-                      <p class="card__description">Описание</p>
-                    </div>
-                  </li>
-                  <li class="card">
-                    <div class="card__content">
-                      <p class="card__name">Название</p>
-                      <p class="card__description">Описание</p>
-                    </div>
-                  </li>
-                </ul>
+                <input type="text" class="tab-cards__new-card" />
+                <ul class="tab-cards__list" data-js-cards-list></ul>
 
                 <div class="history" data-js-history>
                   <h3 class="history__title">История</h3>
@@ -342,13 +334,12 @@
                         class="switch__input"
                         name="hide-history"
                         type="checkbox"
+                        data-js-hide-input
                       />
                       <span class="switch__slider"></span>
                     </span>
                   </label>
-                  <ul class="history__list" data-js-history-list>
- 
-                  </ul>
+                  <ul class="history__list" data-js-history-list></ul>
                 </div>
               </article>
             </div>

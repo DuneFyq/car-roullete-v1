@@ -17,6 +17,7 @@ class CarSpinController extends BaseSpinController {
   constructor(rootElement: HTMLElement, cars: CarMap) {
     super(rootElement);
     this.cars = cars;
+    this.init();
   }
 
   protected spin(): void {

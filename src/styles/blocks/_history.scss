@@ -33,10 +33,14 @@
     max-height: 250px;
     overflow-y: auto;
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: rem(8);
+    display: none;
+
+    &--active {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: rem(8);
+    }
   }
 
   &__hide-row {

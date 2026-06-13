@@ -1,18 +1,45 @@
 @use "../helpers" as *;
 
 .card {
+  padding-bottom: rem(5);
+
   &__content {
+    @include fluid-text(17, 13);
+
     cursor: pointer;
+    font-weight: 600;
     display: flex;
     flex-direction: row;
+    padding: rem(5);
     gap: rem(6);
+
+    background-color: var(--color-gray-10);
+    border-radius: var(--border-radius);
+
+    &--selected {
+      background-color: var(--color-accent);
+    }
+
+    @include mobile {
+      padding: rem(10);
+    }
   }
 
   &__name {
-    color: red;
+    color: var(--color-dark);
   }
 
-  &__description {
-    color: blue;
+  &__type {
+    &--utility {
+      color: #3300ff;
+    }
+
+    &--debuff {
+      color: #701bbf;
+    }
+
+    &--buff {
+      color: #4aae8d;
+    }
   }
 }

@@ -37,7 +37,9 @@ export abstract class BaseSpinController {
     this.buttonElement = button;
     this.resultElement = result;
     this.abortController = new AbortController();
+  }
 
+  protected init() {
     this.bindEvents();
   }
 
@@ -45,7 +47,7 @@ export abstract class BaseSpinController {
     this.abortController.abort();
   }
 
-  private bindEvents() {
+  protected bindEvents() {
     const { signal } = this.abortController;
     this.buttonElement.addEventListener("click", () => this.spin(), { signal });
   }
