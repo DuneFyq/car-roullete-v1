@@ -48,8 +48,8 @@ class CardSpinController extends BaseSpinController {
   private readonly addCardInputWrapper: HTMLElement;
   private readonly cards: CardMap;
 
-    constructor(rootElement: HTMLElement, cards: CardMap) {
-      super(rootElement);
+  constructor(rootElement: HTMLElement, cards: CardMap) {
+    super(rootElement);
 
     const list = this.rootElement.querySelector<HTMLUListElement>(
       this.selectors.list,
@@ -130,7 +130,7 @@ class CardSpinController extends BaseSpinController {
 
     const selectedIds = [...selectedElements]
       .map((contentElement) => {
-        const li = contentElement.closest(".card"); 
+        const li = contentElement.closest(".card");
         return li ? li.classList[1] : null;
       })
       .filter(Boolean) as string[];
@@ -139,8 +139,8 @@ class CardSpinController extends BaseSpinController {
 
     if (selectedIds.length === 0) return;
     selectedIds.forEach((id) => {
-      cardService.removeRecord(id)
-    })
+      cardService.removeRecord(id);
+    });
 
     this.render();
   }
@@ -178,7 +178,9 @@ class CardSpinController extends BaseSpinController {
     const content = this.cards.get(name);
     const type = content?.type ?? "Типа не имеет";
 
-    this.resultElement.value = `${name} - ${type}`;
+    if ("value" in this.resultElement) {
+      this.resultElement.value = `${name} - ${type}`;
+    }
 
     historyService.addRecord(name);
     cardService.addRecord(name);

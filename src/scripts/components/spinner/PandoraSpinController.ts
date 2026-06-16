@@ -11,7 +11,7 @@ class PandoraSpinController extends BaseSpinController {
   protected readonly selectors: CustomSpinSelectors = {
     root: ROOT_SELECTOR,
     button: "[data-js-spin-button]",
-    result: "[data-js-spin-result]"
+    result: "[data-js-spin-result]",
   };
 
   constructor(rootElement: HTMLElement) {
@@ -21,7 +21,9 @@ class PandoraSpinController extends BaseSpinController {
   }
 
   protected spin(): void {
-    this.resultElement.value = 'Пандора';
+    if ("value" in this.resultElement) {
+      this.resultElement.value = "Пандора";
+    }
   }
 }
 

@@ -21,7 +21,9 @@ class PandoraSpinController extends BaseSpinController {
   }
 
   protected spin(): void {
-    this.resultElement.value = 'Раунд';
+        if ("value" in this.resultElement) {
+      this.resultElement.value = "Пандора";
+    }
   }
 }
 
