@@ -48,8 +48,8 @@ class CardSpinController extends BaseSpinController {
   private readonly addCardInputWrapper: HTMLElement;
   private readonly cards: CardMap;
 
-  constructor(rootElement: HTMLElement, cards: CardMap) {
-    super(rootElement);
+    constructor(rootElement: HTMLElement, cards: CardMap) {
+      super(rootElement);
 
     const list = this.rootElement.querySelector<HTMLUListElement>(
       this.selectors.list,
@@ -130,7 +130,7 @@ class CardSpinController extends BaseSpinController {
 
     const selectedIds = [...selectedElements]
       .map((contentElement) => {
-        const li = contentElement.closest(".card");
+        const li = contentElement.closest(".card"); 
         return li ? li.classList[1] : null;
       })
       .filter(Boolean) as string[];

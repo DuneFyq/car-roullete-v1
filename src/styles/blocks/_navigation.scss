@@ -13,7 +13,8 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: rem(8);
+    gap: rem(10);
+    overflow-y: auto;
 
     @include mobile-s {
       flex-direction: row;
@@ -32,7 +33,11 @@
 
   &__button {
     width: 100%;
-    @include fluid-text(18, 12);
+    @include fluid-text(18, 14);
+
+    @include mobile {
+      padding: 10px 20px;
+    }
 
     &--active {
       background-color: var(--color-accent);

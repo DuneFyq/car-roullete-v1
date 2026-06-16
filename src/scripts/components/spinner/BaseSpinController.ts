@@ -15,7 +15,7 @@ export abstract class BaseSpinController {
 
   protected readonly rootElement: HTMLElement;
   protected readonly buttonElement: HTMLButtonElement;
-  protected readonly resultElement: HTMLInputElement;
+  protected readonly resultElement: HTMLElement;
   protected readonly abortController: AbortController;
 
   constructor(rootElement: HTMLElement) {
@@ -24,7 +24,7 @@ export abstract class BaseSpinController {
     const button = this.rootElement.querySelector<HTMLButtonElement>(
       this.selectors.button,
     );
-    const result = this.rootElement.querySelector<HTMLInputElement>(
+    const result = this.rootElement.querySelector<HTMLElement>(
       this.selectors.result,
     );
 

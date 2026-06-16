@@ -1,0 +1,24 @@
+@use "../helpers" as *;
+
+.tab-craft {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  row-gap: rem(16);
+
+  @include mobile {
+    row-gap: rem(24);
+  }
+
+  &__input {
+    @include fluid-text(20, 15);
+    text-align: center;
+    border: var(--border-input);
+    border-radius: var(--border-radius);
+    height: rem(40);
+
+    @include mobile {
+      height: rem(48);
+    }
+  }
+}

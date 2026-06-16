@@ -1,770 +1,950 @@
 {
   "Abarth": [
-    { "model": "595 esseesse", "years": "1968" },
-    { "model": "Fiat 131", "years": "1980" },
-    { "model": "695 Biposto", "years": "2016" }
+    { "model": "595 esseesse", "years": "1968", "class": "D" },
+    { "model": "Fiat 131", "years": "1980", "class": "D" }
   ],
   "Acura": [
-    { "model": "Integra Type R", "years": "2001" },
-    { "model": "RSX Type S", "years": "2002" },
-    { "model": "NSX Type S", "years": "2022" },
-    { "model": "Integra A-Spec", "years": "2023" }
+    { "model": "Integra Type R", "years": "2001", "class": "C" },
+    { "model": "RSX Type S", "years": "2002", "class": "C" },
+    { "model": "NSX Type S", "years": "2022", "class": "S1" },
+    { "model": "Integra A-Spec", "years": "2023", "class": "C" }
   ],
   "Alfa Romeo": [
-    { "model": "Giulia Sprint GTA Stradale", "years": "1965" },
-    { "model": "Giulia TZ2", "years": "1965" },
-    { "model": "33 Stradale", "years": "1968" },
-    { "model": "SE 048SP", "years": "1990" },
-    { "model": "155 Q4", "years": "1992" },
-    { "model": "8C Competizione", "years": "2007" },
-    { "model": "4C", "years": "2014" },
-    { "model": "Giulia Quadrifoglio", "years": "2017" },
-    { "model": "Giulia GTAm", "years": "2021" }
+    { "model": "Giulia Sprint GTA Stradale", "years": "1965", "class": "D" },
+    { "model": "Giulia TZ2", "years": "1965", "class": "B" },
+    { "model": "33 Stradale", "years": "1968", "class": "B" },
+    { "model": "155 Q4", "years": "1992", "class": "C" },
+    { "model": "8C Competizione", "years": "2007", "class": "A" },
+    { "model": "4C", "years": "2014", "class": "A" },
+    { "model": "Giulia Quadrifoglio", "years": "2017", "class": "A" }
   ],
   "Alumicraft": [
-    { "model": "Class 10 Race Car", "years": "2015" },
-    { "model": "#122 Class 1 Buggy", "years": "2021" },
-    { "model": "#6165 Trick Truck", "years": "2022" }
+    { "model": "Class 10 Race Car", "years": "2015", "class": "B" },
+    { "model": "#122 Class 1 Buggy", "years": "2021", "class": "B" },
+    { "model": "#6165 Trick Truck", "years": "2022", "class": "C" }
   ],
-  "AMG Transport Dynamics": [{ "model": "M12S Warthog CST", "years": "2554" }],
-  "Apollo": [{ "model": "Intensa Emozione", "years": "2019" }],
+  "AMG Transport Dynamics": [
+    { "model": "M12S Warthog CST", "years": "2554", "class": "A" }
+  ],
+  "Apollo": [{ "model": "Intensa Emozione", "years": "2019", "class": "R" }],
   "Ariel": [
-    { "model": "Atom 500 V8", "years": "2013" },
-    { "model": "Nomad", "years": "2016" }
+    { "model": "Atom 500 V8", "years": "2013", "class": "S2" },
+    { "model": "Nomad", "years": "2016", "class": "A" }
   ],
   "Aston Martin": [
-    { "model": "DB5", "years": "1964" },
-    { "model": "Vulcan", "years": "2016" },
-    { "model": "DB11", "years": "2017" },
-    { "model": "Vulcan AMR Pro", "years": "2017" },
-    { "model": "DBS Superleggera", "years": "2019" },
-    { "model": "Valhalla Concept Car", "years": "2019" },
-    { "model": "Vantage", "years": "2019" },
-    { "model": "DBX", "years": "2021" },
-    { "model": "Valkyrie AMR Pro", "years": "2022" },
-    { "model": "Valkyrie", "years": "2023" }
+    { "model": "DB5", "years": "1964", "class": "C" },
+    { "model": "Vulcan", "years": "2016", "class": "R" },
+    { "model": "DB11", "years": "2017", "class": "A" },
+    { "model": "Vulcan AMR Pro", "years": "2017", "class": "R" },
+    { "model": "DBS Superleggera", "years": "2019", "class": "S1" },
+    { "model": "Valhalla Concept Car", "years": "2019", "class": "R" },
+    { "model": "Vantage", "years": "2019", "class": "A" },
+    { "model": "Valkyrie AMR Pro", "years": "2022", "class": "R" },
+    { "model": "Valkyrie", "years": "2023", "class": "R" }
   ],
   "Audi": [
-    { "model": "Sport quattro", "years": "1984" },
-    { "model": "#2 Sport quattro S1", "years": "1986" },
-    { "model": "RS 4 Avant", "years": "2001" },
-    { "model": "RS 6", "years": "2003" },
-    { "model": "RS 4", "years": "2006" },
-    { "model": "R8 LMS", "years": "2009" },
-    { "model": "RS 6", "years": "2009" },
-    { "model": "TT RS Coupé", "years": "2010" },
-    { "model": "RS 3 Sportback", "years": "2011" },
-    { "model": "RS 5 Coupé", "years": "2011" },
-    { "model": "R8 Coupé V10 plus 5.2 FSI quattro", "years": "2013" },
-    { "model": "RS 4 Avant", "years": "2013" },
-    { "model": "RS 7 Sportback", "years": "2013" },
-    { "model": "RS 6 Avant", "years": "2015" },
-    { "model": "S1", "years": "2015" },
-    { "model": "R8 V10 plus", "years": "2016" },
-    { "model": "RS 4 Avant", "years": "2018" },
-    { "model": "R8 V10 performance", "years": "2020" },
-    { "model": "RS 3 Sedan", "years": "2020" },
-    { "model": "RS 6 Avant", "years": "2021" },
-    { "model": "RS 7 Sportback", "years": "2021" },
-    { "model": "RS e-tron GT", "years": "2021" },
-    { "model": "R8 Coupé V10 GT RWD", "years": "2023" }
+    { "model": "Sport quattro", "years": "1984", "class": "B" },
+    { "model": "#2 Sport quattro S1", "years": "1986", "class": "S1" },
+    { "model": "RS 4 Avant", "years": "2001", "class": "B" },
+    { "model": "RS 6", "years": "2003", "class": "B" },
+    { "model": "RS 4", "years": "2006", "class": "B" },
+    { "model": "R8 LMS", "years": "2009", "class": "R" },
+    { "model": "RS 6", "years": "2009", "class": "B" },
+    { "model": "TT RS Coupé", "years": "2010", "class": "B" },
+    { "model": "RS 3 Sportback", "years": "2011", "class": "B" },
+    { "model": "RS 5 Coupé", "years": "2011", "class": "A" },
+    {
+      "model": "R8 Coupé V10 plus 5.2 FSI quattro",
+      "years": "2013",
+      "class": "A"
+    },
+    { "model": "RS 4 Avant", "years": "2013", "class": "A" },
+    { "model": "RS 7 Sportback", "years": "2013", "class": "A" },
+    { "model": "RS 6 Avant", "years": "2015", "class": "A" },
+    { "model": "S1", "years": "2015", "class": "B" },
+    { "model": "R8 V10 plus", "years": "2016", "class": "S1" },
+    { "model": "RS 4 Avant", "years": "2018", "class": "A" },
+    { "model": "R8 V10 performance", "years": "2020", "class": "S1" },
+    { "model": "RS 3 Sedan", "years": "2020", "class": "A" },
+    { "model": "RS 6 Avant", "years": "2021", "class": "A" },
+    { "model": "RS 7 Sportback", "years": "2021", "class": "A" },
+    { "model": "RS e-tron GT", "years": "2021", "class": "A" }
   ],
-  "Austin-Healey": [{ "model": "3000 MkIII", "years": "1965" }],
-  "Autozam": [{ "model": "AZ-1", "years": "1993" }],
-  "BAC": [{ "model": "Mono", "years": "2014" }],
+  "Austin-Healey": [{ "model": "3000 MkIII", "years": "1965", "class": "D" }],
+  "Autozam": [{ "model": "AZ-1", "years": "1993", "class": "D" }],
+  "BAC": [{ "model": "Mono", "years": "2014", "class": "S1" }],
   "Bentley": [
-    { "model": "Bentayga", "years": "2016" },
-    { "model": "Continental GT Convertible", "years": "2021" }
+    { "model": "Bentayga", "years": "2016", "class": "A" },
+    { "model": "Continental GT Convertible", "years": "2021", "class": "A" }
   ],
   "BMW": [
-    { "model": "Isetta 300 Export", "years": "1957" },
-    { "model": "2002 Turbo", "years": "1973" },
-    { "model": "M1", "years": "1981" },
-    { "model": "M3", "years": "1988" },
-    { "model": "M5", "years": "1988" },
-    { "model": "850CSi", "years": "1995" },
-    { "model": "M5", "years": "1995" },
-    { "model": "M3", "years": "1997" },
-    { "model": "M5", "years": "2003" },
-    { "model": "M3", "years": "2005" },
-    { "model": "M3", "years": "2008" },
-    { "model": "Z4 M Coupé", "years": "2008" },
-    { "model": "M5", "years": "2009" },
-    { "model": "M3 GTS", "years": "2010" },
-    { "model": "X5 M", "years": "2011" },
-    { "model": "M5", "years": "2012" },
-    { "model": "M4 Coupé", "years": "2014" },
-    { "model": "i8", "years": "2015" },
-    { "model": "M4 GTS", "years": "2016" },
-    { "model": "Z4 Roadster", "years": "2019" },
-    { "model": "M2 Competition Coupé", "years": "2020" },
-    { "model": "M8 Competition Coupé", "years": "2020" },
-    { "model": "M4 Competition Coupé", "years": "2021" },
-    { "model": "M4 Competition Coupé Welcome Pack", "years": "2021" },
-    { "model": "iX xDrive50", "years": "2022" },
-    { "model": "M5 CS", "years": "2022" },
-    { "model": "M2", "years": "2023" },
-    { "model": "M2 Forza Edition", "years": "2023" },
-    { "model": "X6 M Competition", "years": "2024" }
+    { "model": "Isetta 300 Export", "years": "1957", "class": "D" },
+    { "model": "2002 Turbo", "years": "1973", "class": "C" },
+    { "model": "M1", "years": "1981", "class": "B" },
+    { "model": "M3", "years": "1988", "class": "C" },
+    { "model": "M5", "years": "1988", "class": "C" },
+    { "model": "850CSi", "years": "1995", "class": "C" },
+    { "model": "M5", "years": "1995", "class": "B" },
+    { "model": "M3", "years": "1997", "class": "B" },
+    { "model": "M5", "years": "2003", "class": "B" },
+    { "model": "M3", "years": "2005", "class": "B" },
+    { "model": "M3", "years": "2008", "class": "S1" },
+    { "model": "Z4 M Coupé", "years": "2008", "class": "B" },
+    { "model": "M5", "years": "2009", "class": "B" },
+    { "model": "M3 GTS", "years": "2010", "class": "A" },
+    { "model": "X5 M", "years": "2011", "class": "B" },
+    { "model": "M5", "years": "2012", "class": "A" },
+    { "model": "M4 Coupé", "years": "2014", "class": "A" },
+    { "model": "i8", "years": "2015", "class": "A" },
+    { "model": "M4 GTS", "years": "2016", "class": "S1" },
+    { "model": "Z4 Roadster", "years": "2019", "class": "A" },
+    { "model": "M2 Competition Coupé", "years": "2020", "class": "A" },
+    { "model": "M8 Competition Coupé", "years": "2020", "class": "A" },
+    { "model": "M4 Competition Coupé", "years": "2021", "class": "S1" },
+    { "model": "iX xDrive50", "years": "2022", "class": "B" },
+    { "model": "M5 CS", "years": "2022", "class": "S1" },
+    { "model": "M2", "years": "2023", "class": "A" },
+    { "model": "M2 Forza Edition", "years": "2023", "class": "S1" },
+    { "model": "X6 M Competition", "years": "2024", "class": "A" }
   ],
-  "Buick": [{ "model": "Regal GNX", "years": "1987" }],
+  "Buick": [{ "model": "Regal GNX", "years": "1987", "class": "C" }],
   "Cadillac": [
-    { "model": "XTS Limousine", "years": "2013" },
-    { "model": "ATS-V", "years": "2016" },
-    { "model": "CTS-V Sedan", "years": "2016" },
-    { "model": "CT4-V Blackwing", "years": "2022" },
-    { "model": "CT5-V Blackwing", "years": "2022" }
+    { "model": "XTS Limousine", "years": "2013", "class": "D" },
+    { "model": "ATS-V", "years": "2016", "class": "A" },
+    { "model": "CTS-V Sedan", "years": "2016", "class": "A" },
+    { "model": "CT4-V Blackwing", "years": "2022", "class": "A" },
+    { "model": "CT5-V Blackwing", "years": "2022", "class": "S1" }
   ],
-  "Can-Am": [{ "model": "Maverick X RS Turbo R", "years": "2018" }],
+  "Can-Am": [
+    { "model": "Maverick X RS Turbo R", "years": "2018", "class": "B" }
+  ],
   "Casey Currie Motorsports": [
-    { "model": "#4402 Ultra 4 'Trophy Jeep'", "years": "2019" }
+    { "model": "#4402 Ultra 4 'Trophy Jeep'", "years": "2019", "class": "A" }
   ],
   "Chevrolet": [
-    { "model": "Corvette", "years": "1953" },
-    { "model": "150 Utility Sedan", "years": "1955" },
-    { "model": "Bel Air", "years": "1957" },
-    { "model": "Corvette", "years": "1960" },
-    { "model": "Impala Super Sport 409", "years": "1964" },
-    { "model": "Corvette Stingray 427", "years": "1967" },
-    { "model": "Camaro Super Sport Coupe", "years": "1969" },
-    { "model": "Nova Super Sport 396", "years": "1969" },
-    { "model": "Camaro Z28", "years": "1970" },
-    { "model": "Chevelle Super Sport 454", "years": "1970" },
-    { "model": "Corvette ZR-1", "years": "1970" },
-    { "model": "El Camino Super Sport 454", "years": "1970" },
-    { "model": "K-10 Custom", "years": "1972" },
-    { "model": "Camaro Z28", "years": "1979" },
-    { "model": "Monte Carlo Super Sport", "years": "1988" },
-    { "model": "Corvette ZR-1", "years": "1995" },
-    { "model": "Impala Super Sport", "years": "1996" },
-    { "model": "Corvette Z06", "years": "2002" },
-    { "model": "Corvette ZR1", "years": "2009" },
-    { "model": "Camaro Z/28", "years": "2015" },
-    { "model": "Corvette Z06", "years": "2015" },
-    { "model": "Camaro ZL1", "years": "2017" },
-    { "model": "Camaro ZL1 1LE", "years": "2018" },
-    { "model": "Corvette ZR1", "years": "2019" },
-    { "model": "Corvette Stingray Coupe", "years": "2020" },
-    { "model": "Silverado LT Trail Boss", "years": "2020" },
-    { "model": "Corvette Z06", "years": "2023" },
-    { "model": "Corvette E-Ray", "years": "2024" }
+    { "model": "Corvette", "years": "1953", "class": "D" },
+    { "model": "150 Utility Sedan", "years": "1955", "class": "D" },
+    { "model": "Bel Air", "years": "1957", "class": "D" },
+    { "model": "Corvette", "years": "1960", "class": "C" },
+    { "model": "Impala Super Sport 409", "years": "1964", "class": "C" },
+    { "model": "Corvette Stingray 427", "years": "1967", "class": "B" },
+    { "model": "Camaro Super Sport Coupe", "years": "1969", "class": "C" },
+    { "model": "Nova Super Sport 396", "years": "1969", "class": "C" },
+    { "model": "Camaro Z28", "years": "1970", "class": "C" },
+    { "model": "Chevelle Super Sport 454", "years": "1970", "class": "C" },
+    { "model": "Corvette ZR-1", "years": "1970", "class": "C" },
+    { "model": "El Camino Super Sport 454", "years": "1970", "class": "C" },
+    { "model": "K-10 Custom", "years": "1972", "class": "D" },
+    { "model": "Camero Z28", "years": "1979", "class": "D" },
+    { "model": "Monte Carlo Super Sport", "years": "1988", "class": "D" },
+    { "model": "Corvette ZR-1", "years": "1995", "class": "B" },
+    { "model": "Impala Super Sport", "years": "1996", "class": "C" },
+    { "model": "Corvette Z06", "years": "2002", "class": "A" },
+    { "model": "Corvette ZR1", "years": "2009", "class": "S1" },
+    { "model": "Camaro Z/28", "years": "2015", "class": "A" },
+    { "model": "Corvette Z06", "years": "2015", "class": "S1" },
+    { "model": "Camaro ZL1", "years": "2017", "class": "S1" },
+    { "model": "Camaro ZL1 1LE", "years": "2018", "class": "S1" },
+    { "model": "Corvette ZR1", "years": "2019", "class": "S1" },
+    { "model": "Corvette Stingray Coupe", "years": "2020", "class": "A" },
+    { "model": "Silverado LT Trail Boss", "years": "2020", "class": "C" },
+    { "model": "Corvette Z06", "years": "2023", "class": "S1" },
+    { "model": "Corvette E-Ray", "years": "2024", "class": "S1" }
   ],
-  "Datsun": [
-    { "model": "2000 Roadster", "years": "1969" },
-    { "model": "510", "years": "1970" },
+  "Datsun": [{ "model": "510", "years": "1970", "class": "D" }],
+  "DeBerti": [
+    { "model": "Jeep Wrangler Unlimited", "years": "2013", "class": "A" },
     {
-      "model": "#269 Attacking the Clock Racing 240Z 'All Carbon Hill Climb Beast'",
-      "years": "1972"
+      "model": "Chevrolet Silverado 1500 Drift Truck",
+      "years": "2018",
+      "class": "S1"
+    },
+    {
+      "model": "Ford Super Duty F-250 Lariat 'Transformer'",
+      "years": "2019",
+      "class": "B"
+    },
+    {
+      "model": "Toyota Tacoma TRD 'The Performance Truck'",
+      "years": "2019",
+      "class": "S1"
     }
   ],
-  "DeBerti": [
-    { "model": "Jeep Wrangler Unlimited", "years": "2013" },
-    { "model": "Chevrolet Silverado 1500 Drift Truck", "years": "2018" },
-    { "model": "Ford Super Duty F-250 Lariat 'Transformer'", "years": "2019" },
-    { "model": "Toyota Tacoma TRD 'The Performance Truck'", "years": "2019" }
-  ],
-  "DeLorean": [{ "model": "DMC-12", "years": "1982" }],
+  "DeLorean": [{ "model": "DMC-12", "years": "1982", "class": "D" }],
   "Dodge": [
-    { "model": "Dart HEMI Super Stock", "years": "1968" },
-    { "model": "Charger Daytona HEMI", "years": "1969" },
-    { "model": "Charger R/T", "years": "1969" },
-    { "model": "Challenger R/T", "years": "1970" },
-    { "model": "Coronet Super Bee", "years": "1970" },
-    { "model": "Viper GTS ACR", "years": "1999" },
-    { "model": "Viper GTS ACR Forza Edition", "years": "1999" },
-    { "model": "Ram SRT-10", "years": "2006" },
-    { "model": "Viper SRT-10 ACR", "years": "2008" },
-    { "model": "Challenger SRT Hellcat", "years": "2015" },
-    { "model": "Charger SRT Hellcat", "years": "2015" },
-    { "model": "Viper ACR", "years": "2016" },
-    { "model": "Challenger SRT Demon", "years": "2018" },
-    { "model": "Durango SRT Hellcat", "years": "2021" },
-    { "model": "Challenger SRT Super Stock", "years": "2022" }
+    { "model": "Dart HEMI Super Stock", "years": "1968", "class": "B" },
+    { "model": "Charger Daytona HEMI", "years": "1969", "class": "C" },
+    { "model": "Charger R/T", "years": "1969", "class": "C" },
+    { "model": "Challenger R/T", "years": "1970", "class": "C" },
+    { "model": "Coronet Super Bee", "years": "1970", "class": "C" },
+    { "model": "Viper GTS ACR", "years": "1999", "class": "B" },
+    { "model": "Viper SRT-10 ACR", "years": "2008", "class": "S1" },
+    { "model": "Challenger SRT Hellcat", "years": "2015", "class": "A" },
+    { "model": "Charger SRT Hellcat", "years": "2015", "class": "A" },
+    { "model": "Viper ACR", "years": "2016", "class": "S1" },
+    { "model": "Challenger SRT Demon", "years": "2018", "class": "A" },
+    { "model": "Durango SRT Hellcat", "years": "2021", "class": "A" },
+    { "model": "Challenger SRT Super Stock", "years": "2022", "class": "A" }
   ],
   "Ferrari": [
-    { "model": "250 GT Berlinetta Lusso", "years": "1962" },
-    { "model": "250 GTO", "years": "1962" },
-    { "model": "#24 Ferrari Spa 330 P4", "years": "1967" },
-    { "model": "275 GTB4 Spider", "years": "1967" },
-    { "model": "Dino 246 GT", "years": "1969" },
-    { "model": "512 S", "years": "1970" },
-    { "model": "288 GTO", "years": "1984" },
-    { "model": "F40", "years": "1987" },
-    { "model": "F40 Competizione", "years": "1989" },
-    { "model": "512 TR", "years": "1992" },
-    { "model": "F355 Berlinetta", "years": "1994" },
-    { "model": "F50", "years": "1995" },
-    { "model": "F50 GT", "years": "1996" },
-    { "model": "Enzo Ferrari", "years": "2002" },
-    { "model": "FXX", "years": "2005" },
-    { "model": "430 Scuderia", "years": "2007" },
-    { "model": "458 Italia", "years": "2009" },
-    { "model": "599XX", "years": "2010" },
-    { "model": "599XX Evolution", "years": "2012" },
-    { "model": "458 Speciale", "years": "2013" },
-    { "model": "LaFerrari", "years": "2013" },
-    { "model": "FXX K", "years": "2014" },
-    { "model": "488 GTB", "years": "2015" },
-    { "model": "F12tdf", "years": "2015" },
-    { "model": "812 Superfast", "years": "2017" },
-    { "model": "J50", "years": "2017" },
-    { "model": "J50 Preorder Car", "years": "2017" },
-    { "model": "FXX-K Evo", "years": "2018" },
-    { "model": "FXX-K Evo Welcome Pack", "years": "2018" },
-    { "model": "Portofino", "years": "2018" },
-    { "model": "488 Pista", "years": "2019" },
-    { "model": "F8 Tributo", "years": "2019" },
-    { "model": "Monza SP2", "years": "2019" },
-    { "model": "Roma", "years": "2020" },
-    { "model": "SF90 Stradale", "years": "2020" },
-    { "model": "296 GTB", "years": "2022" },
-    { "model": "F80", "years": "2025" }
+    { "model": "250 GT Berlinetta Lusso", "years": "1962", "class": "C" },
+    { "model": "250 GTO", "years": "1962", "class": "C" },
+    { "model": "#24 Ferrari Spa 330 P4", "years": "1967", "class": "A" },
+    { "model": "Dino 246 GT", "years": "1969", "class": "C" },
+    { "model": "512 S", "years": "1970", "class": "S1" },
+    { "model": "288 GTO", "years": "1984", "class": "A" },
+    { "model": "F40", "years": "1987", "class": "A" },
+    { "model": "F40 Competizione", "years": "1989", "class": "R" },
+    { "model": "512 TR", "years": "1992", "class": "A" },
+    { "model": "F355 Berlinetta", "years": "1994", "class": "B" },
+    { "model": "F50", "years": "1995", "class": "A" },
+    { "model": "F50 GT", "years": "1996", "class": "R" },
+    { "model": "Enzo Ferrari", "years": "2002", "class": "S1" },
+    { "model": "FXX", "years": "2005", "class": "S2" },
+    { "model": "430 Scuderia", "years": "2007", "class": "S1" },
+    { "model": "458 Italia", "years": "2009", "class": "S1" },
+    { "model": "599XX", "years": "2010", "class": "R" },
+    { "model": "599XX Evolution", "years": "2012", "class": "R" },
+    { "model": "458 Speciale", "years": "2013", "class": "S1" },
+    { "model": "LaFerrari", "years": "2013", "class": "S2" },
+    { "model": "FXX K", "years": "2014", "class": "R" },
+    { "model": "488 GTB", "years": "2015", "class": "S1" },
+    { "model": "F12tdf", "years": "2015", "class": "S1" },
+    { "model": "812 Superfast", "years": "2017", "class": "S1" },
+    { "model": "J50", "years": "2017", "class": "S1" },
+    { "model": "FXX-K Evo", "years": "2018", "class": "R" },
+    { "model": "Portofino", "years": "2018", "class": "S1" },
+    { "model": "488 Pista", "years": "2019", "class": "S2" },
+    { "model": "F8 Tributo", "years": "2019", "class": "S2" },
+    { "model": "Monza SP2", "years": "2019", "class": "S1" },
+    { "model": "SF90 Stradale", "years": "2020", "class": "S2" }
   ],
   "Ford": [
-    { "model": "De Luxe Five-Window Coupe", "years": "1932" },
-    { "model": "Mustang GT Coupe", "years": "1965" },
-    { "model": "#2 GT40 Mk II", "years": "1966" },
-    { "model": "Mustang GT 2+2 Fastback", "years": "1968" },
-    { "model": "Mustang GT 2+2 Fastback Forza Edition", "years": "1968" },
-    { "model": "Mustang Boss 302", "years": "1969" },
-    { "model": "Capri RS3100", "years": "1973" },
-    { "model": "XB Falcon GT", "years": "1973" },
-    { "model": "#5 Escort RS1800 MkII", "years": "1977" },
-    { "model": "RS200 Evolution", "years": "1985" },
-    { "model": "F-150 XLT Lariat", "years": "1986" },
-    { "model": "F-150 XLT Lariat Forza Edition", "years": "1986" },
-    { "model": "Sierra Cosworth RS500", "years": "1987" },
-    { "model": "Escort RS Cosworth", "years": "1992" },
-    { "model": "Mustang SVT Cobra R", "years": "1993" },
-    { "model": "Supervan 3", "years": "1994" },
-    { "model": "Racing Puma", "years": "1999" },
-    { "model": "Mustang SVT Cobra R", "years": "2000" },
-    { "model": "#4 Ford Focus RS", "years": "2001" },
-    { "model": "F-150 SVT Lightning", "years": "2003" },
-    { "model": "Focus RS", "years": "2003" },
-    { "model": "GT", "years": "2005" },
-    { "model": "Focus RS", "years": "2009" },
-    { "model": "Crown Victoria Police Interceptor", "years": "2010" },
-    { "model": "Transit SuperSportVan", "years": "2011" },
-    { "model": "Mustang Shelby GT500", "years": "2013" },
-    { "model": "#11 Rockstar F-150 Trophy Truck", "years": "2014" },
-    { "model": "FPV Limited Edition Pursuit Ute", "years": "2014" },
-    { "model": "Ranger T6 Rally Raid", "years": "2014" },
-    { "model": "Mustang Shelby GT350R", "years": "2016" },
-    { "model": "#14 Rahal Letterman Lanigan Racing Fiesta", "years": "2017" },
-    { "model": "#25 'Brocky' Ultra4 Bronco RTR", "years": "2017" },
-    { "model": "Focus RS", "years": "2017" },
-    { "model": "GT", "years": "2017" },
-    { "model": "M-Sport Fiesta RS", "years": "2017" },
-    { "model": "Mustang RTR Spec 5", "years": "2018" },
-    { "model": "#2069 Ford Performance Bronco R", "years": "2020" },
-    { "model": "Mustang Shelby GT500", "years": "2020" },
-    { "model": "Super Duty F-450 DRW PLATINUM", "years": "2020" },
-    { "model": "Super Duty F-450 DRW PLATINUM Forza Edition", "years": "2020" },
-    { "model": "Bronco Raptor", "years": "2022" },
-    { "model": "F-150 Lightning", "years": "2022" },
-    { "model": "Focus ST", "years": "2022" },
-    { "model": "Supervan 4", "years": "2022" },
-    { "model": "F-150 Raptor R", "years": "2023" },
-    { "model": "F-150 Raptor R Welcome Pack", "years": "2023" },
-    { "model": "Fiesta ST", "years": "2023" },
-    { "model": "Mustang Dark Horse", "years": "2024" },
-    { "model": "Mustang GT", "years": "2024" }
+    { "model": "De Luxe Five-Window Coupe", "years": "1932", "class": "D" },
+    { "model": "Mustang GT Coupe", "years": "1965", "class": "D" },
+    { "model": "#2 GT40 Mk II", "years": "1966", "class": "A" },
+    { "model": "Mustang GT 2+2 Fastback", "years": "1968", "class": "D" },
+    {
+      "model": "Mustang GT 2+2 Fastback Forza Edition",
+      "years": "1968",
+      "class": "A"
+    },
+    { "model": "Mustang Boss 302", "years": "1969", "class": "C" },
+    { "model": "Capri RS3100", "years": "1973", "class": "D" },
+    { "model": "XB Falcon GT", "years": "1973", "class": "C" },
+    { "model": "#5 Escort RS1800 MkII", "years": "1977", "class": "B" },
+    { "model": "RS200 Evolution", "years": "1985", "class": "S1" },
+    { "model": "F-150 XLT Lariat", "years": "1986", "class": "D" },
+    {
+      "model": "F-150 XLT Lariat Forza Edition",
+      "years": "1986",
+      "class": "S2"
+    },
+    { "model": "Sierra Cosworth RS500", "years": "1987", "class": "C" },
+    { "model": "Escort RS Cosworth", "years": "1992", "class": "C" },
+    { "model": "Mustang SVT Cobra R", "years": "1993", "class": "C" },
+    { "model": "Supervan 3", "years": "1994", "class": "S1" },
+    { "model": "Racing Puma", "years": "1999", "class": "C" },
+    { "model": "Mustang SVT Cobra R", "years": "2000", "class": "B" },
+    { "model": "#4 Ford Focus RS", "years": "2001", "class": "A" },
+    { "model": "Focus RS", "years": "2003", "class": "C" },
+    { "model": "GT", "years": "2005", "class": "A" },
+    { "model": "Focus RS", "years": "2009", "class": "B" },
+    {
+      "model": "Crown Victoria Police Interceptor",
+      "years": "2010",
+      "class": "D"
+    },
+    { "model": "Transit SuperSportVan", "years": "2011", "class": "D" },
+    { "model": "Mustang Shelby GT500", "years": "2013", "class": "A" },
+    {
+      "model": "#11 Rockstar F-150 Trophy Truck",
+      "years": "2014",
+      "class": "A"
+    },
+    {
+      "model": "FPV Limited Edition Pursuit Ute",
+      "years": "2014",
+      "class": "B"
+    },
+    { "model": "Ranger T6 Rally Raid", "years": "2014", "class": "B" },
+    { "model": "Mustang Shelby GT350R", "years": "2016", "class": "S1" },
+    {
+      "model": "#14 Rahal Letterman Lanigan Racing Fiesta",
+      "years": "2017",
+      "class": "S1"
+    },
+    {
+      "model": "#25 'Brocky' Ultra4 Bronco RTR",
+      "years": "2017",
+      "class": "A"
+    },
+    { "model": "Focus RS", "years": "2017", "class": "B" },
+    { "model": "GT", "years": "2017", "class": "S1" },
+    { "model": "M-Sport Fiesta RS", "years": "2017", "class": "S1" },
+    { "model": "Mustang RTR Spec 5", "years": "2018", "class": "A" },
+    {
+      "model": "#2069 Ford Performance Bronco R",
+      "years": "2020",
+      "class": "C"
+    },
+    { "model": "Mustang Shelby GT500", "years": "2020", "class": "S1" },
+    { "model": "Super Duty F-450 DRW PLATINUM", "years": "2020", "class": "D" },
+    {
+      "model": "Super Duty F-450 DRW PLATINUM Forza Edition",
+      "years": "2020",
+      "class": "A"
+    },
+    { "model": "Bronco Raptor", "years": "2022", "class": "C" },
+    { "model": "F-150 Lightning", "years": "2022", "class": "C" },
+    { "model": "Focus ST", "years": "2022", "class": "B" },
+    { "model": "Supervan 4", "years": "2022", "class": "R" },
+    { "model": "F-150 Raptor R", "years": "2023", "class": "B" },
+    { "model": "Fiesta ST", "years": "2023", "class": "C" },
+    { "model": "Mustang Dark Horse", "years": "2024", "class": "A" },
+    { "model": "Mustang GT", "years": "2024", "class": "A" }
   ],
   "Formula Drift": [
-    { "model": "#98 BMW 325i", "years": "1989" },
-    { "model": "#34 Toyota Supra MkIV", "years": "1995" },
-    { "model": "#777 Nissan 240SX", "years": "1997" },
-    { "model": "#43 Dodge Viper SRT-10 ACR", "years": "2006" },
-    { "model": "#117 599 GTB Fiorano", "years": "2007" },
-    { "model": "#99 Mazda RX-8", "years": "2009" },
-    { "model": "#777 Chevrolet Corvette", "years": "2013" },
-    { "model": "#13 Ford Mustang", "years": "2015" },
-    { "model": "#530 HSV Maloo GEN-F", "years": "2016" },
-    { "model": "#411 Toyota Corolla Hatchback", "years": "2019" },
-    { "model": "#151 Toyota GR Supra", "years": "2020" },
-    { "model": "#91 BMW M2", "years": "2020" },
-    { "model": "#64 Forsberg Racing Nissan Z", "years": "2023" }
+    { "model": "#98 BMW 325i", "years": "1989", "class": "S1" },
+    { "model": "#34 Toyota Supra MkIV", "years": "1995", "class": "S1" },
+    { "model": "#777 Nissan 240SX", "years": "1997", "class": "S1" },
+    { "model": "#43 Dodge Viper SRT-10 ACR", "years": "2006", "class": "S1" },
+    { "model": "#117 599 GTB Fiorano", "years": "2007", "class": "S1" },
+    { "model": "#99 Mazda RX-8", "years": "2009", "class": "S1" },
+    { "model": "#777 Chevrolet Corvette", "years": "2013", "class": "S1" },
+    { "model": "#13 Ford Mustang", "years": "2015", "class": "S1" },
+    { "model": "#530 HSV Maloo GEN-F", "years": "2016", "class": "S1" },
+    {
+      "model": "#411 Toyota Corolla Hatchback",
+      "years": "2019",
+      "class": "S1"
+    },
+    { "model": "#151 Toyota GR Supra", "years": "2020", "class": "S1" },
+    { "model": "#91 BMW M2", "years": "2020", "class": "S1" },
+    { "model": "#64 Forsberg Racing Nissan Z", "years": "2023", "class": "S1" }
   ],
-  "Funco Motorsports": [{ "model": "F9", "years": "2018" }],
+  "Funco Motorsports": [{ "model": "F9", "years": "2018", "class": "S1" }],
   "GMC": [
-    { "model": "Jimmy", "years": "1970" },
-    { "model": "Syclone", "years": "1991" },
-    { "model": "Typhoon", "years": "1992" },
-    { "model": "HUMMER EV Pickup", "years": "2022" }
+    { "model": "Jimmy", "years": "1970", "class": "C" },
+    { "model": "Syclone", "years": "1991", "class": "C" },
+    { "model": "Typhoon", "years": "1992", "class": "C" },
+    { "model": "HUMMER EV Pickup", "years": "2022", "class": "A" }
   ],
-  "Gordon Murray Automotive": [{ "model": "T.50", "years": "2020" }],
-  "GR": [{ "model": "GT Prototype", "years": "2025" }],
+  "Gordon Murray Automotive": [
+    { "model": "T.50", "years": "2020", "class": "R" }
+  ],
+  "GR": [{ "model": "GT Prototype", "years": "2025", "class": "S1" }],
   "Hennessey": [
-    { "model": "Venom GT", "years": "2012" },
-    { "model": "Ford F-150 VelociRaptor 6X6", "years": "2019" },
-    { "model": "Venom F5", "years": "2021" }
+    { "model": "Venom GT", "years": "2012", "class": "R" },
+    { "model": "Ford F-150 VelociRaptor 6X6", "years": "2019", "class": "B" },
+    { "model": "Venom F5", "years": "2021", "class": "R" }
   ],
-  "Holden": [{ "model": "Torana A9X", "years": "1977" }],
+  "Holden": [{ "model": "Torana A9X", "years": "1977", "class": "C" }],
   "Honda": [
-    { "model": "S800", "years": "1970" },
-    { "model": "Civic RS", "years": "1974" },
-    { "model": "City E II", "years": "1984" },
-    { "model": "Civic CRX Mugen", "years": "1984" },
-    { "model": "Civic Si", "years": "1986" },
-    { "model": "#19 101 Motorsport CRX WTAC", "years": "1990" },
-    { "model": "Beat", "years": "1991" },
-    { "model": "CR-X SiR", "years": "1991" },
-    { "model": "#21 Hardrace/JDMYard Civic WTAC", "years": "1992" },
-    { "model": "NSX-R", "years": "1992" },
-    { "model": "Acty", "years": "1994" },
-    { "model": "Prelude Si", "years": "1994" },
-    { "model": "Civic Type R", "years": "1997" },
-    { "model": "#33 Integra WTAC", "years": "2001" },
-    { "model": "S2000", "years": "2003" },
-    { "model": "#52 Evasive Motorsports S2000 WTAC", "years": "2004" },
-    { "model": "Civic Type R", "years": "2004" },
-    { "model": "NSX-R", "years": "2005" },
-    { "model": "NSX-R GT", "years": "2005" },
-    { "model": "Civic Type R", "years": "2007" },
-    { "model": "Civic Type R (FD2)", "years": "2008" },
-    { "model": "Civic Type R", "years": "2015" },
-    { "model": "Ridgeline Baja Trophy Truck", "years": "2015" },
-    { "model": "Civic Type R", "years": "2018" },
-    { "model": "e", "years": "2022" },
-    { "model": "Civic Type R", "years": "2023" }
+    { "model": "S800", "years": "1970", "class": "D" },
+    { "model": "Civic RS", "years": "1974", "class": "D" },
+    { "model": "City E II", "years": "1984", "class": "D" },
+    { "model": "Civic CRX Mugen", "years": "1984", "class": "D" },
+    { "model": "Civic Si", "years": "1986", "class": "D" },
+    { "model": "Beat", "years": "1991", "class": "D" },
+    { "model": "NSX-R", "years": "1992", "class": "B" },
+    { "model": "Acty", "years": "1994", "class": "D" },
+    { "model": "Prelude Si", "years": "1994", "class": "C" },
+    { "model": "Civic Type R", "years": "1997", "class": "C" },
+    { "model": "S2000", "years": "2003", "class": "B" },
+    { "model": "Civic Type R", "years": "2004", "class": "C" },
+    { "model": "NSX-R", "years": "2005", "class": "B" },
+    { "model": "NSX-R GT", "years": "2005", "class": "A" },
+    { "model": "Civic Type R", "years": "2007", "class": "C" },
+    { "model": "Civic Type R", "years": "2015", "class": "B" },
+    { "model": "Ridgeline Baja Trophy Truck", "years": "2015", "class": "B" },
+    { "model": "Civic Type R", "years": "2018", "class": "A" },
+    { "model": "e", "years": "2022", "class": "D" },
+    { "model": "Civic Type R", "years": "2023", "class": "A" }
   ],
   "HSV": [
-    { "model": "GEN-F GTS", "years": "2014" },
-    { "model": "Limited Edition GEN-F GTS Maloo", "years": "2014" }
+    { "model": "GEN-F GTS", "years": "2014", "class": "A" },
+    {
+      "model": "Limited Edition GEN-F GTS Maloo",
+      "years": "2014",
+      "class": "A"
+    }
   ],
   "Hyundai": [
-    { "model": "Veloster N", "years": "2019" },
-    { "model": "i30 N", "years": "2020" },
-    { "model": "i20 N", "years": "2021" },
-    { "model": "N Vision 74", "years": "2022" },
-    { "model": "IONIQ 5 N", "years": "2023" }
+    { "model": "Veloster N", "years": "2019", "class": "B" },
+    { "model": "i30 N", "years": "2020", "class": "B" },
+    { "model": "i20 N", "years": "2021", "class": "B" },
+    { "model": "N Vision 74", "years": "2022", "class": "A" },
+    { "model": "IONIQ 5 N", "years": "2023", "class": "A" }
   ],
   "Jaguar": [
-    { "model": "D-Type", "years": "1956" },
-    { "model": "E-type", "years": "1961" },
-    { "model": "Lightweight E-Type", "years": "1964" },
-    { "model": "Sport XJR-15", "years": "1991" },
-    { "model": "XJ220", "years": "1993" },
-    { "model": "XJ220S TWR", "years": "1993" },
-    { "model": "C-X75", "years": "2010" }
+    { "model": "D-Type", "years": "1956", "class": "B" },
+    { "model": "E-type", "years": "1961", "class": "C" },
+    { "model": "Lightweight E-Type", "years": "1964", "class": "B" },
+    { "model": "Sport XJR-15", "years": "1991", "class": "S1" },
+    { "model": "XJ220", "years": "1993", "class": "A" },
+    { "model": "XJ220S TWR", "years": "1993", "class": "S1" },
+    { "model": "C-X75", "years": "2010", "class": "S2" }
   ],
   "Jeep": [
-    { "model": "Wrangler Rubicon", "years": "2012" },
-    { "model": "Trailcat", "years": "2016" },
-    { "model": "Grand Cherokee Trackhawk", "years": "2018" },
-    { "model": "JT", "years": "2020" }
+    { "model": "Wrangler Rubicon", "years": "2012", "class": "D" },
+    { "model": "Trailcat", "years": "2016", "class": "A" },
+    { "model": "Grand Cherokee Trackhawk", "years": "2018", "class": "A" },
+    { "model": "JT", "years": "2020", "class": "D" }
   ],
   "Jimco": [
     {
       "model": "#240 Fastball Racing Class 6100 Spec Trophy Truck",
-      "years": "2019"
+      "years": "2019",
+      "class": "B"
     },
-    { "model": "#179 Hammerhead Class 1", "years": "2020" }
+    { "model": "#179 Hammerhead Class 1", "years": "2020", "class": "A" }
   ],
   "Koenigsegg": [
-    { "model": "CCGT", "years": "2008" },
-    { "model": "Agera", "years": "2011" },
-    { "model": "One:1", "years": "2015" },
-    { "model": "Regera", "years": "2016" },
-    { "model": "Agera RS", "years": "2017" },
-    { "model": "Jesko", "years": "2020" },
-    { "model": "Gemera", "years": "2024" }
+    { "model": "CCGT", "years": "2008", "class": "R" },
+    { "model": "Agera", "years": "2011", "class": "S2" },
+    { "model": "One:1", "years": "2015", "class": "R" },
+    { "model": "Regera", "years": "2016", "class": "R" },
+    { "model": "Agera RS", "years": "2017", "class": "R" },
+    { "model": "Jesko", "years": "2020", "class": "R" }
   ],
-  "KTM": [{ "model": "X-Bow GT4", "years": "2018" }],
+  "KTM": [{ "model": "X-Bow GT4", "years": "2018", "class": "S1" }],
   "Lamborghini": [
-    { "model": "Miura P400", "years": "1967" },
-    { "model": "Countach LP5000 QV", "years": "1988" },
-    { "model": "Diablo SV", "years": "1997" },
-    { "model": "Diablo GTR", "years": "1999" },
-    { "model": "Murciélago LP 670-4 SV", "years": "2010" },
-    { "model": "Sesto Elemento", "years": "2011" },
-    { "model": "Aventador LP700-4", "years": "2012" },
-    { "model": "Gallardo LP570-4 Spyder Performante", "years": "2012" },
-    { "model": "Veneno", "years": "2013" },
-    { "model": "Huracán LP 610-4", "years": "2014" },
-    { "model": "Centenario LP 770-4", "years": "2016" },
-    { "model": "Aventador SVJ", "years": "2018" },
-    { "model": "Urus", "years": "2019" },
-    { "model": "Essenza SCV12", "years": "2020" },
-    { "model": "Huracán EVO", "years": "2020" },
-    { "model": "Huracán STO", "years": "2020" },
-    { "model": "Sián Roadster", "years": "2020" },
-    { "model": "Countach LPI 800-4", "years": "2021" },
-    { "model": "Aventador LP 780-4 Ultimae", "years": "2022" },
-    { "model": "Huracán Sterrato", "years": "2022" },
-    { "model": "Huracán Tecnica", "years": "2022" },
-    { "model": "Revuelto", "years": "2024" }
+    { "model": "Miura P400", "years": "1967", "class": "B" },
+    { "model": "Diablo SV", "years": "1997", "class": "A" },
+    { "model": "Diablo GTR", "years": "1999", "class": "S2" },
+    { "model": "Murciélago LP 670-4 SV", "years": "2010", "class": "S1" },
+    { "model": "Sesto Elemento", "years": "2011", "class": "R" },
+    { "model": "Aventador LP700-4", "years": "2012", "class": "S1" },
+    {
+      "model": "Gallardo LP570-4 Spyder Performante",
+      "years": "2012",
+      "class": "A"
+    },
+    { "model": "Veneno", "years": "2013", "class": "S2" },
+    { "model": "Huracán LP 610-4", "years": "2014", "class": "S1" },
+    { "model": "Centenario LP 770-4", "years": "2016", "class": "S1" },
+    { "model": "Aventador SVJ", "years": "2018", "class": "S1" },
+    { "model": "Urus", "years": "2019", "class": "A" },
+    { "model": "Essenza SCV12", "years": "2020", "class": "R" },
+    { "model": "Huracán STO", "years": "2020", "class": "S1" },
+    { "model": "Sián Roadster", "years": "2020", "class": "S1" },
+    { "model": "Countach LPI 800-4", "years": "2021", "class": "S1" },
+    { "model": "Aventador LP 780-4 Ultimae", "years": "2022", "class": "S1" },
+    { "model": "Huracán Sterrato", "years": "2022", "class": "S1" },
+    { "model": "Huracán Tecnica", "years": "2022", "class": "S1" },
+    { "model": "Revuelto", "years": "2024", "class": "S1" }
   ],
   "Lancia": [
-    { "model": "Stratos HF Stradale", "years": "1974" },
-    { "model": "Delta S4", "years": "1986" },
-    { "model": "Delta HF Integrale EVO", "years": "1992" }
+    { "model": "Stratos HF Stradale", "years": "1974", "class": "C" },
+    { "model": "Delta S4", "years": "1986", "class": "B" },
+    { "model": "Delta HF Integrale EVO", "years": "1992", "class": "C" }
   ],
   "Land Rover": [
-    { "model": "Range Rover Sport SVR", "years": "2015" },
-    { "model": "Defender 110 X", "years": "2020" }
+    { "model": "Range Rover Sport SVR", "years": "2015", "class": "A" },
+    { "model": "Defender 110 X", "years": "2020", "class": "C" }
   ],
   "Lexus": [
-    { "model": "LFA", "years": "2010" },
-    { "model": "LFA Forza Edition", "years": "2010" },
-    { "model": "RC F", "years": "2015" },
-    { "model": "LC 500", "years": "2021" }
+    { "model": "LFA", "years": "2010", "class": "S1" },
+    { "model": "LFA Forza Edition", "years": "2010", "class": "S2" },
+    { "model": "RC F", "years": "2015", "class": "A" },
+    { "model": "LC 500", "years": "2021", "class": "B" }
   ],
-  "Lincoln": [{ "model": "Continental", "years": "1962" }],
+  "Lincoln": [{ "model": "Continental", "years": "1962", "class": "D" }],
   "Lotus": [
-    { "model": "Elise GT1", "years": "1997" },
-    { "model": "Elise Series 1 Sport 190", "years": "1999" },
-    { "model": "Exige Cup 430", "years": "2018" },
-    { "model": "Scura Motorsports Exige WTAC", "years": "2018" },
-    { "model": "Evija", "years": "2020" },
-    { "model": "Evija Forza Edition", "years": "2020" },
-    { "model": "Emira", "years": "2023" }
+    { "model": "Elise GT1", "years": "1997", "class": "S1" },
+    { "model": "Elise Series 1 Sport 190", "years": "1999", "class": "B" },
+    { "model": "Scura Motorsports Exige WTAC", "years": "2018", "class": "R" },
+    { "model": "Evija", "years": "2020", "class": "R" }
   ],
-  "Lucid": [{ "model": "Air Sapphire", "years": "2024" }],
+  "Lucid": [{ "model": "Air Sapphire", "years": "2024", "class": "S1" }],
   "Maserati": [
-    { "model": "Ghibli Cup", "years": "1997" },
-    { "model": "MC12", "years": "2004" },
-    { "model": "MC12 Versione Corsa", "years": "2008" },
-    { "model": "MC20", "years": "2022" }
+    { "model": "Ghibli Cup", "years": "1997", "class": "B" },
+    { "model": "MC12 Versione Corsa", "years": "2008", "class": "R" },
+    { "model": "MC20", "years": "2022", "class": "S1" }
   ],
   "Mazda": [
-    { "model": "Cosmo 110S Series II", "years": "1972" },
-    { "model": "RX-3", "years": "1973" },
-    { "model": "RX-3 Forza Edition", "years": "1973" },
-    { "model": "#123 Mad Mike 808 Wagon 'FURSTY'", "years": "1974" },
-    { "model": "RX-7 GSL-SE", "years": "1985" },
-    { "model": "Savanna RX-7", "years": "1990" },
-    { "model": "#55 Mazda 787B", "years": "1991" },
-    { "model": "RX-7 Type R", "years": "1992" },
-    { "model": "MX-5 Miata", "years": "1994" },
-    { "model": "MX-5 Miata Forza Edition", "years": "1994" },
-    { "model": "Mazdaspeed MX-5", "years": "2005" },
-    { "model": "Furai", "years": "2008" },
-    { "model": "Mazdaspeed 3", "years": "2010" },
-    { "model": "RX-8 R3", "years": "2011" },
-    { "model": "MX-5", "years": "2013" },
-    { "model": "MX-5", "years": "2016" },
-    { "model": "MX-5 Cup", "years": "2017" },
-    { "model": "MX-5 Miata RF", "years": "2022" }
+    { "model": "RX-3", "years": "1973", "class": "D" },
+    { "model": "RX-3 Forza Edition", "years": "1973", "class": "B" },
+    { "model": "RX-7 GSL-SE", "years": "1985", "class": "D" },
+    { "model": "Savanna RX-7", "years": "1990", "class": "C" },
+    { "model": "#55 Mazda 787B", "years": "1991", "class": "R" },
+    { "model": "RX-7 Type R", "years": "1992", "class": "B" },
+    { "model": "MX-5 Miata", "years": "1994", "class": "D" },
+    { "model": "MX-5 Miata Forza Edition", "years": "1994", "class": "S2" },
+    { "model": "Mazdaspeed MX-5", "years": "2005", "class": "C" },
+    { "model": "Mazdaspeed 3", "years": "2010", "class": "B" },
+    { "model": "RX-8 R3", "years": "2011", "class": "B" },
+    { "model": "MX-5", "years": "2013", "class": "C" },
+    { "model": "MX-5", "years": "2016", "class": "C" },
+    { "model": "MX-5 Cup", "years": "2017", "class": "B" },
+    { "model": "MX-5 Miata RF", "years": "2022", "class": "B" }
   ],
   "McLaren": [
-    { "model": "F1", "years": "1993" },
-    { "model": "F1 GT", "years": "1997" },
-    { "model": "12C Coupé", "years": "2011" },
-    { "model": "P1", "years": "2013" },
-    { "model": "650S Spider", "years": "2014" },
-    { "model": "570S Coupé", "years": "2015" },
-    { "model": "600LT Coupé", "years": "2018" },
-    { "model": "Speedtail", "years": "2019" },
-    { "model": "620R", "years": "2021" },
-    { "model": "765LT Coupé", "years": "2021" },
-    { "model": "Sabre", "years": "2021" },
-    { "model": "Artura", "years": "2023" }
+    { "model": "F1", "years": "1993", "class": "S1" },
+    { "model": "F1 GT", "years": "1997", "class": "S1" },
+    { "model": "12C Coupé", "years": "2011", "class": "S1" },
+    { "model": "P1", "years": "2013", "class": "S2" },
+    { "model": "650S Spider", "years": "2014", "class": "S1" },
+    { "model": "570S Coupé", "years": "2015", "class": "S1" },
+    { "model": "600LT Coupé", "years": "2018", "class": "S1" },
+    { "model": "Speedtail", "years": "2019", "class": "S2" },
+    { "model": "620R", "years": "2021", "class": "S1" },
+    { "model": "765LT Coupé", "years": "2021", "class": "S2" },
+    { "model": "Artura", "years": "2023", "class": "S1" }
   ],
   "Mercedes-AMG": [
-    { "model": "GT S", "years": "2015" },
-    { "model": "C 63 S Coupé", "years": "2016" },
-    { "model": "GT R", "years": "2017" },
-    { "model": "E 63 S", "years": "2018" },
-    { "model": "GT 4-Door Coupé", "years": "2018" },
-    { "model": "GT Black Series", "years": "2020" },
-    { "model": "GT Black Series Welcome Pack", "years": "2020" },
-    { "model": "SLC 43 Final Edition", "years": "2020" },
-    { "model": "Mercedes-AMG ONE", "years": "2021" },
-    { "model": "SL 63", "years": "2021" }
+    { "model": "GT S", "years": "2015", "class": "S1" },
+    { "model": "C 63 S Coupé", "years": "2016", "class": "A" },
+    { "model": "E 63 S", "years": "2018", "class": "A" },
+    { "model": "GT 4-Door Coupé", "years": "2018", "class": "A" },
+    { "model": "GT Black Series", "years": "2020", "class": "S1" },
+    { "model": "SLC 43 Final Edition", "years": "2020", "class": "A" },
+    { "model": "Mercedes-AMG ONE", "years": "2021", "class": "S2" },
+    { "model": "SL 63", "years": "2021", "class": "A" }
   ],
   "Mercedes-Benz": [
-    { "model": "300 SL Coupé", "years": "1954" },
-    { "model": "300 SLR", "years": "1955" },
-    { "model": "AMG Hammer Coupe", "years": "1987" },
-    { "model": "190 E 2.5-16 Evolution II", "years": "1990" },
-    { "model": "190 E 2.5-16 Evolution II Forza Edition", "years": "1990" },
-    { "model": "AMG CLK GTR", "years": "1998" },
-    { "model": "SL 65 AMG Black Series", "years": "2009" },
-    { "model": "C 63 AMG Coupé Black Series", "years": "2012" },
-    { "model": "A 45 AMG", "years": "2013" },
-    { "model": "G 65 AMG", "years": "2013" },
-    { "model": "G 63 AMG 6x6", "years": "2014" },
-    { "model": "Unimog U5023", "years": "2014" },
-    { "model": "X-Class", "years": "2018" }
+    { "model": "300 SL Coupé", "years": "1954", "class": "D" },
+    { "model": "300 SLR", "years": "1955", "class": "B" },
+    { "model": "AMG Hammer Coupe", "years": "1987", "class": "B" },
+    { "model": "190 E 2.5-16 Evolution II", "years": "1990", "class": "C" },
+    {
+      "model": "190 E 2.5-16 Evolution II Forza Edition",
+      "years": "1990",
+      "class": "A"
+    },
+    { "model": "AMG CLK GTR", "years": "1998", "class": "S1" },
+    { "model": "SL 65 AMG Black Series", "years": "2009", "class": "S1" },
+    { "model": "C 63 AMG Coupé Black Series", "years": "2012", "class": "A" },
+    { "model": "A 45 AMG", "years": "2013", "class": "B" },
+    { "model": "G 65 AMG", "years": "2013", "class": "B" },
+    { "model": "G 63 AMG 6x6", "years": "2014", "class": "B" },
+    { "model": "Unimog U5023", "years": "2014", "class": "D" },
+    { "model": "X-Class", "years": "2018", "class": "D" }
   ],
   "Meyers": [
-    { "model": "Manx", "years": "1971" },
-    { "model": "Manx 2.0", "years": "2023" }
+    { "model": "Manx", "years": "1971", "class": "D" },
+    { "model": "Manx 2.0", "years": "2023", "class": "D" }
   ],
-  "MG": [{ "model": "Metro 6R4", "years": "1986" }],
+  "MG": [{ "model": "Metro 6R4", "years": "1986", "class": "A" }],
   "MINI": [
-    { "model": "Cooper S", "years": "1965" },
-    { "model": "John Cooper Works GP", "years": "2012" },
-    { "model": "X-Raid All4 Racing Countryman", "years": "2013" },
-    { "model": "X-raid John Cooper Works Buggy", "years": "2018" },
-    { "model": "John Cooper Works GP", "years": "2021" }
+    { "model": "Cooper S", "years": "1965", "class": "D" },
+    { "model": "John Cooper Works GP", "years": "2012", "class": "B" },
+    { "model": "X-Raid All4 Racing Countryman", "years": "2013", "class": "A" },
+    { "model": "X-raid John Cooper Works Buggy", "years": "2018", "class": "A" }
   ],
   "Mitsubishi": [
     {
       "model": "#269 Attacking the Clock Racing Minicab Time Attack",
-      "years": "1990"
+      "years": "1990",
+      "class": "D"
     },
-    { "model": "Galant VR-4", "years": "1992" },
-    { "model": "Eclipse GSX", "years": "1995" },
-    { "model": "Lancer Evolution III GSR", "years": "1995" },
-    { "model": "Montero Exceed 2800 TD", "years": "1995" },
-    { "model": "GTO", "years": "1997" },
-    { "model": "Montero Evolution", "years": "1997" },
-    { "model": "Lancer Evolution VI GSR TM Edition", "years": "2001" },
-    { "model": "Lancer Evolution VIII MR", "years": "2004" },
-    { "model": "Lancer Evolution VIII MR Welcome Pack", "years": "2004" },
+    { "model": "Galant VR-4", "years": "1992", "class": "C" },
+    { "model": "Eclipse GSX", "years": "1995", "class": "C" },
+    { "model": "Lancer Evolution III GSR", "years": "1995", "class": "C" },
+    { "model": "Montero Exceed 2800 TD", "years": "1995", "class": "D" },
+    { "model": "GTO", "years": "1997", "class": "B" },
+    { "model": "Montero Evolution", "years": "1997", "class": "C" },
+    {
+      "model": "Lancer Evolution VI GSR TM Edition",
+      "years": "2001",
+      "class": "B"
+    },
+    { "model": "Lancer Evolution VIII MR", "years": "2004", "class": "B" },
     {
       "model": "#1 Sierra Sierra Enterprises Lancer Evolution Time Attack",
-      "years": "2005"
+      "years": "2005",
+      "class": "R"
     },
-    { "model": "Lancer Evolution IX MR", "years": "2006" },
-    { "model": "Lancer Evolution X GSR", "years": "2008" }
+    { "model": "Lancer Evolution X GSR", "years": "2008", "class": "A" }
   ],
   "Nissan": [
-    { "model": "Fairlady Z 432", "years": "1969" },
-    { "model": "Skyline 2000GT-R", "years": "1971" },
-    { "model": "Skyline H/T 2000GT-R", "years": "1973" },
-    { "model": "#11 Tomica Skyline Turbo Super Silhouette", "years": "1983" },
-    { "model": "Safari Turbo", "years": "1985" },
-    { "model": "Be-1", "years": "1987" },
-    { "model": "Skyline GTS-R", "years": "1987" },
-    { "model": "PAO", "years": "1989" },
-    { "model": "S-Cargo", "years": "1989" },
-    { "model": "S-Cargo Forza Edition", "years": "1989" },
-    { "model": "Silvia K's", "years": "1989" },
-    { "model": "#12 Skyline GT-R (BNR32 Gr.A) JTC", "years": "1990" },
-    { "model": "Pulsar GTI-R", "years": "1990" },
-    { "model": "Figaro", "years": "1991" },
-    { "model": "Skyline GT-R", "years": "1992" },
-    { "model": "#32 Skyline WTAC 'Xtreme GTR'", "years": "1993" },
-    { "model": "240SX", "years": "1993" },
-    { "model": "Fairlady Z Version S Twin Turbo", "years": "1994" },
-    { "model": "Silvia K's", "years": "1994" },
-    { "model": "Gloria Gran Turismo", "years": "1995" },
-    { "model": "NISMO GT-R LM", "years": "1995" },
-    { "model": "Skyline GT-R V-Spec", "years": "1997" },
-    { "model": "Stagea RS Four V", "years": "1997" },
-    { "model": "#23 Pennzoil NISMO Skyline GT-R", "years": "1998" },
-    { "model": "R390 (GT1)", "years": "1998" },
-    { "model": "Silvia K's Aero", "years": "1998" },
-    { "model": "Skyline GT-R 40th Anniversary", "years": "1998" },
-    { "model": "#36 Dream Project S15 Silvia WTAC", "years": "2000" },
-    { "model": "Skyline GT-R V Spec II", "years": "2000" },
-    { "model": "Silvia Spec-R", "years": "2002" },
-    { "model": "Fairlady Z", "years": "2003" },
-    { "model": "370Z", "years": "2010" },
-    { "model": "GT-R Black Edition (R35)", "years": "2012" },
-    { "model": "GT-R Black Edition (R35) Forza Edition", "years": "2012" },
-    { "model": "GT-R (R35)", "years": "2017" },
-    { "model": "370Z Nismo", "years": "2019" },
-    { "model": "GT-R NISMO (R35)", "years": "2020" },
-    { "model": "GT-R Nismo", "years": "2024" },
-    { "model": "Z NISMO", "years": "2024" }
+    { "model": "Fairlady Z 432", "years": "1969", "class": "D" },
+    { "model": "Skyline 2000GT-R", "years": "1971", "class": "D" },
+    { "model": "Skyline H/T 2000GT-R", "years": "1973", "class": "D" },
+    {
+      "model": "#11 Tomica Skyline Turbo Super Silhouette",
+      "years": "1983",
+      "class": "R"
+    },
+    { "model": "Safari Turbo", "years": "1985", "class": "D" },
+    { "model": "Skyline GTS-R", "years": "1987", "class": "C" },
+    { "model": "PAO", "years": "1989", "class": "D" },
+    { "model": "S-Cargo", "years": "1989", "class": "D" },
+    { "model": "S-Cargo Forza Edition", "years": "1989", "class": "S1" },
+    { "model": "Silvia K's", "years": "1989", "class": "C" },
+    { "model": "Pulsar GTI-R", "years": "1990", "class": "C" },
+    { "model": "Figaro", "years": "1991", "class": "D" },
+    { "model": "Skyline GT-R", "years": "1992", "class": "B" },
+    { "model": "240SX", "years": "1993", "class": "D" },
+    {
+      "model": "Fairlady Z Version S Twin Turbo",
+      "years": "1994",
+      "class": "B"
+    },
+    { "model": "Silvia K's", "years": "1994", "class": "C" },
+    { "model": "Gloria Gran Turismo", "years": "1995", "class": "B" },
+    { "model": "NISMO GT-R LM", "years": "1995", "class": "B" },
+    { "model": "Skyline GT-R V-Spec", "years": "1997", "class": "B" },
+    { "model": "Stagea RS Four V", "years": "1997", "class": "B" },
+    {
+      "model": "#23 Pennzoil NISMO Skyline GT-R",
+      "years": "1998",
+      "class": "S2"
+    },
+    { "model": "R390 (GT1)", "years": "1998", "class": "S2" },
+    { "model": "Silvia K's Aero", "years": "1998", "class": "C" },
+    { "model": "Skyline GT-R V Spec II", "years": "2000", "class": "B" },
+    { "model": "Silvia Spec-R", "years": "2002", "class": "B" },
+    { "model": "Fairlady Z", "years": "2003", "class": "B" },
+    { "model": "GT-R Black Edition (R35)", "years": "2012", "class": "S1" },
+    {
+      "model": "GT-R Black Edition (R35) Forza Edition",
+      "years": "2012",
+      "class": "S2"
+    },
+    { "model": "GT-R (R35)", "years": "2017", "class": "S1" },
+    { "model": "370Z Nismo", "years": "2019", "class": "A" },
+    { "model": "GT-R NISMO (R35)", "years": "2020", "class": "S1" },
+    { "model": "GT-R Nismo", "years": "2024", "class": "S1" },
+    { "model": "Z NISMO", "years": "2024", "class": "S1" }
   ],
-  "Noble": [{ "model": "M600", "years": "2010" }],
-  "Opel": [{ "model": "Manta 400", "years": "1984" }],
+  "Noble": [{ "model": "M600", "years": "2010", "class": "S2" }],
+  "Opel": [{ "model": "Manta 400", "years": "1984", "class": "B" }],
   "Pagani": [
-    { "model": "Zonda R", "years": "2009" },
-    { "model": "Zonda Cinque Roadster", "years": "2010" },
-    { "model": "Huayra BC Coupe", "years": "2016" },
-    { "model": "Huayra R", "years": "2021" }
+    { "model": "Zonda R", "years": "2009", "class": "R" },
+    { "model": "Zonda Cinque Roadster", "years": "2010", "class": "S2" },
+    { "model": "Huayra BC Coupe", "years": "2016", "class": "S2" }
   ],
-  "Peel": [
-    { "model": "P50", "years": "1962" },
-    { "model": "P50 Trolli Edition", "years": "1962" }
-  ],
-  "Penhall": [{ "model": "The Cholla", "years": "2011" }],
+  "Peel": [{ "model": "P50", "years": "1962", "class": "D" }],
+  "Penhall": [{ "model": "The Cholla", "years": "2011", "class": "A" }],
   "Peugeot": [
-    { "model": "205 Turbo 16", "years": "1984" },
-    { "model": "205 Rallye", "years": "1991" },
-    { "model": "207 Super 2000", "years": "2007" }
+    { "model": "205 Turbo 16", "years": "1984", "class": "A" },
+    { "model": "205 Rallye", "years": "1991", "class": "D" },
+    { "model": "207 Super 2000", "years": "2007", "class": "S1" }
   ],
   "Plymouth": [
-    { "model": "Fury", "years": "1958" },
-    { "model": "Barracuda Formula S", "years": "1968" },
-    { "model": "Cuda 426 HEMI", "years": "1971" }
+    { "model": "Fury", "years": "1958", "class": "D" },
+    { "model": "Barracuda Formula S", "years": "1968", "class": "C" },
+    { "model": "Cuda 426 HEMI", "years": "1971", "class": "C" }
   ],
   "Polaris": [
-    { "model": "RZR Pro XP Factory Racing Limited Edition", "years": "2021" },
-    { "model": "RZR Pro XP Ultimate", "years": "2021" }
+    {
+      "model": "RZR Pro XP Factory Racing Limited Edition",
+      "years": "2021",
+      "class": "A"
+    },
+    { "model": "RZR Pro XP Ultimate", "years": "2021", "class": "A" }
   ],
   "Pontiac": [
-    { "model": "Firebird Trans Am", "years": "1977" },
-    { "model": "Firebird Trans Am GTA", "years": "1987" }
+    { "model": "Firebird Trans Am", "years": "1977", "class": "D" },
+    { "model": "Firebird Trans Am GTA", "years": "1987", "class": "C" }
   ],
   "Porsche": [
-    { "model": "#3 917 LH", "years": "1970" },
-    { "model": "#3 917 LH Forza Edition", "years": "1970" },
-    { "model": "911 Carrera RS", "years": "1973" },
-    { "model": "911 Turbo 3.3", "years": "1982" },
-    { "model": "#185 959 Prodrive Rally Raid", "years": "1985" },
-    { "model": "959", "years": "1987" },
-    { "model": "944 Turbo", "years": "1989" },
-    { "model": "911 Turbo S Leichtbau", "years": "1993" },
-    { "model": "928 GTS", "years": "1993" },
-    { "model": "968 Turbo S", "years": "1993" },
-    { "model": "911 GT2", "years": "1995" },
-    { "model": "911 GT1 Strassenversion", "years": "1997" },
-    { "model": "Carrera GT", "years": "2003" },
-    { "model": "911 GT3", "years": "2004" },
-    { "model": "Cayman GT3 WTAC", "years": "2005" },
-    { "model": "911 GT3 RS 4.0", "years": "2012" },
-    { "model": "918 Spyder", "years": "2014" },
-    { "model": "718 Cayman GTS", "years": "2018" },
-    { "model": "911 GT2 RS", "years": "2018" },
-    { "model": "Cayenne Turbo", "years": "2018" },
-    { "model": "Macan LPR Rally Raid", "years": "2018" },
-    { "model": "#70 Porsche Motorsport 935", "years": "2019" },
-    { "model": "911 Carrera S", "years": "2019" },
-    { "model": "911 GT3 RS", "years": "2019" },
-    { "model": "Taycan Turbo S", "years": "2020" },
-    { "model": "911 GT3", "years": "2021" },
-    { "model": "Mission R", "years": "2021" },
-    { "model": "718 Cayman GT4 RS", "years": "2022" },
-    { "model": "911 GT3 RS", "years": "2023" },
-    { "model": "911 Rallye", "years": "2023" },
-    { "model": "911 Turbo S", "years": "2023" }
+    { "model": "#3 917 LH", "years": "1970", "class": "S2" },
+    { "model": "#3 917 LH Forza Edition", "years": "1970", "class": "R" },
+    { "model": "911 Carrera RS", "years": "1973", "class": "C" },
+    { "model": "911 Turbo 3.3", "years": "1982", "class": "B" },
+    { "model": "#185 959 Prodrive Rally Raid", "years": "1985", "class": "S1" },
+    { "model": "959", "years": "1987", "class": "A" },
+    { "model": "944 Turbo", "years": "1989", "class": "C" },
+    { "model": "928 GTS", "years": "1993", "class": "A" },
+    { "model": "968 Turbo S", "years": "1993", "class": "A" },
+    { "model": "911 GT2", "years": "1995", "class": "S1" },
+    { "model": "911 GT1 Strassenversion", "years": "1997", "class": "S1" },
+    { "model": "Carrera GT", "years": "2003", "class": "S1" },
+    { "model": "911 GT3", "years": "2004", "class": "S1" },
+    { "model": "Cayman GT3 WTAC", "years": "2005", "class": "R" },
+    { "model": "911 GT3 RS 4.0", "years": "2012", "class": "S1" },
+    { "model": "918 Spyder", "years": "2014", "class": "S2" },
+    { "model": "718 Cayman GTS", "years": "2018", "class": "A" },
+    { "model": "911 GT2 RS", "years": "2018", "class": "S2" },
+    { "model": "Cayenne Turbo", "years": "2018", "class": "A" },
+    { "model": "Macan LPR Rally Raid", "years": "2018", "class": "A" },
+    { "model": "#70 Porsche Motorsport 935", "years": "2019", "class": "R" },
+    { "model": "911 Carrera S", "years": "2019", "class": "S1" },
+    { "model": "911 GT3 RS", "years": "2019", "class": "S1" },
+    { "model": "Taycan Turbo S", "years": "2020", "class": "S1" },
+    { "model": "911 GT3", "years": "2021", "class": "S1" },
+    { "model": "Mission R", "years": "2021", "class": "S2" },
+    { "model": "718 Cayman GT4 RS", "years": "2022", "class": "S1" },
+    { "model": "911 GT3 RS", "years": "2023", "class": "S1" },
+    { "model": "911 Rallye", "years": "2023", "class": "S1" },
+    { "model": "911 Turbo S", "years": "2023", "class": "S1" }
   ],
-  "Radical": [{ "model": "RXC Turbo", "years": "2015" }],
-  "Ram": [{ "model": "1500 TRX", "years": "2024" }],
-  "Reliant": [{ "model": "Supervan III", "years": "1972" }],
+  "Radical": [{ "model": "RXC Turbo", "years": "2015", "class": "R" }],
+  "Ram": [{ "model": "1500 TRX", "years": "2024", "class": "B" }],
+  "Reliant": [{ "model": "Supervan III", "years": "1972", "class": "D" }],
   "Renault": [
-    { "model": "8 Gordini", "years": "1967" },
-    { "model": "5 Turbo", "years": "1980" },
-    { "model": "Clio Williams", "years": "1993" },
-    { "model": "Mégane R26.R", "years": "2008" },
-    { "model": "Megane RS 250", "years": "2010" },
-    { "model": "Megane R.S.", "years": "2018" }
+    { "model": "5 Turbo", "years": "1980", "class": "C" },
+    { "model": "Clio Williams", "years": "1993", "class": "C" },
+    { "model": "Mégane R26.R", "years": "2008", "class": "C" },
+    { "model": "Megane RS 250", "years": "2010", "class": "B" },
+    { "model": "Megane R.S.", "years": "2018", "class": "A" }
   ],
-  "Rimac": [{ "model": "Nevera", "years": "2021" }],
-  "Rivian": [{ "model": "R1T", "years": "2022" }],
+  "Rimac": [{ "model": "Nevera", "years": "2021", "class": "S2" }],
+  "Rivian": [{ "model": "R1T", "years": "2022", "class": "A" }],
   "RJ Anderson": [
-    { "model": "#37 Polaris RZR Pro 2 Truck", "years": "2016" },
-    { "model": "#37 Polaris RZR Pro 4 Truck", "years": "2021" }
+    { "model": "#37 Polaris RZR Pro 2 Truck", "years": "2016", "class": "A" },
+    { "model": "#37 Polaris RZR Pro 4 Truck", "years": "2021", "class": "A" }
   ],
-  "Saleen": [{ "model": "S7 LM", "years": "2017" }],
-  "Schuppan": [{ "model": "962CR", "years": "1993" }],
   "Shelby": [
-    { "model": "Cobra 427 S/C", "years": "1965" },
-    { "model": "Cobra Daytona Coupe", "years": "1965" }
+    { "model": "Cobra 427 S/C", "years": "1965", "class": "A" },
+    { "model": "Cobra Daytona Coupe", "years": "1965", "class": "A" }
   ],
   "SIERRA Cars": [
-    { "model": "#23 Yokohama ALPHA", "years": "2020" },
-    { "model": "700R", "years": "2021" },
-    { "model": "RX3", "years": "2021" }
+    { "model": "#23 Yokohama ALPHA", "years": "2020", "class": "A" },
+    { "model": "700R", "years": "2021", "class": "A" },
+    { "model": "RX3", "years": "2021", "class": "A" }
   ],
-  "SRT": [{ "model": "Viper GTS", "years": "2013" }],
+  "SRT": [{ "model": "Viper GTS", "years": "2013", "class": "S1" }],
   "Subaru": [
-    { "model": "BRAT GL", "years": "1980" },
-    { "model": "LEGACY RS", "years": "1990" },
-    { "model": "Vivio RX-R", "years": "1994" },
-    { "model": "Vivio RX-R Forza Edition", "years": "1994" },
-    { "model": "SVX", "years": "1996" },
-    { "model": "Impreza 22B-STi Version", "years": "1998" },
-    { "model": "IMPREZA WRX STI", "years": "2004" },
-    { "model": "IMPREZA WRX STI", "years": "2005" },
-    { "model": "LEGACY B4 2.0 GT", "years": "2005" },
-    { "model": "IMPREZA WRX STI", "years": "2008" },
-    { "model": "WRX STI", "years": "2011" },
-    { "model": "BRZ", "years": "2013" },
-    { "model": "WRX STI", "years": "2015" },
-    { "model": "WRX STI ARX Supercar", "years": "2018" },
-    { "model": "STI S209", "years": "2019" },
-    { "model": "BRZ", "years": "2022" },
-    { "model": "BRZ Forza Edition", "years": "2022" },
-    { "model": "WRX", "years": "2022" }
+    { "model": "BRAT GL", "years": "1980", "class": "D" },
+    { "model": "LEGACY RS", "years": "1990", "class": "C" },
+    { "model": "Vivio RX-R", "years": "1994", "class": "D" },
+    { "model": "Vivio RX-R Forza Edition", "years": "1994", "class": "S1" },
+    { "model": "SVX", "years": "1996", "class": "C" },
+    { "model": "Impreza 22B-STi Version", "years": "1998", "class": "B" },
+    { "model": "IMPREZA WRX STI", "years": "2004", "class": "B" },
+    { "model": "IMPREZA WRX STI", "years": "2005", "class": "B" },
+    { "model": "LEGACY B4 2.0 GT", "years": "2005", "class": "B" },
+    { "model": "IMPREZA WRX STI", "years": "2008", "class": "B" },
+    { "model": "WRX STI", "years": "2011", "class": "B" },
+    { "model": "BRZ", "years": "2013", "class": "B" },
+    { "model": "WRX STI", "years": "2015", "class": "A" },
+    { "model": "WRX STI ARX Supercar", "years": "2018", "class": "S1" },
+    { "model": "BRZ", "years": "2022", "class": "B" },
+    { "model": "BRZ Forza Edition", "years": "2022", "class": "A" },
+    { "model": "WRX", "years": "2022", "class": "B" }
   ],
   "Toyota": [
-    { "model": "Sports 800", "years": "1965" },
-    { "model": "Sports 800 Fanta Edition", "years": "1965" },
-    { "model": "2000GT", "years": "1969" },
-    { "model": "Corolla SR5", "years": "1974" },
-    { "model": "FJ40", "years": "1979" },
-    { "model": "Sprinter Trueno GT Apex", "years": "1985" },
-    { "model": "Sprinter Trueno GT Apex Forza Edition", "years": "1985" },
-    { "model": "MR2 SC", "years": "1989" },
-    { "model": "Chaser GT Twin Turbo", "years": "1991" },
-    { "model": "Sera", "years": "1991" },
-    { "model": "Celica GT-Four RC ST185", "years": "1992" },
-    { "model": "Supra 2.0 GT", "years": "1992" },
-    { "model": "#1 T100 Baja Truck", "years": "1993" },
-    { "model": "Celica GT-Four ST205", "years": "1994" },
-    { "model": "J&J Motorsport Supra WTAC", "years": "1995" },
-    { "model": "MR2 GT", "years": "1995" },
-    { "model": "Starlet Glanza V", "years": "1996" },
-    { "model": "Chaser 2.5 Tourer V", "years": "1997" },
-    { "model": "Soarer 2.5 GT-T", "years": "1997" },
-    { "model": "Supra RZ", "years": "1998" },
-    { "model": "Altezza RS200 Z EDITION", "years": "1999" },
-    { "model": "Celica Sport Specialty II", "years": "2003" },
-    { "model": "Crown Super Deluxe Taxi", "years": "2005" },
-    { "model": "86", "years": "2013" },
-    { "model": "86 Stories", "years": "2013" },
-    { "model": "Land Cruiser Arctic Trucks AT37", "years": "2016" },
-    { "model": "JPN Taxi", "years": "2017" },
-    { "model": "4Runner TRD Pro", "years": "2019" },
-    { "model": "Tacoma TRD Pro", "years": "2019" },
-    { "model": "Tacoma TRD Pro Forza Edition", "years": "2019" },
-    { "model": "GR Supra", "years": "2020" },
-    { "model": "GR Yaris", "years": "2021" },
-    { "model": "GR86", "years": "2022" },
-    { "model": "Camry TRD", "years": "2023" },
-    { "model": "GR Corolla", "years": "2023" },
-    { "model": "Land Cruiser", "years": "2025" }
+    { "model": "Sports 800", "years": "1965", "class": "D" },
+    { "model": "2000GT", "years": "1969", "class": "D" },
+    { "model": "FJ40", "years": "1979", "class": "D" },
+    { "model": "Sprinter Trueno GT Apex", "years": "1985", "class": "D" },
+    {
+      "model": "Sprinter Trueno GT Apex Forza Edition",
+      "years": "1985",
+      "class": "S1"
+    },
+    { "model": "Chaser GT Twin Turbo", "years": "1991", "class": "B" },
+    { "model": "Sera", "years": "1991", "class": "D" },
+    { "model": "Celica GT-Four RC ST185", "years": "1992", "class": "C" },
+    { "model": "Supra 2.0 GT", "years": "1992", "class": "C" },
+    { "model": "#1 T100 Baja Truck", "years": "1993", "class": "A" },
+    { "model": "Celica GT-Four ST205", "years": "1994", "class": "B" },
+    { "model": "MR2 GT", "years": "1995", "class": "B" },
+    { "model": "Chaser 2.5 Tourer V", "years": "1997", "class": "B" },
+    { "model": "Soarer 2.5 GT-T", "years": "1997", "class": "B" },
+    { "model": "Supra RZ", "years": "1998", "class": "B" },
+    { "model": "Celica Sport Specialty II", "years": "2003", "class": "B" },
+    { "model": "Crown Super Deluxe Taxi", "years": "2005", "class": "D" },
+    { "model": "86", "years": "2013", "class": "B" },
+    { "model": "86 Stories", "years": "2013", "class": "A" },
+    { "model": "JPN Taxi", "years": "2017", "class": "D" },
+    { "model": "4Runner TRD Pro", "years": "2019", "class": "B" },
+    { "model": "Tacoma TRD Pro", "years": "2019", "class": "B" },
+    { "model": "GR Supra", "years": "2020", "class": "A" },
+    { "model": "GR Yaris", "years": "2021", "class": "B" },
+    { "model": "GR86", "years": "2022", "class": "B" },
+    { "model": "Camry TRD", "years": "2023", "class": "B" },
+    { "model": "Land Cruiser", "years": "2025", "class": "C" }
   ],
   "TVR": [
-    { "model": "Cerbera Speed 12", "years": "1998" },
-    { "model": "Sagaris", "years": "2005" },
-    { "model": "Griffith", "years": "2018" }
+    { "model": "Sagaris", "years": "2005", "class": "A" },
+    { "model": "Griffith", "years": "2018", "class": "S1" }
   ],
-  "Ultima": [{ "model": "Evolution Coupe 1020", "years": "2015" }],
+  "Ultima": [
+    { "model": "Evolution Coupe 1020", "years": "2015", "class": "R" }
+  ],
   "Volkswagen": [
-    { "model": "Beetle", "years": "1963" },
-    { "model": "Type 2 De Luxe", "years": "1963" },
-    { "model": "Class 5/1600 Baja Bug", "years": "1969" },
-    { "model": "Pickup LX", "years": "1982" },
-    { "model": "Golf GTI", "years": "1983" },
-    { "model": "Rallye Golf", "years": "1989" },
-    { "model": "Golf Gti 16v Mk2", "years": "1992" },
-    { "model": "Corrado VR6", "years": "1995" },
-    { "model": "Golf R", "years": "2010" },
-    { "model": "Scirocco R", "years": "2011" },
-    { "model": "Golf R", "years": "2014" },
-    { "model": "#34 Andretti Rally Cross Beetle", "years": "2017" },
-    { "model": "Golf R", "years": "2021" },
-    { "model": "Golf R", "years": "2022" }
+    { "model": "Beetle", "years": "1963", "class": "D" },
+    { "model": "Type 2 De Luxe", "years": "1963", "class": "D" },
+    { "model": "Class 5/1600 Baja Bug", "years": "1969", "class": "D" },
+    { "model": "Pickup LX", "years": "1982", "class": "D" },
+    { "model": "Golf GTI", "years": "1983", "class": "D" },
+    { "model": "Golf Gti 16v Mk2", "years": "1992", "class": "D" },
+    { "model": "Corrado VR6", "years": "1995", "class": "C" },
+    { "model": "Golf R", "years": "2010", "class": "B" },
+    { "model": "Scirocco R", "years": "2011", "class": "B" },
+    { "model": "Golf R", "years": "2014", "class": "B" },
+    {
+      "model": "#34 Andretti Rally Cross Beetle",
+      "years": "2017",
+      "class": "S2"
+    },
+    { "model": "Golf R", "years": "2021", "class": "B" },
+    { "model": "Golf R", "years": "2022", "class": "C" }
   ],
-  "Volvo": [{ "model": "242 Turbo Evolution", "years": "1983" }],
+  "Volvo": [{ "model": "242 Turbo Evolution", "years": "1983", "class": "C" }],
   "Wuling": [
-    { "model": "Sunshine S", "years": "2013" },
-    { "model": "Sunshine S Forza Edition", "years": "2013" },
-    { "model": "Hongguang Mini EV", "years": "2022" }
+    { "model": "Sunshine S", "years": "2013", "class": "D" },
+    { "model": "Sunshine S Forza Edition", "years": "2013", "class": "S1" },
+    { "model": "Hongguang Mini EV", "years": "2022", "class": "D" }
   ],
-  "Zenvo": [{ "model": "TSR-S", "years": "2019" }],
+  "Zenvo": [{ "model": "TSR-S", "years": "2019", "class": "R" }],
   "Premium": [
     {
-      "Toyota": [
-        { "model": "Te", "years": "1111" },
-        { "model": "Fe", "years": "2222" }
+      "Dodge": [
+        {
+          "model": "Viper GTS ACR Forza Edition",
+          "years": "1999",
+          "class": "A"
+        }
       ],
+      "Lotus": [
+        { "model": "Evija Forza Edition", "years": "2020", "class": "S2" }
+      ],
+      "Toyota": [
+        {
+          "model": "J&J Motorsport Supra WTAC",
+          "years": "1995",
+          "class": "S2"
+        },
+        {
+          "model": "Tacoma TRD Pro Forza Edition",
+          "years": "2019",
+          "class": "R"
+        },
+        { "model": "GR Corolla", "years": "2023", "class": "B" }
+      ],
+      "Honda": [
+        {
+          "model": "#19 101 Motorsport CRX WTAC",
+          "years": "1990",
+          "class": "S2"
+        },
+        {
+          "model": "#21 Hardrace/JDMYard Civic WTAC",
+          "years": "1992",
+          "class": "R"
+        },
+        { "model": "#33 Integra WTAC", "years": "2001", "class": "S2" },
+        {
+          "model": "#52 Evasive Motorsports S2000 WTAC",
+          "years": "2004",
+          "class": "S2"
+        },
+        { "model": "Civic Type R (FD2)", "years": "2008", "class": "B" }
+      ],
+      "Mitsubishi": [
+        {
+          "model": "#269 Attacking the Clock Racing Minicab Time Attack",
+          "years": "1990",
+          "class": "D"
+        }
+      ],
+      "Nissan": [
+        {
+          "model": "#12 Skyline GT-R (BNR32 Gr.A) JTC",
+          "years": "1990",
+          "class": "S2"
+        },
+        {
+          "model": "#32 Skyline WTAC 'Xtreme GTR'",
+          "years": "1993",
+          "class": "R"
+        },
+        {
+          "model": "Skyline GT-R 40th Anniversary",
+          "years": "1998",
+          "class": "B"
+        },
+        {
+          "model": "#36 Dream Project S15 Silvia WTAC",
+          "years": "2000",
+          "class": "R"
+        }
+      ],
+      "Alfa Romeo": [
+        { "model": "SE 048SP", "years": "1990", "class": "R" },
+        { "model": "Giulia GTAm", "years": "2021", "class": "S1" }
+      ],
+      "Ferrari": [
+        { "model": "275 GTB4 Spider", "years": "1967", "class": "C" },
+        { "model": "F80", "years": "2025", "class": "R" }
+      ],
+      "Audi": [
+        { "model": "R8 Coupé V10 GT RWD", "years": "2023", "class": "S1" }
+      ],
+      "Datsun": [
+        {
+          "model": "#269 Attacking the Clock Racing 240Z 'All Carbon Hill Climb Beast'",
+          "years": "1972",
+          "class": "R"
+        }
+      ],
+      "Koenigsegg": [{ "model": "Gemera", "years": "2024", "class": "S2" }],
       "Mazda": [
-        { "model": "Ke", "years": "3333" },
-        { "model": "Re", "years": "4444" }
+        {
+          "model": "#123 Mad Mike 808 Wagon 'FURSTY'",
+          "years": "1974",
+          "class": "S1"
+        }
       ]
     }
   ],
-  "Exclusives": [
+  "Exclusive": [
     {
-      "Toyota": [
-        { "model": "Te", "years": "1111" },
-        { "model": "Fe", "years": "2222" }
+      "Abarth": [{ "model": "695 Biposto", "years": "2016", "class": "B" }],
+      "Aston Martin": [{ "model": "DBX", "years": "2021", "class": "A" }],
+      "Datsun": [{ "model": "2000 Roadster", "years": "1969", "class": "D" }],
+      "Dodge": [{ "model": "Ram SRT-10", "years": "2006", "class": "B" }],
+      "Ferrari": [
+        { "model": "Roma", "years": "2020", "class": "S1" },
+        { "model": "296 GTB", "years": "2022", "class": "S2" }
       ],
+      "Ford": [
+        { "model": "F-150 SVT Lightning", "years": "2003", "class": "C" }
+      ],
+      "Honda": [{ "model": "CR-X SiR", "years": "1991", "class": "C" }],
+      "Lamborghini": [
+        { "model": "Countach LP5000 QV", "years": "1988", "class": "A" },
+        { "model": "Huracán EVO", "years": "2020", "class": "S1" }
+      ],
+      "Lotus": [
+        { "model": "Exige Cup 430", "years": "2018", "class": "S1" },
+        { "model": "Emira", "years": "2023", "class": "A" }
+      ],
+      "Maserati": [{ "model": "MC12", "years": "2004", "class": "S1" }],
       "Mazda": [
-        { "model": "Ke", "years": "3333" },
-        { "model": "Re", "years": "4444" }
-      ]
+        { "model": "Cosmo 110S Series II", "years": "1972", "class": "D" },
+        { "model": "Furai", "years": "2008", "class": "R" }
+      ],
+      "McLaren": [{ "model": "Sabre", "years": "2021", "class": "S1" }],
+      "Mercedes-AMG": [{ "model": "GT R", "years": "2017", "class": "S1" }],
+      "MINI": [
+        { "model": "John Cooper Works GP", "years": "2021", "class": "B" }
+      ],
+      "Mitsubishi": [
+        { "model": "Lancer Evolution IX MR", "years": "2006", "class": "A" }
+      ],
+      "Nissan": [
+        { "model": "Be-1", "years": "1987", "class": "D" },
+        { "model": "Skyline GT-R V-Spec", "years": "1997", "class": "B" },
+        { "model": "370Z", "years": "2010", "class": "B" }
+      ],
+      "Pagani": [{ "model": "Huayra R", "years": "2021", "class": "R" }],
+      "Porsche": [
+        { "model": "911 Turbo S Leichtbau", "years": "1993", "class": "A" }
+      ],
+      "Renault": [{ "model": "8 Gordini", "years": "1967", "class": "D" }],
+      "Saleen": [{ "model": "S7 LM", "years": "2017", "class": "S2" }],
+      "Schuppan": [{ "model": "962CR", "years": "1993", "class": "S1" }],
+      "Subaru": [{ "model": "STI S209", "years": "2019", "class": "A" }],
+      "Toyota": [
+        { "model": "Corolla SR5", "years": "1974", "class": "D" },
+        { "model": "MR2 SC", "years": "1989", "class": "D" },
+        { "model": "Starlet Glanza V", "years": "1996", "class": "C" },
+        { "model": "Altezza RS200 Z EDITION", "years": "1999", "class": "C" },
+        {
+          "model": "Land Cruiser Arctic Trucks AT37",
+          "years": "2016",
+          "class": "D"
+        }
+      ],
+      "TVR": [{ "model": "Cerbera Speed 12", "years": "1998", "class": "S1" }],
+      "Volkswagen": [{ "model": "Rallye Golf", "years": "1989", "class": "C" }]
     }
   ]
 }

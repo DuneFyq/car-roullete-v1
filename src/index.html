@@ -42,6 +42,30 @@
                 Карточки
               </button>
             </li>
+            <li class="roulette-nav__item">
+              <button
+                class="button button--tab roulette-nav__button"
+                data-js-tabs-button
+              >
+                Пандора
+              </button>
+            </li>
+            <li class="roulette-nav__item">
+              <button
+                class="button button--tab roulette-nav__button"
+                data-js-tabs-button
+              >
+                Крафты
+              </button>
+            </li>
+            <li class="roulette-nav__item">
+              <button
+                class="button button--tab roulette-nav__button"
+                data-js-tabs-button
+              >
+                Раунд
+              </button>
+            </li>
           </ul>
         </nav>
 
@@ -49,7 +73,7 @@
           <div class="roulette-content__tabs">
             <div class="tab tab--rules tab--active" data-js-tabs-content>
               <article class="tab-rules">
-                <h2 class="tab-rules__title">Правила</h2>
+                <h2 class="tab__title">Правила</h2>
 
                 <!-- Навигация -->
                 <nav class="tab-rules__nav">
@@ -103,6 +127,7 @@
                     <li class="tab-rules__list-item">Дрифт</li>
                     <li class="tab-rules__list-item">Флаги</li>
                     <li class="tab-rules__list-item">Вышибалы</li>
+                    <li class="tab-rules__list-item">Прыжок</li>
                     <li class="tab-rules__list-item tab-rules__list-item--note">
                       - Подробнее о дисциплинах у создателей -
                     </li>
@@ -236,14 +261,15 @@
 
             <div class="tab tab--cars" data-js-tabs-content data-js-car-spin>
               <article class="tab-cars">
-                <h2 class="tab-cars__title">Машины</h2>
-                <h3 class="tab-cars__subtitle">Случайные машины</h3>
-                <input
+                <h2 class="tab__title">Машины</h2>
+                <h3 class="tab__subtitle">Случайные машины</h3>
+
+                <div
                   class="tab-cars__input"
                   name="car-result"
                   data-js-spin-result
-                  readonly
-                />
+                ></div>
+
                 <div class="tab-cars__interaction">
                   <button
                     class="button button--spin tab-cars__spin-button"
@@ -252,24 +278,40 @@
                     Крутить
                   </button>
 
-                  <label class="tab-cars__filter-row">
-                    <span class="tab-cars__filter-text">искл. premium</span>
-                    <span class="switch tab-cars__switch-wrapper">
-                      <input
-                        class="switch__input"
-                        name="exclude-premium"
-                        type="checkbox"
-                      />
-                      <span class="switch__slider"></span>
-                    </span>
-                  </label>
+                  <div class="tab-cars__switches">
+                    <label class="tab-cars__filter-row">
+                      <span class="tab-cars__filter-text">искл. эксклюзив</span>
+                      <span class="switch">
+                        <input
+                          class="switch__input"
+                          name="exclude-exclusive"
+                          type="checkbox"
+                          data-js-filter-input-exclusive
+                        />
+                        <span class="switch__slider"></span>
+                      </span>
+                    </label>
+
+                    <label class="tab-cars__filter-row">
+                      <span class="tab-cars__filter-text">искл. premium</span>
+                      <span class="switch">
+                        <input
+                          class="switch__input"
+                          name="exclude-premium"
+                          type="checkbox"
+                          data-js-filter-input-premium
+                        />
+                        <span class="switch__slider"></span>
+                      </span>
+                    </label>
+                  </div>
                 </div>
 
                 <div class="history" data-js-history>
                   <h3 class="history__title">История</h3>
                   <label class="history__hide-row">
                     <span class="history__hide-text">скрыть</span>
-                    <span class="switch tab-cars__switch-wrapper">
+                    <span class="switch">
                       <input
                         class="switch__input"
                         name="hide-history"
@@ -289,8 +331,8 @@
 
             <div class="tab tab--cards" data-js-tabs-content data-js-card-spin>
               <article class="tab-cards">
-                <h2 class="tab-cards__title">Карточки</h2>
-                <h3 class="tab-cards__subtitle">Случайные карточки</h3>
+                <h2 class="tab__title">Карточки</h2>
+                <h3 class="tab__subtitle">Случайные карточки</h3>
                 <input
                   class="tab-cards__input"
                   name="card-result"
@@ -346,6 +388,131 @@
                   <label class="history__hide-row">
                     <span class="history__hide-text">скрыть</span>
                     <span class="switch tab-cards__switch-wrapper">
+                      <input
+                        class="switch__input"
+                        name="hide-history"
+                        type="checkbox"
+                        data-js-hide-input
+                      />
+                      <span class="switch__slider"></span>
+                    </span>
+                  </label>
+                  <ul
+                    class="history__list history__list--active"
+                    data-js-history-list
+                  >
+                    <li class="card ${record.id}">
+                      <div class="card__content">
+                        <p class="card__name">${record.result}</p>
+                        <p class="card__type card__type--${type.toLowerCase()}">
+                          ${type}
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+
+            <div
+              class="tab tab--pandora"
+              data-js-tabs-content
+              data-js-pandora-spin
+            >
+              <article class="tab-pandora">
+                <h2 class="tab__title">Ящик пандоры</h2>
+                <h3 class="tab__subtitle">Случайная тайна</h3>
+
+                <input
+                  class="tab-pandora__input"
+                  name="pandora-result"
+                  data-js-spin-result
+                  readonly
+                />
+
+                <button
+                  class="button button--spin tab-pandora__spin-button"
+                  data-js-spin-button
+                >
+                  Крутить
+                </button>
+
+                <div class="history" data-js-history>
+                  <h3 class="history__title">История</h3>
+                  <label class="history__hide-row">
+                    <span class="history__hide-text">скрыть</span>
+                    <span class="switch">
+                      <input
+                        class="switch__input"
+                        name="hide-history"
+                        type="checkbox"
+                        data-js-hide-input
+                      />
+                      <span class="switch__slider"></span>
+                    </span>
+                  </label>
+                  <ul
+                    class="history__list history__list--active"
+                    data-js-history-list
+                  ></ul>
+                </div>
+              </article>
+            </div>
+
+            <div class="tab tab--craft" data-js-tabs-content>
+              <article class="tab-craft">
+                <h2 class="tab__title">Крафт</h2>
+
+                <input class="tab-craft__input" name="test" readonly />
+                <input class="tab-craft__input" name="test" readonly />
+                <input class="tab-craft__input" name="test" readonly />
+
+                <div class="history" data-js-history>
+                  <h3 class="history__title">История</h3>
+                  <label class="history__hide-row">
+                    <span class="history__hide-text">скрыть</span>
+                    <span class="switch">
+                      <input
+                        class="switch__input"
+                        name="hide-history"
+                        type="checkbox"
+                        data-js-hide-input
+                      />
+                      <span class="switch__slider"></span>
+                    </span>
+                  </label>
+                  <ul
+                    class="history__list history__list--active"
+                    data-js-history-list
+                  ></ul>
+                </div>
+              </article>
+            </div>
+
+            <div class="tab tab--round" data-js-tabs-content data-js-round-spin>
+              <article class="tab-round">
+                <h2 class="tab__title">Раунд</h2>
+                <h3 class="tab__subtitle">Генерация параментров раунда</h3>
+
+                <input
+                  class="tab-round__input"
+                  name="round-result"
+                  data-js-spin-result
+                  readonly
+                />
+
+                <button
+                  class="button button--spin tab-round__spin-button"
+                  data-js-spin-button
+                >
+                  Крутить
+                </button>
+
+                <div class="history" data-js-history>
+                  <h3 class="history__title">История</h3>
+                  <label class="history__hide-row">
+                    <span class="history__hide-text">скрыть</span>
+                    <span class="switch">
                       <input
                         class="switch__input"
                         name="hide-history"

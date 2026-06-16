@@ -1,0 +1,53 @@
+@use "../helpers" as *;
+
+.tab-pandora {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  row-gap: rem(16);
+
+  @include mobile {
+    row-gap: rem(24);
+  }
+
+  &__input {
+    @include fluid-text(20, 15);
+    text-align: center;
+    border: var(--border-input);
+    border-radius: var(--border-radius);
+    height: rem(40);
+
+    @include mobile {
+      height: rem(48);
+    }
+  }
+
+  &__spin-button {
+    @include flex-center(true);
+
+    width: 100%;
+    max-width: rem(100);
+    margin-inline: auto;
+
+    font-size: rem(16);
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      transform 0.1s ease;
+
+    @include hover() {
+      background-color: var(--color-accent);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+
+    @include mobile {
+      width: 100%;
+      max-width: 100%;
+      height: rem(48);
+    }
+  }
+}

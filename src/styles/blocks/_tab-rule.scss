@@ -9,16 +9,6 @@
     row-gap: rem(24);
   }
 
-  &__title {
-    @include fluid-text(60, 40);
-    color: var(--color-dark);
-    text-align: center;
-
-    @include mobile-s {
-      @include fluid-text(40, 32);
-    }
-  }
-
   &__nav-heading {
     @include fluid-text(40, 20);
 

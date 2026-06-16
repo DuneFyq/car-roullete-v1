@@ -1,0 +1,41 @@
+@use "../helpers" as *;
+
+.class {
+  &--D,
+  &--C,
+  &--B,
+  &--A,
+  &--S1,
+  &--S2,
+  &--R {
+    text-shadow: 10px var(--color-dark);
+  }
+
+  &--D {
+    color: #3cbff5;
+  }
+
+  &--C {
+    color: #fac849;
+  }
+
+  &--B {
+    color: #f76430;
+  }
+
+  &--A {
+    color: #ff1244;
+  }
+
+  &--S1 {
+    color: #b676d5;
+  }
+
+  &--S2 {
+    color: #336EB7
+  }
+
+  &--R {
+    color: #d71d99;
+  }
+}

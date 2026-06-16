@@ -10,27 +10,10 @@
     row-gap: rem(24);
   }
 
-  &__title {
-    @include fluid-text(60, 40);
-    color: var(--color-dark);
-
-    @include mobile-s {
-      @include fluid-text(40, 32);
-    }
-  }
-
-  &__subtitle {
-    @include fluid-text(40, 20);
-    color: var(--color-gray-60);
-
-    @include mobile {
-      margin-bottom: rem(16);
-    }
-  }
-
   &__input {
     @include fluid-text(20, 15);
     text-align: center;
+    border: var(--border-input);
     border-radius: var(--border-radius);
     height: rem(40);
 
@@ -78,7 +61,6 @@
 
   &__list {
     width: 100%;
-    min-height: rem(70);
     max-height: rem(250);
     text-align: left;
     background-color: var(--color-gray);
