@@ -1,4 +1,4 @@
-import { historyService } from "../../services/LocalStorageService ";
+import { historyService } from "../../services/LocalStorageService";
 
 const ROOT_SELECTOR = "[data-js-history]";
 

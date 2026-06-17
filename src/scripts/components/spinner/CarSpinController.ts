@@ -1,12 +1,13 @@
 import { BaseSpinController, type SpinSelectors } from "./BaseSpinController";
-import { historyService } from "../../services/LocalStorageService ";
-import { randomFromArray, randomFromIterable } from "../../utils/randomUtils";
+import { historyService } from "../../services/LocalStorageService";
+import { randomFromArray } from "../../utils/randomUtils";
 
 export const ROOT_SELECTOR = "[data-js-car-spin]";
 
 interface CustomSpinSelectors extends SpinSelectors {
   readonly root: string;
   readonly button: string;
+  readonly result: string;
   readonly filterInputExclusive: string;
   readonly filterInputPremium: string;
 }
@@ -17,7 +18,8 @@ interface CarModel {
   class: string;
 }
 
-type CarMap = Map<string, CarModel[]>;
+type RawCarJson = Map<string, CarModel[] | [Record<string, CarModel[]>]>;
+type FlatCar = { brand: string; model: CarModel };
 
 class CarSpinController extends BaseSpinController {
   protected readonly selectors: CustomSpinSelectors = {
@@ -30,80 +32,77 @@ class CarSpinController extends BaseSpinController {
 
   private readonly filterInputExclusive: HTMLInputElement;
   private readonly filterInputPremium: HTMLInputElement;
-  private readonly cars: CarMap;
+  private readonly flatCars: FlatCar[];
 
-  constructor(rootElement: HTMLElement, cars: CarMap) {
+  constructor(rootElement: HTMLElement, cars: Map<string, CarModel>) {
     super(rootElement);
 
-    const filterInputExclusive =
-      this.rootElement.querySelector<HTMLInputElement>(
-        this.selectors.filterInputExclusive,
-      );
+    const filterInputExclusive = this.rootElement.querySelector<HTMLInputElement>(
+      this.selectors.filterInputExclusive,
+    );
     const filterInputPremium = this.rootElement.querySelector<HTMLInputElement>(
       this.selectors.filterInputPremium,
     );
 
     if (!filterInputExclusive || !filterInputPremium) {
-      throw new Error(
-        `SpinController: не найдены элементы внутри ${this.selectors.root}`,
-      );
+      throw new Error(`SpinController: не найдены фильтры внутри ${this.selectors.root}`);
     }
 
     this.filterInputExclusive = filterInputExclusive;
     this.filterInputPremium = filterInputPremium;
 
-    this.cars = cars;
+    this.flatCars = this.buildFlatCars(cars);
+    
+    if (this.flatCars.length === 0) {
+      throw new Error(`SpinController: не найден корректный список машин`);
+    }
+
     this.init();
   }
 
   protected spin(): void {
-    let brand: string;
+    const luckyShot = randomFromArray(this.flatCars);
+    const resultHTML = this.generateCarHTML(luckyShot.brand, luckyShot.model);
+    this.updateOutput(resultHTML);
+  }
 
-    while (true) {
-      brand = randomFromIterable(this.cars.keys());
+  private buildFlatCars(cars: Map<string, CarModel>): FlatCar[] {
+    const flatCars: FlatCar[] = [];
+    const skipPremium = this.filterInputPremium.checked;
+    const skipExclusive = this.filterInputExclusive.checked;
 
-      const isPremiumFiltered =
-        brand === "Premium" && this.filterInputPremium.checked;
-      const isExclusiveFiltered =
-        brand === "Exclusive" && this.filterInputExclusive.checked;
+    for (const [brand, models] of cars.entries()) {
+      if (!Array.isArray(models) || models.length === 0) continue;
 
-      if (!isPremiumFiltered && !isExclusiveFiltered) {
-        break;
+      if (brand === "Premium" || brand === "Exclusive") {
+        if ((brand === "Premium" && skipPremium) || (brand === "Exclusive" && skipExclusive)) {
+          continue;
+        }
+
+        const specialMap = models[0] as Record<string, CarModel[]>;
+        for (const [actualBrand, specialModels] of Object.entries(specialMap)) {
+          for (const model of specialModels) {
+            flatCars.push({ brand: actualBrand, model });
+          }
+        }
+      } 
+      else {
+        for (const model of models) {
+          flatCars.push({ brand, model });
+        }
       }
     }
 
-    const isSpecial = brand === "Premium" || brand === "Exclusive";
+    return flatCars;
+  }
 
-    const models = this.cars.get(brand);
-    if (!models?.length) return;
+  private generateCarHTML(brand: string, car: CarModel): string {
+    return `${brand} ${car.model} ${car.years}- <span class="class--${car.class}">"${car.class}"</span>`;
+  }
 
-    const specialMap = isSpecial
-      ? (models[0] as unknown as Record<string, CarModel[]>)
-      : null;
-    const actualBrand = isSpecial
-      ? randomFromIterable(Object.keys(specialMap!))
-      : brand;
-    const targetCars = isSpecial ? specialMap![actualBrand] : models;
-
-    const randomCar = randomFromArray(targetCars);
-    if (!randomCar) return;
-
-    let result = `
-      ${actualBrand}
-      ${randomCar.model}
-      ${randomCar.years}-
-      <span class="class--${randomCar.class}">
-        "${randomCar.class}"
-      </span>
-    `;
-
-    if (this.resultElement.innerHTML === result) {
-      result += " (Повтор!)";
-    }
-
-    this.resultElement.innerHTML = result;
-
-    historyService.addRecord(result);
+  private updateOutput(resultHTML: string): void {
+    this.resultElement.innerHTML = resultHTML;
+    historyService.addRecord(resultHTML);
     document.dispatchEvent(new CustomEvent("history:updated"));
   }
 }
@@ -115,23 +114,24 @@ class CarSpinCollection {
     this.init();
   }
 
-  private async fetchCars(): Promise<CarMap> {
+  private async fetchCars(): Promise<Map<string, CarModel>> {
     const res = await fetch("./cars/forza-horizon-6.json");
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
-    const raw = (await res.json()) as Record<string, CarModel[]>;
+    const raw = (await res.json()) as RawCarJson;
     return new Map(Object.entries(raw));
   }
 
-  private async init() {
+  private async init(): Promise<void> {
     const elements = document.querySelectorAll<HTMLElement>(ROOT_SELECTOR);
     const cars = await this.fetchCars();
-    this.controllers = [...elements].map(
+    
+    this.controllers = Array.from(elements).map(
       (element) => new CarSpinController(element, cars),
     );
   }
 
-  public destroy() {
+  public destroy(): void {
     this.controllers.forEach((c) => c.destroy());
     this.controllers.length = 0;
   }

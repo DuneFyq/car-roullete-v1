@@ -2,7 +2,7 @@ import { BaseSpinController, type SpinSelectors } from "./BaseSpinController";
 import {
   cardService,
   historyService,
-} from "../../services/LocalStorageService ";
+} from "../../services/LocalStorageService";
 import { randomFromIterable } from "../../utils/randomUtils";
 
 const ROOT_SELECTOR = "[data-js-card-spin]";
