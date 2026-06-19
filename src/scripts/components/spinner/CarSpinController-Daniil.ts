@@ -18,7 +18,7 @@ interface CarModel {
   class: string;
 }
 
-type RawCarJson = Map<string, CarModel[] | [Record<string, CarModel[]>]>;
+type RawCarJson = Record<string, CarModel[] | [Record<string, CarModel[]>]>;
 type FlatCar = { brand: string; model: CarModel };
 
 class CarSpinController extends BaseSpinController {
@@ -32,103 +32,73 @@ class CarSpinController extends BaseSpinController {
 
   private readonly filterInputExclusive: HTMLInputElement;
   private readonly filterInputPremium: HTMLInputElement;
-
-  private readonly allCars: FlatCar[] = [];
-  private readonly carsWithoutPremium: FlatCar[] = [];
-  private readonly carsWithoutExclusive: FlatCar[] = [];
-  private readonly carsWithoutBoth: FlatCar[] = [];
+  private readonly flatCars: FlatCar[];
 
   constructor(rootElement: HTMLElement, cars: Map<string, CarModel>) {
     super(rootElement);
 
-    this.filterInputExclusive =
+    const filterInputExclusive =
       this.rootElement.querySelector<HTMLInputElement>(
         this.selectors.filterInputExclusive,
-      )!;
-    this.filterInputPremium = this.rootElement.querySelector<HTMLInputElement>(
+      );
+    const filterInputPremium = this.rootElement.querySelector<HTMLInputElement>(
       this.selectors.filterInputPremium,
-    )!;
+    );
 
-    if (!this.filterInputExclusive || !this.filterInputPremium) {
+    if (!filterInputExclusive || !filterInputPremium) {
       throw new Error(
         `SpinController: не найдены фильтры внутри ${this.selectors.root}`,
       );
     }
 
-    this.buildCarLists(cars);
+    this.filterInputExclusive = filterInputExclusive;
+    this.filterInputPremium = filterInputPremium;
+
+    this.flatCars = this.buildFlatCars(cars);
+
+    if (this.flatCars.length === 0) {
+      throw new Error(`SpinController: не найден корректный список машин`);
+    }
+
     this.init();
   }
 
   protected spin(): void {
-    const cars = this.getCarsForCurrentFilters();
-
-    if (cars.length === 0) {
-      this.updateOutput(
-        `<span class="class--error">Нет доступных машин для текущих фильтров</span>`,
-      );
-      return;
-    }
-
-    const luckyShot = randomFromArray(cars);
-    this.updateOutput(this.generateCarHTML(luckyShot.brand, luckyShot.model));
+    const luckyShot = randomFromArray(this.flatCars);
+    const resultHTML = this.generateCarHTML(luckyShot.brand, luckyShot.model);
+    this.updateOutput(resultHTML);
   }
 
-  private getCarsForCurrentFilters(): FlatCar[] {
+  private buildFlatCars(cars: Map<string, CarModel>): FlatCar[] {
+    const flatCars: FlatCar[] = [];
     const skipPremium = this.filterInputPremium.checked;
     const skipExclusive = this.filterInputExclusive.checked;
 
-    if (skipPremium && skipExclusive) return this.carsWithoutBoth;
-    if (skipPremium) return this.carsWithoutPremium;
-    if (skipExclusive) return this.carsWithoutExclusive;
-    return this.allCars;
-  }
-
-  private buildCarLists(cars: Map<string, CarModel>): void {
     for (const [brand, models] of cars.entries()) {
       if (!Array.isArray(models) || models.length === 0) continue;
 
-      const carPairs = this.extractCarPairs(brand, models);
-      const isPremium = brand === "Premium";
-      const isExclusive = brand === "Exclusive";
-
-      for (const pair of carPairs) {
-        this.allCars.push(pair);
-
-        if (!isPremium) {
-          this.carsWithoutPremium.push(pair);
+      if (brand === "Premium" || brand === "Exclusive") {
+        if (
+          (brand === "Premium" && skipPremium) ||
+          (brand === "Exclusive" && skipExclusive)
+        ) {
+          continue;
         }
 
-        if (!isExclusive) {
-          this.carsWithoutExclusive.push(pair);
+        const specialMap = models[0] as Record<string, CarModel[]>;
+        for (const [actualBrand, specialModels] of Object.entries(specialMap)) {
+          for (const model of specialModels) {
+            flatCars.push({ brand: actualBrand, model });
+          }
         }
-
-        if (!isPremium && !isExclusive) {
-          this.carsWithoutBoth.push(pair);
+      } else {
+        for (const model of models) {
+          flatCars.push({ brand, model });
         }
       }
     }
-  }
 
-  private extractCarPairs(
-    brand: string,
-    models: CarModel[] | [Record<string, CarModel[]>],
-  ): FlatCar[] {
-    const isSpecial = brand === "Premium" || brand === "Exclusive";
-
-    if (!isSpecial) {
-      return (models as CarModel[]).map((model) => ({ brand, model }));
-    }
-
-    const specialMap = models[0] as Record<string, CarModel[]>;
-    const pairs: FlatCar[] = [];
-
-    for (const [actualBrand, specialModels] of Object.entries(specialMap)) {
-      for (const model of specialModels) {
-        pairs.push({ brand: actualBrand, model });
-      }
-    }
-
-    return pairs;
+    return flatCars;
   }
 
   private generateCarHTML(brand: string, car: CarModel): string {
@@ -149,7 +119,7 @@ class CarSpinCollection {
     this.init();
   }
 
-  private async fetchCars(): Promise<Map<string, CarModel>> {
+  private async fetchCars(): Promise<Map<string, any>> {
     const res = await fetch("./cars/forza-horizon-6.json");
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
 

@@ -7,6 +7,8 @@ interface CustomSpinSelectors extends SpinSelectors {
   readonly button: string;
 }
 
+type PandoraKey = Record<string, { chance: number }>
+
 class PandoraSpinController extends BaseSpinController {
   protected readonly selectors: CustomSpinSelectors = {
     root: ROOT_SELECTOR,
@@ -14,9 +16,10 @@ class PandoraSpinController extends BaseSpinController {
     result: "[data-js-spin-result]",
   };
 
+  // Принимаем плоскую карту ключей
   constructor(rootElement: HTMLElement) {
     super(rootElement);
-
+    
     this.init();
   }
 
@@ -34,8 +37,16 @@ class PandoraSpinCollection {
     this.init();
   }
 
+  private async fetchKeys() {
+    return;
+  }
+
   private async init() {
     const elements = document.querySelectorAll<HTMLElement>(ROOT_SELECTOR);
+    
+    // Получаем единую карту всех ключей
+    const keys = await this.fetchKeys();
+
     this.controllers = [...elements].map(
       (element) => new PandoraSpinController(element),
     );
