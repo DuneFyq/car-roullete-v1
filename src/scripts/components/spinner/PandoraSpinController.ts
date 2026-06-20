@@ -1,6 +1,6 @@
 import { BaseSpinController, type SpinSelectors } from "./BaseSpinController";
 import { historyService } from "../../services/LocalStorageService";
-import { randomFromArray, randomKeyFromObject } from "../../utils/randomUtils";
+import { randomKeyFromObject } from "../../utils/randomUtils";
 
 export const ROOT_SELECTOR = "[data-js-pandora-spin]";
 
