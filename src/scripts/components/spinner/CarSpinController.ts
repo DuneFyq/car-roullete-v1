@@ -16,6 +16,8 @@ interface CarModel {
   model: string;
   years: string;
   class: string;
+  isPremium?: boolean;
+  isExclusive?: boolean;
 }
 
 type RawCarJson = Map<string, CarModel[] | [Record<string, CarModel[]>]>;
@@ -131,8 +133,10 @@ class CarSpinController extends BaseSpinController {
     return pairs;
   }
 
-  private generateCarHTML(brand: string, car: CarModel): string {
-    return `${brand} ${car.model} ${car.years}- <span class="class--${car.class}">"${car.class}"</span>`;
+  private generateCarHTML(brand: string, car: CarModel) {
+    const { model, years, class: carClass } = car;
+
+    return `${brand} ${model} ${years} - <span class="class--${carClass}">"${carClass}"</span>`;
   }
 
   private updateOutput(resultHTML: string): void {
@@ -143,7 +147,7 @@ class CarSpinController extends BaseSpinController {
 }
 
 class CarSpinCollection {
-  private controllers: CarSpinController[] = [];
+  public controllers: CarSpinController[] = [];
 
   constructor() {
     this.init();
@@ -157,7 +161,7 @@ class CarSpinCollection {
     return new Map(Object.entries(raw));
   }
 
-  private async init(): Promise<void> {
+  private async init() {
     const elements = document.querySelectorAll<HTMLElement>(ROOT_SELECTOR);
     const cars = await this.fetchCars();
 
@@ -166,7 +170,7 @@ class CarSpinCollection {
     );
   }
 
-  public destroy(): void {
+  public destroy() {
     this.controllers.forEach((c) => c.destroy());
     this.controllers.length = 0;
   }

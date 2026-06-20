@@ -8,6 +8,7 @@ interface CustomSpinSelectors extends SpinSelectors {
 }
 
 type PandoraKey = Record<string, { chance: number }>
+type AllPandoraKeys = Record<string, PandoraKey>
 
 class PandoraSpinController extends BaseSpinController {
   protected readonly selectors: CustomSpinSelectors = {
@@ -16,9 +17,12 @@ class PandoraSpinController extends BaseSpinController {
     result: "[data-js-spin-result]",
   };
 
-  // Принимаем плоскую карту ключей
-  constructor(rootElement: HTMLElement) {
+  private readonly keys: AllPandoraKeys;
+
+  constructor(rootElement: HTMLElement, keys: AllPandoraKeys) {
     super(rootElement);
+
+    this.keys = keys;
     
     this.init();
   }
@@ -26,6 +30,7 @@ class PandoraSpinController extends BaseSpinController {
   protected spin(): void {
     if ("value" in this.resultElement) {
       this.resultElement.value = "Пандора";
+      console.log(this.keys);
     }
   }
 }
@@ -37,18 +42,23 @@ class PandoraSpinCollection {
     this.init();
   }
 
-  private async fetchKeys() {
-    return;
+  private async fetchKeys(): Promise<AllPandoraKeys> {
+    return {
+      "sliver": {
+        "dayn": { chance: 0 }
+      },
+      "golden": {
+        "dayn": { chance: 0 }
+      }
+    };
   }
 
   private async init() {
     const elements = document.querySelectorAll<HTMLElement>(ROOT_SELECTOR);
-    
-    // Получаем единую карту всех ключей
-    const keys = await this.fetchKeys();
+    const keys: AllPandoraKeys = await this.fetchKeys();
 
     this.controllers = [...elements].map(
-      (element) => new PandoraSpinController(element),
+      (element) => new PandoraSpinController(element, keys),
     );
   }
 

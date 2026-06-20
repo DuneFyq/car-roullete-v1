@@ -44,11 +44,11 @@ export function randomFromIterable<T>(items: Iterable<T>): T {
  * 
  * @example
  * const colors = ['red', 'green', 'blue'];
- * const color = randomArrayItem(colors); // 'red' | 'green' | 'blue'
+ * const color = randomFromArray(colors); // 'red' | 'green' | 'blue'
  * 
  * @example
  * const empty: string[] = [];
- * randomArrayItem(empty); // ❌ Error: Empty array
+ * randomFromArray(empty); // ❌ Error: Empty array
  */
 export function randomFromArray<T>(items: readonly T[]): T {
   if (items.length === 0) throw new Error("Empty array");
@@ -69,7 +69,7 @@ export function randomFromArray<T>(items: readonly T[]): T {
  * 
  * @example
  * const config = { width: 100, height: 200, depth: 300 };
- * const param = randomObjectKey(config); // 'width' | 'height' | 'depth'
+ * const param = randomKeyFromObject(config); // 'width' | 'height' | 'depth'
  * const value = config[param]; // 100 | 200 | 300
  */
 export function randomKeyFromObject<T extends object>(object: T): string & keyof T {
