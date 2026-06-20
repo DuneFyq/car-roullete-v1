@@ -430,12 +430,62 @@
                   readonly
                 />
 
-                <button
-                  class="button button--spin tab-pandora__spin-button"
-                  data-js-spin-button
-                >
-                  Крутить
-                </button>
+                <div class="tab-pandora__interaction">
+                  <button
+                    class="button button--spin tab-pandora__spin-button"
+                    data-js-spin-button
+                  >
+                    Крутить
+                  </button>
+
+                  <div class="tab-pandora__switches">
+                    <label class="tab-pandora__filter-row">
+                      <span class="tab-pandora__filter-text"
+                        >бронзовый ключ</span
+                      >
+                      <span class="switch">
+                        <input
+                          class="switch__input"
+                          name="key-type"
+                          value="bronze"
+                          type="radio"
+                          data-js-filter-input-bronze
+                        />
+                        <span class="switch__slider"></span>
+                      </span>
+                    </label>
+
+                    <label class="tab-pandora__filter-row">
+                      <span class="tab-pandora__filter-text"
+                        >серебряный ключ</span
+                      >
+                      <span class="switch">
+                        <input
+                          class="switch__input"
+                          name="key-type"
+                          value="silver"
+                          type="radio"
+                          data-js-filter-input-silver
+                        />
+                        <span class="switch__slider"></span>
+                      </span>
+                    </label>
+
+                    <label class="tab-pandora__filter-row">
+                      <span class="tab-pandora__filter-text">золотой ключ</span>
+                      <span class="switch">
+                        <input
+                          class="switch__input"
+                          name="key-type"
+                          value="golden"
+                          type="radio"
+                          data-js-filter-input-golden
+                        />
+                        <span class="switch__slider"></span>
+                      </span>
+                    </label>
+                  </div>
+                </div>
 
                 <div class="history" data-js-history>
                   <h3 class="history__title">История</h3>

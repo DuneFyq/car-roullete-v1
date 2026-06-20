@@ -534,11 +534,6 @@
     { "model": "X-raid John Cooper Works Buggy", "years": "2018", "class": "A" }
   ],
   "Mitsubishi": [
-    {
-      "model": "#269 Attacking the Clock Racing Minicab Time Attack",
-      "years": "1990",
-      "class": "D"
-    },
     { "model": "Galant VR-4", "years": "1992", "class": "C" },
     { "model": "Eclipse GSX", "years": "1995", "class": "C" },
     { "model": "Lancer Evolution III GSR", "years": "1995", "class": "C" },
