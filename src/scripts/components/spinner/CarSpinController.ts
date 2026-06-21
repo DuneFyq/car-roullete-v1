@@ -1,5 +1,4 @@
 import { BaseSpinController, type SpinSelectors } from "./BaseSpinController";
-import { historyService } from "../../services/LocalStorageService";
 import { randomFromArray } from "../../utils/randomUtils";
 
 export const ROOT_SELECTOR = "[data-js-car-spin]";
@@ -137,12 +136,6 @@ class CarSpinController extends BaseSpinController {
     const { model, years, class: carClass } = car;
 
     return `${brand} ${model} ${years} - <span class="class--${carClass}">"${carClass}"</span>`;
-  }
-
-  private updateOutput(resultHTML: string): void {
-    this.resultElement.innerHTML = resultHTML;
-    historyService.addRecord(resultHTML);
-    document.dispatchEvent(new CustomEvent("history:updated"));
   }
 }
 

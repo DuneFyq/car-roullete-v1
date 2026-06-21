@@ -1,3 +1,5 @@
+import { historyService } from "../../services/LocalStorageService";
+
 export const ROOT_SELECTOR = "[data-js-spin]";
 
 export interface SpinSelectors {
@@ -53,4 +55,14 @@ export abstract class BaseSpinController {
   }
 
   protected abstract spin(): void;
+
+  protected updateOutput(resultHTML: string): void {
+    if ("value" in this.resultElement) this.resultElement.value = resultHTML;
+    else if ("innerHTML" in this.resultElement) this.resultElement.innerHTML = resultHTML;
+
+    if (resultHTML === "Пожалуйста, выберите тип крутки") return;
+
+    historyService.addRecord(resultHTML);
+    document.dispatchEvent(new CustomEvent("history:updated"));
+  }
 }

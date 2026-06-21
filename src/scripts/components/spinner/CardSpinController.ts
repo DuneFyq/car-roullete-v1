@@ -1,8 +1,5 @@
 import { BaseSpinController, type SpinSelectors } from "./BaseSpinController";
-import {
-  cardService,
-  historyService,
-} from "../../services/LocalStorageService";
+import { cardService } from "../../services/LocalStorageService";
 import { randomFromIterable } from "../../utils/randomUtils";
 
 const ROOT_SELECTOR = "[data-js-card-spin]";
@@ -178,16 +175,9 @@ class CardSpinController extends BaseSpinController {
     const content = this.cards.get(name);
     const type = content?.type ?? "Типа не имеет";
 
-    if ("value" in this.resultElement) {
-      this.resultElement.value = `${name} - ${type}`;
-    }
-
-    historyService.addRecord(name);
+    this.updateOutput(`${name} - ${type}`);
     cardService.addRecord(name);
-
     this.render();
-
-    document.dispatchEvent(new CustomEvent("history:updated"));
   }
 
   private render() {

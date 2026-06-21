@@ -231,12 +231,20 @@
                     Ящик Пандоры
                   </h3>
                   <p class="tab-rules__text">
-                    Открывается двумя способами:<br />
-                    1) 1 ключ — Большой шанс выбить очень плохой дроп, но
-                    маленький шанс выбить что-то стоящее.<br />
-                    2) 3 ключа — Гарантировано выдается хороший дроп.<br />
-                    1 ключ выдаётся игроку, занявшему последнее место в раунде.
-                    В каждом раунде без исключения выдаётся 1 ключ.
+                    Открывается тремя способами:<br />
+                    1) <strong>бронзовый ключ</strong> — Большой шанс выбить
+                    очень плохой дроп, но маленький шанс выбить что-то
+                    стоящее.<br />
+                    2) <strong>серебряный ключ</strong> — Баланс, шанс выбить
+                    что хорошое и плохое равное.<br />
+                    3) <strong>золотой ключ</strong> — Гарантировано выдается
+                    хороший дроп.<br />
+                    Способ получения ключей:<br />
+                    1 бронзовый ключ выдаётся игроку который занял последнее
+                    место. Также в рулетке вместе с игроками есть "бронзовый
+                    ключ" если он выпал, то следующему игроку на которого
+                    выпадет ход выдаётся ключ. (Один раз за раунд) 2 бронзовых =
+                    1 серебряный 2 серебряных = 1 золотой
                   </p>
                 </section>
 
@@ -255,6 +263,71 @@
                     врезаться, состояние машины может ухудшиться, и вы можете
                     потерять максимальную скорость, управление и так далее.
                   </p>
+                </section>
+
+                <!-- Секция: Магазин -->
+                <section class="tab-rules__section" id="shop">
+                  <h3
+                    class="tab-rules__section-title tab-rules__section-title--shop"
+                  >
+                    Магазин
+                  </h3>
+                  <p class="tab-rules__text">
+                    Список товаров которые можно купить за баллы:
+                  </p>
+                  <ul class="tab-rules__list tab-rules__list--shop">
+                    <li class="tab-rules__list-item">
+                      <strong>Клон</strong> — 0,25
+                    </li>
+                    <li class="tab-rules__list-item">
+                      <strong>Дублёр</strong> — 0,25
+                    </li>
+                    <li class="tab-rules__list-item">
+                      <strong>Попытка №2</strong> — 0,25
+                    </li>
+                    <li class="tab-rules__list-item">
+                      <strong>Кинжал</strong> — 0,25
+                    </li>
+                    <li class="tab-rules__list-item">
+                      <strong>Обмен карточками</strong> — 0,25
+                    </li>
+                    <li class="tab-rules__list-item">
+                      <strong>Обмен машинами</strong> — 0,25
+                    </li>
+                    <li class="tab-rules__list-item">
+                      <strong>Автолюбитель</strong> — 0,25
+                    </li>
+                    <li class="tab-rules__list-item">
+                      <strong>Детектив</strong> — 0,25
+                    </li>
+                    <li class="tab-rules__list-item">
+                      <strong>Пиромансер</strong> — 0,25
+                    </li>
+                    <li class="tab-rules__list-item">
+                      <strong>Авто-стоп</strong> — 0,25
+                    </li>
+                    <li class="tab-rules__list-item">
+                      <strong>Наручники</strong> — 0,25
+                    </li>
+                    <li class="tab-rules__list-item">
+                      <strong>Апгрейд</strong> — 0,25
+                    </li>
+                    <li class="tab-rules__list-item">
+                      <strong>Доп.баллы</strong> — 0,25
+                    </li>
+                    <li class="tab-rules__list-item">
+                      <strong>Иммунитет</strong> — 0,25
+                    </li>
+                    <li class="tab-rules__list-item">
+                      <strong>Зеркало</strong> — 0,25
+                    </li>
+                    <li class="tab-rules__list-item">
+                      <strong>Вампиризм</strong> — 0,25
+                    </li>
+                    <li class="tab-rules__list-item">
+                      <strong>Бронзовый ключ</strong> — 0,25
+                    </li>
+                  </ul>
                 </section>
               </article>
             </div>
@@ -544,19 +617,7 @@
                 <h2 class="tab__title">Раунд</h2>
                 <h3 class="tab__subtitle">Генерация параментров раунда</h3>
 
-                <input
-                  class="tab-round__input"
-                  name="round-result"
-                  data-js-spin-result
-                  readonly
-                />
-
-                <button
-                  class="button button--spin tab-round__spin-button"
-                  data-js-spin-button
-                >
-                  Крутить
-                </button>
+                
 
                 <div class="history" data-js-history>
                   <h3 class="history__title">История</h3>

@@ -1,6 +1,4 @@
 import { BaseSpinController, type SpinSelectors } from "./BaseSpinController";
-import { historyService } from "../../services/LocalStorageService";
-import { randomKeyFromObject } from "../../utils/randomUtils";
 
 export const ROOT_SELECTOR = "[data-js-pandora-spin]";
 
@@ -68,20 +66,33 @@ class PandoraSpinController extends BaseSpinController {
 
     const key = keysArray[selectedIndex];
     const pool = this.keys[key];
-    const randomValue = randomKeyFromObject(pool);
+    const [randomValue, chance] = this.randomWithChance(pool);
 
-    this.updateOutput(`${key} - ${randomValue}`);
+    this.updateOutput(`${key} -- "${randomValue}" -- ${chance.toFixed(2)}%`);
   }
 
-  private updateOutput(resultHTML: string): void {
-    if ("value" in this.resultElement) {
-      this.resultElement.value = resultHTML;
+  private randomWithChance(pool: PandoraKey): [string, number] {
+    const poolEntries = Object.entries(pool);
+    const totalWeight = poolEntries.reduce(
+      (sum, [_, item]) => sum + item.chance,
+      0,
+    );
 
-      if (resultHTML === "Пожалуйста, выберите тип крутки") return;
-
-      historyService.addRecord(resultHTML);
-      document.dispatchEvent(new CustomEvent("history:updated"));
+    if (totalWeight === 0) {
+      return ["", 0];
     }
+
+    let random = Math.random() * totalWeight;
+
+    for (const [itemName, itemData] of poolEntries) {
+      if (random < itemData.chance) {
+        return [itemName, itemData.chance];
+      }
+      random -= itemData.chance;
+    }
+
+    const lastEntry = poolEntries[poolEntries.length - 1];
+    return [lastEntry[0], lastEntry[1].chance];
   }
 }
 
