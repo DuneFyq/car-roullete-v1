@@ -5,7 +5,8 @@ import {
   CarSpinCollection, 
   CardSpinCollection, 
   PandoraSpinCollection, 
-  RoundSpinCollection 
+  RoundSpinCollection,
+  CraftCollection
 } from './components';
 
 new TabsCollection();
@@ -14,3 +15,4 @@ new CarSpinCollection();
 new CardSpinCollection();
 new PandoraSpinCollection();
 new RoundSpinCollection();
+new CraftCollection();

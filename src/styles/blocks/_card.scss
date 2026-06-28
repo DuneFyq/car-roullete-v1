@@ -2,26 +2,38 @@
 
 .card {
   padding-bottom: rem(5);
+  list-style: none;
 
   &:last-child {
     padding-bottom: 0;
   }
 
   &__content {
+    --card-text-color: var(--color-dark);
+    --card-info-bg: var(--color-gray-20);
+    --card-info-bg-hover: var(--color-gray-30);
+    --card-info-color: var(--color-dark);
+
     @include fluid-text(17, 13);
 
     cursor: pointer;
     font-weight: 600;
     display: flex;
-    flex-direction: row;
+    align-items: center;
     padding: rem(5);
     gap: rem(6);
 
     background-color: var(--color-gray-10);
     border-radius: var(--border-radius);
+    transition: background-color 0.2s ease;
 
     &--selected {
       background-color: var(--color-accent);
+
+      --card-text-color: var(--color-light);
+      --card-info-bg: rgba(255, 255, 255, 0.2);
+      --card-info-bg-hover: rgba(255, 255, 255, 0.3);
+      --card-info-color: var(--color-light);
     }
 
     @include mobile {
@@ -30,20 +42,57 @@
   }
 
   &__name {
-    color: var(--color-dark);
+    color: var(--card-text-color);
+    flex: 1;
+    margin: 0;
   }
 
   &__type {
+    margin: 0;
+
     &--utility {
       color: #3300ff;
     }
-
     &--debuff {
       color: #701bbf;
     }
-
     &--buff {
       color: #4aae8d;
+    }
+  }
+
+  &__info {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: rem(20);
+    height: rem(20);
+    border-radius: 50%;
+
+    background-color: var(--card-info-bg);
+    color: var(--card-info-color);
+
+    font-size: rem(12);
+    font-weight: 700;
+    font-family: serif;
+
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+
+    &:hover {
+      background-color: var(--card-info-bg-hover);
+    }
+  }
+
+  &__item {
+    padding: rem(10);
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--color-gray-5);
     }
   }
 }

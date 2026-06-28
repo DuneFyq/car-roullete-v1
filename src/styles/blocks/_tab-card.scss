@@ -103,7 +103,8 @@
 
   &__use-all,
   &__use-specific,
-  &__add-card {
+  &__add-card,
+  &__guide {
     @include fluid-text(15, 12);
     @include flex-center(true);
 

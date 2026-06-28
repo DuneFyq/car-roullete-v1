@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\scripts",
+    "\\src\\scripts\\components",
+    "\\src\\scripts\\components\\spinner",
+    "\\src\\scripts\\components\\tabs",
+    "\\src\\scripts\\services",
+    "\\src\\scripts\\utils"
+  ],
+  "SelectedNode": "\\src\\styles",
+  "PreviewInSolutionExplorer": false
+}

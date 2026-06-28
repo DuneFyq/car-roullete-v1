@@ -3,7 +3,7 @@
 .tab-cars {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: center; 
   row-gap: rem(16);
 
   @include mobile {

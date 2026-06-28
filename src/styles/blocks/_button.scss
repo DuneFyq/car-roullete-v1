@@ -21,11 +21,15 @@
     background-color: var(--color-gray-10);
   }
 
+  &--primary {
+    background-color: #77DD77;
+  }
+
   &--use-all,
   &--use-specific,
-  &--add-card {
+  &--add-card,
+  &--guide {
     background-color: var(--color-light-blue);
     border: 1px solid var(--color-light-blue-5);
-    
   }
 }

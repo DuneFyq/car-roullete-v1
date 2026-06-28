@@ -1,7 +1,9 @@
 import { BaseSpinController, type SpinSelectors } from "./BaseSpinController";
 import { cardService } from "../../services/LocalStorageService";
 import { randomFromIterable } from "../../utils/randomUtils";
+import { Modal } from "../modal/Modal";
 
+const MAX_CARDS = 35;
 const ROOT_SELECTOR = "[data-js-card-spin]";
 
 interface CustomSpinSelectors extends SpinSelectors {
@@ -11,6 +13,7 @@ interface CustomSpinSelectors extends SpinSelectors {
   readonly list: string;
   readonly subMenu: string;
   readonly addCardInputWrapper: string;
+  readonly cardInfoModal: string;
 }
 
 interface CardContent {
@@ -33,6 +36,7 @@ class CardSpinController extends BaseSpinController {
     list: "[data-js-cards-list]",
     subMenu: "[data-js-sub-menu]",
     addCardInputWrapper: "[data-js-input-wrapper]",
+    cardInfoModal: "[data-js-modal]",
   };
 
   private readonly stateClasses: TabsStateClasses = {
@@ -44,6 +48,7 @@ class CardSpinController extends BaseSpinController {
   private readonly subMenu: HTMLElement;
   private readonly addCardInputWrapper: HTMLElement;
   private readonly cards: CardMap;
+  private modal: Modal | null = null;
 
   constructor(rootElement: HTMLElement, cards: CardMap) {
     super(rootElement);
@@ -90,6 +95,16 @@ class CardSpinController extends BaseSpinController {
     );
   }
 
+  private initModal() {
+    this.modal = new Modal(this.selectors.cardInfoModal);
+
+    const confirmBtn = document.querySelector<HTMLElement>(".modal__confirm");
+    confirmBtn?.addEventListener("click", () => {
+      console.log("Данные сохранены!");
+      this.modal?.close();
+    });
+  }
+
   private bindButtonHandlers(event: Event) {
     const target = event.target as HTMLElement;
     const button = target.closest("button");
@@ -110,12 +125,57 @@ class CardSpinController extends BaseSpinController {
       case "add-card":
         this.handleAddCard();
         break;
+      case "guide":
+        this.handleGuide();
+        break;
       default:
         console.warn(`Необработанное действие: ${action}`);
     }
   }
 
+  private createModal(titleText: string, bodyText: string) {
+    if (!this.modal) {
+      this.initModal();
+    }
+
+    const modalElement = document.querySelector<HTMLElement>(
+      this.selectors.cardInfoModal,
+    );
+    const titleElement =
+      modalElement?.querySelector<HTMLElement>(".modal__title");
+    const bodyElement =
+      modalElement?.querySelector<HTMLElement>(".modal__body");
+
+    if (titleElement && bodyElement) {
+      titleElement.textContent = titleText;
+      bodyElement.innerHTML = bodyText;
+    }
+
+    this.modal?.open();
+  }
+
+  private handleGuide() {
+    const cards = this.cards;
+    const bodyHtml = this.convertCardsToHtml(cards);
+
+    this.createModal("Справочник", bodyHtml);
+  }
+
+  private convertCardsToHtml(cards: CardMap): string {
+    if (!cards || cards.size === 0) return "<p>Нет данных.</p>";
+
+    let html = '<ul class="guide-list">';
+    cards.forEach((content, key) => {
+      html += `<li class='card__item'><strong>${key}</strong>:<br>${content.action}</li>`;
+    });
+    html += "</ul>";
+
+    return html;
+  }
+
   private handleUseAll() {
+    if (!confirm("Точно использовать?")) return;
+
     cardService.clearStorage();
     this.render();
   }
@@ -159,17 +219,46 @@ class CardSpinController extends BaseSpinController {
   }
 
   private selectObject({ target }: Event) {
-    if (target instanceof HTMLElement) {
-      const parent = target.closest(".card__content");
-      if (!parent) return;
+    if (!(target instanceof Element)) return;
 
-      parent.classList.toggle(this.stateClasses.cardSelected);
+    const infoButton = target.closest(".card__info");
+    if (infoButton) {
+      this.showCardInfo(infoButton as HTMLElement);
+      return;
     }
+
+    const parent = target.closest(".card__content");
+    if (!parent) return;
+
+    parent.classList.toggle(this.stateClasses.cardSelected);
+  }
+
+  private showCardInfo(button: HTMLElement) {
+    const cardContent = button.closest(".card__content");
+    if (!cardContent) return;
+
+    const nameElement = cardContent.querySelector(".card__name");
+    const typeElement = cardContent.querySelector(".card__type");
+
+    const name = nameElement?.textContent ?? "Без имени";
+    const type = typeElement?.textContent ?? "Без типа";
+    const description = this.cards.get(name)?.action ?? "Без описания";
+
+    this.createModal(
+      name,
+      `
+        <p class="card__description"><strong>Описание:</strong> ${description}</p>
+        <p class="card__type card__type--${type.toLowerCase()}"><strong>Тип:</strong> ${type}.</p>
+      `,
+    );
   }
 
   protected spin() {
     const countCard = cardService.getRecords();
-    if (countCard.length === 35) return;
+    if (countCard.length === MAX_CARDS) {
+      confirm(`Достигнут лимит в ${MAX_CARDS}/${MAX_CARDS} карточек`);
+      return;
+    }
 
     const name = randomFromIterable(this.cards.keys());
     const content = this.cards.get(name);
@@ -195,10 +284,11 @@ class CardSpinController extends BaseSpinController {
       const type = content?.type ?? "Типа не имеет";
 
       return `
-      <li class="card ${record.id}">
+      <li class="card" data-id="${record.id}">
         <div class="card__content">
           <p class="card__name">${record.result}</p>
           <p class="card__type card__type--${type.toLowerCase()}">${type}</p>
+          <button class="card__info" aria-label="More information about ${record.result}">i</button>
         </div>
       </li>
     `;

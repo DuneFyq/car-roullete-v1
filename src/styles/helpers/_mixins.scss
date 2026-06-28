@@ -1,6 +1,14 @@
-@use 'sass:math';
-@use 'functions' as *;
+@use "sass:math";
+@use "functions" as *;
 
+@mixin text-block-accent($border-color, $bg-color) {
+  margin-top: rem(16);
+  margin-bottom: rem(16);
+  padding: rem(8) rem(12) rem(8) rem(16);
+  background-color: $bg-color;
+  border-left: 4px solid $border-color;
+  border-radius: 4px;
+}
 @mixin fluid-text($max: 48, $min: 16) {
   font-size: fluid($max, $min);
 }
@@ -18,7 +26,7 @@
 @mixin flex-center($isInline: false) {
   @if $isInline {
     display: inline-flex;
-  } @else  {
+  } @else {
     display: flex;
   }
 
@@ -72,7 +80,7 @@
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: $left;
     right: $right;

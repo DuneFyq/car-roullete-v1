@@ -8,8 +8,6 @@
     <script type="module" src="/scripts/main.ts" defer></script>
   </head>
   <body>
-    <!-- Пока без это <header class="tab-header"></header> -->
-
     <main class="page">
       <div class="roulette-header">
         <h1 class="roulette-header__title">Car Roulette</h1>
@@ -100,13 +98,16 @@
                     </li>
                     <li class="tab-rules__list-item">
                       <a class="tab-rules__link" href="#pandora"
-                        >Ящик пандоры</a
+                        >Ящик Пандоры</a
                       >
                     </li>
                     <li class="tab-rules__list-item">
                       <a class="tab-rules__link" href="#modifier"
                         >Модификаторы</a
                       >
+                    </li>
+                    <li class="tab-rules__list-item">
+                      <a class="tab-rules__link" href="#shop">Магазин</a>
                     </li>
                   </ul>
                 </nav>
@@ -142,10 +143,31 @@
                     Машины
                   </h3>
                   <p class="tab-rules__text">
-                    В списке у каждой машины должен быть написан рейтинг и
-                    подпись "эксклюзив" или "платная", если как таковое свойство
-                    есть у машины.
+                    В начале раунда игрок получает 1 машину через рулетку на
+                    сайте. Выпавший транспорт используется в заезде, реролл
+                    запрещен.
                   </p>
+                  <p class="tab-rules__text">
+                    Исключение: если активен модификатор, игрок может получить 2
+                    машины и 2 карточки вместо стандартных 1 машины и 1
+                    карточки.
+                  </p>
+                  <p class="tab-rules__text">
+                    В списке у каждой машины указан класс (рейтинг): D, C, B, A,
+                    S, R, X (от начального до максимального). Также могут
+                    присутствовать следующие пометки:
+                  </p>
+                  <ul class="tab-rules__list">
+                    <li class="tab-rules__list-item">
+                      <strong>«Платная»</strong> — машину можно получить только
+                      если ты купил платный набор или за реальные деньги.
+                    </li>
+                    <li class="tab-rules__list-item">
+                      <strong>«Эксклюзив»</strong> — такую нельзя купить в
+                      автосалоне или на аукционе, её можно выбить только в спец.
+                      гонках или каким-то другим путём.
+                    </li>
+                  </ul>
                 </section>
 
                 <!-- Секция: Карточки -->
@@ -155,31 +177,45 @@
                   >
                     Карточки
                   </h3>
-                  <div class="tab-rules__content">
-                    <p class="tab-rules__text">
-                      Рулетка состоит из количества игроков, которое находится в
-                      игре. Крутится и выпадает рандомный игрок, например, выпал
-                      игрок под номером 1 — в свою очередь, у него появляется
-                      выбор: Использовать карту ИЛИ Заново крутить рулетку ИЛИ
-                      Покинуть рулетку в этом раунде и сохранить карты.<br />
-                      Виды карточек:
-                    </p>
-                    <ul class="tab-rules__list tab-rules__list--cards">
-                      <li class="tab-rules__list-item">
-                        <strong>Buff (Усиление)</strong> — положительные эффекты
-                        для себя.
-                      </li>
-                      <li class="tab-rules__list-item">
-                        <strong>Debuff (Ослабление/Атака)</strong> — негативные
-                        эффекты для соперника.
-                      </li>
-                      <li class="tab-rules__list-item">
-                        <strong>Utility (Утилита/Механика)</strong> — изменение
-                        правил игры, обмен, раскрытие информации, копирование
-                        (может быть как выгодным, так и рискованным).
-                      </li>
-                    </ul>
-                  </div>
+                  <p class="tab-rules__text">
+                    Рулетка выбора хода включает всех зарегистрированных в матче
+                    игроков. При выпадении конкретного игрока (например, Игрок
+                    №1) он обязан выбрать одно из действий:
+                  </p>
+                  <ul class="tab-rules__list">
+                    <li class="tab-rules__list-item">
+                      Использовать карту (обычную или элитную).
+                    </li>
+                    <li class="tab-rules__list-item">
+                      Перекрутить рулетку (не выходя из нее).
+                    </li>
+                    <li class="tab-rules__list-item">
+                      Покинуть рулетку в текущем раунде (сохраняя карты, но
+                      становясь неуязвимым для воздействий до конца раунда).
+                    </li>
+                  </ul>
+                  <p class="tab-rules__text tab-rules__text--important">
+                    <strong>Важно:</strong> карточку можно использовать только
+                    тогда, когда игрок выпал в рулетке. Никак иначе! Все
+                    карточные действия совершаются до заезда. Как только все
+                    игроки сделали ходы и покинули рулетку — начинается заезд.
+                  </p>
+                  <p class="tab-rules__text"><strong>Виды карточек:</strong></p>
+                  <ul class="tab-rules__list">
+                    <li class="tab-rules__list-item">
+                      <strong>«Buff (Усиление)»</strong> — положительные эффекты
+                      для себя.
+                    </li>
+                    <li class="tab-rules__list-item">
+                      <strong>«Debuff (Ослабление/Атака)»</strong> — негативные
+                      эффекты для соперника.
+                    </li>
+                    <li class="tab-rules__list-item">
+                      <strong>«Utility (Утилита/Механика)»</strong> — изменение
+                      правил игры, обмен, раскрытие информации, копирование
+                      (может быть как выгодным, так и рискованным).
+                    </li>
+                  </ul>
                 </section>
 
                 <!-- Секция: Игроки -->
@@ -190,20 +226,32 @@
                     Игроки
                   </h3>
                   <p class="tab-rules__text">
-                    Допустим, игроков 3. Игрок под номером 1 использует карту
-                    "-1 балл" на игрока под номером 2. Ход переключается на
-                    игрока под номером 2: он может отразить карту игрока под
-                    номером 1 с помощью карты "Зеркало", либо контратаковать,
-                    приняв урон, либо заново крутить рулетку, приняв урон, либо
-                    покинуть рулетку в этом раунде, приняв урон.<br /><br />
-                    Другой пример: Выпадает игрок 1, он выбирает использовать
-                    карту "Повышение изначального класса на максимум". После
-                    этого рулетка заново крутится, и может выпасть каждый из
-                    трёх игроков. То есть даже игрок 1 может выпадать много раз
-                    подряд до тех пор, пока не выпадет другой игрок, ИЛИ карты
-                    игрока 1 не закончатся (и он автоматически покинет рулетку в
-                    этом раунде), ИЛИ игрок 1 сам не покинет рулетку в этом
-                    раунде.
+                    <strong>Пример 1:</strong> Игрок №1 применяет карту "-1
+                    балл" к Игроку №2. Ход переходит к Игроку №2. Он может:
+                    отразить атаку картой "Зеркало"; перекрутить рулетку (приняв
+                    урон); покинуть рулетку (приняв урон).<br />
+                  </p>
+                  <p class="tab-rules__text tab-rules__text--note">
+                    <strong>Примечание:</strong> «Урон» в данном контексте — синоним
+                    принятия негативного эффекта от атаки (например, потеря
+                    баллов, принудительный обмен машинами и т.д.). Игрок,
+                    покинувший рулетку, не может получить урон, так как не
+                    участвует в ней до конца раунда.
+                  </p>
+                  <p class="tab-rules__text">
+                    <strong>Пример 2:</strong> Игрок №1 применяет карту
+                    "Апгрейд" (максимальный тюнинг, например, повышение класса
+                    машины с D до S1). Рулетка крутится заново. Выпасть может
+                    любой игрок, включая Игрока №1. Цепочка ходов одного игрока
+                    продолжается до тех пор, пока: не выпадет другой игрок; не
+                    закончатся карты (игрок автоматически покидает рулетку);
+                    игрок сам не покинет рулетку; игроков не останется в
+                    рулетке.
+                  </p>
+                  <p class="tab-rules__text tab-rules__text--important">
+                    <strong>Важно:</strong> один и тот же игрок может выпадать
+                    многократно подряд — это зависит только от удачи и
+                    случайности рулетки.
                   </p>
                 </section>
 
@@ -215,12 +263,22 @@
                     Элитные карточки
                   </h3>
                   <p class="tab-rules__text">
-                    Мощные карты, которые используются ограниченное количество
-                    раз либо действуют пассивно на весь матч.<br />
-                    Способы получения:<br />
-                    1) Крафт — из обычных карт (в основном из 3-х).<br />
-                    2) Ящик Пандоры — есть шанс выбить оттуда Элитную карту.
+                    Мощные и улучшенные карты, которые используются ограниченное
+                    количество раз либо действуют пассивно на весь матч.
                   </p>
+                  <p class="tab-rules__text">
+                    <strong>Способы получения:</strong>
+                  </p>
+                  <ul class="tab-rules__list">
+                    <li class="tab-rules__list-item">
+                      <strong>«Крафт»</strong> — из обычных карт (в основном из
+                      3-х).
+                    </li>
+                    <li class="tab-rules__list-item">
+                      <strong>«Ящик Пандоры»</strong> — есть шанс выбить оттуда
+                      Элитную карту.
+                    </li>
+                  </ul>
                 </section>
 
                 <!-- Секция: Ящик Пандоры -->
@@ -230,22 +288,42 @@
                   >
                     Ящик Пандоры
                   </h3>
+                  <p class="tab-rules__text">Открывается с помощью ключей:</p>
+                  <ul class="tab-rules__list">
+                    <li class="tab-rules__list-item">
+                      <strong>«Бронзовый ключ»</strong> — большой шанс выбить
+                      очень плохой дроп, но маленький шанс выбить что-то
+                      стоящее.
+                    </li>
+                    <li class="tab-rules__list-item">
+                      <strong>«Серебряный ключ»</strong> — баланс, шанс выбить
+                      что хорошее и плохое равный.
+                    </li>
+                    <li class="tab-rules__list-item">
+                      <strong>«Золотой ключ»</strong> — гарантированно выдается
+                      хороший дроп.
+                    </li>
+                  </ul>
                   <p class="tab-rules__text">
-                    Открывается тремя способами:<br />
-                    1) <strong>бронзовый ключ</strong> — Большой шанс выбить
-                    очень плохой дроп, но маленький шанс выбить что-то
-                    стоящее.<br />
-                    2) <strong>серебряный ключ</strong> — Баланс, шанс выбить
-                    что хорошое и плохое равное.<br />
-                    3) <strong>золотой ключ</strong> — Гарантировано выдается
-                    хороший дроп.<br />
-                    Способ получения ключей:<br />
-                    1 бронзовый ключ выдаётся игроку который занял последнее
-                    место. Также в рулетке вместе с игроками есть "бронзовый
-                    ключ" если он выпал, то следующему игроку на которого
-                    выпадет ход выдаётся ключ. (Один раз за раунд) 2 бронзовых =
-                    1 серебряный 2 серебряных = 1 золотой
+                    <strong>Механика получения и обмена ключей:</strong>
                   </p>
+                  <ul class="tab-rules__list">
+                    <li class="tab-rules__list-item">
+                      1 бронзовый ключ выдается игроку, занявшему последнее
+                      место в заезде.
+                    </li>
+                    <li class="tab-rules__list-item">
+                      В рулетке хода наравне с игроками участвует слот
+                      "бронзовый ключ". При его выпадении ключ выдается
+                      следующему игроку, которому выпадет ход (не более 1 раза
+                      за раунд).
+                    </li>
+                    <li class="tab-rules__list-item">
+                      Обмен ключей доступен только в момент своего хода в
+                      рулетке: 2 бронзовых = 1 серебряный; 2 серебряных = 1
+                      золотой.
+                    </li>
+                  </ul>
                 </section>
 
                 <!-- Секция: Модификаторы -->
@@ -256,12 +334,17 @@
                     Модификаторы
                   </h3>
                   <p class="tab-rules__text">
-                    Дополнительные условия/правила, действующие на весь матч и
-                    выбираемые перед игрой игроками либо рулеткой.<br />
-                    Например: Симуляторные повреждения — игроки включают на весь
-                    матч себе симуляторные повреждения, и теперь, если в гонках
-                    врезаться, состояние машины может ухудшиться, и вы можете
-                    потерять максимальную скорость, управление и так далее.
+                    Дополнительные условия и правила, действующие на протяжении
+                    всего матча. Выбираются перед игрой путем голосования или
+                    случайным образом через рулетку. Полный список модификаторов
+                    находится на отдельной странице.
+                  </p>
+                  <p class="tab-rules__text">
+                    <strong>Пример:</strong> «Симуляторные повреждения» — игроки
+                    включают на весь матч симуляторные повреждения. При
+                    столкновениях в гонках состояние машины ухудшается, что
+                    ведет к потере максимальной скорости, управляемости и другим
+                    техническим неисправностям.
                   </p>
                 </section>
 
@@ -273,7 +356,17 @@
                     Магазин
                   </h3>
                   <p class="tab-rules__text">
-                    Список товаров которые можно купить за баллы:
+                    Список товаров, которые можно купить за заработанные баллы.
+                    Стоимость большинства базовых товаров — 0,25 балла. При
+                    покупке за 0,25 балла название карты может не раскрываться
+                    (соперники видят лишь факт покупки). Уход в минус при
+                    покупке запрещен.
+                  </p>
+                  <p class="tab-rules__text tab-rules__text--important">
+                    Игрок знает, какую карту купил, но не раскрывает её
+                    соперникам. Соперники видят только факт покупки (название
+                    карты остаётся скрытым). Раскрываются только: элитные
+                    карточки, количество баллов и ключей игрока.
                   </p>
                   <ul class="tab-rules__list tab-rules__list--shop">
                     <li class="tab-rules__list-item">
@@ -379,27 +472,27 @@
                     </label>
                   </div>
                 </div>
-
-                <div class="history" data-js-history>
-                  <h3 class="history__title">История</h3>
-                  <label class="history__hide-row">
-                    <span class="history__hide-text">скрыть</span>
-                    <span class="switch">
-                      <input
-                        class="switch__input"
-                        name="hide-history"
-                        type="checkbox"
-                        data-js-hide-input
-                      />
-                      <span class="switch__slider"></span>
-                    </span>
-                  </label>
-                  <ul
-                    class="history__list history__list--active"
-                    data-js-history-list
-                  ></ul>
-                </div>
               </article>
+
+              <div class="history" data-js-history>
+                <h3 class="history__title">История</h3>
+                <label class="history__hide-row">
+                  <span class="history__hide-text">скрыть</span>
+                  <span class="switch">
+                    <input
+                      class="switch__input"
+                      name="hide-history"
+                      type="checkbox"
+                      data-js-hide-input
+                    />
+                    <span class="switch__slider"></span>
+                  </span>
+                </label>
+                <ul
+                  class="history__list history__list--active"
+                  data-js-history-list
+                ></ul>
+              </div>
             </div>
 
             <div class="tab tab--cards" data-js-tabs-content data-js-card-spin>
@@ -439,6 +532,12 @@
                   >
                     Добавить
                   </button>
+                  <button
+                    class="button button--guide tab-cards__guide"
+                    data-action="guide"
+                  >
+                    Справочник
+                  </button>
                 </div>
 
                 <div class="tab-cards__input-wrapper" data-js-input-wrapper>
@@ -455,36 +554,27 @@
                 </div>
 
                 <ul class="tab-cards__list" data-js-cards-list></ul>
-
-                <div class="history" data-js-history>
-                  <h3 class="history__title">История</h3>
-                  <label class="history__hide-row">
-                    <span class="history__hide-text">скрыть</span>
-                    <span class="switch tab-cards__switch-wrapper">
-                      <input
-                        class="switch__input"
-                        name="hide-history"
-                        type="checkbox"
-                        data-js-hide-input
-                      />
-                      <span class="switch__slider"></span>
-                    </span>
-                  </label>
-                  <ul
-                    class="history__list history__list--active"
-                    data-js-history-list
-                  >
-                    <li class="card ${record.id}">
-                      <div class="card__content">
-                        <p class="card__name">${record.result}</p>
-                        <p class="card__type card__type--${type.toLowerCase()}">
-                          ${type}
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
               </article>
+
+              <div class="history" data-js-history>
+                <h3 class="history__title">История</h3>
+                <label class="history__hide-row">
+                  <span class="history__hide-text">скрыть</span>
+                  <span class="switch tab-cards__switch-wrapper">
+                    <input
+                      class="switch__input"
+                      name="hide-history"
+                      type="checkbox"
+                      data-js-hide-input
+                    />
+                    <span class="switch__slider"></span>
+                  </span>
+                </label>
+                <ul
+                  class="history__list history__list--active"
+                  data-js-history-list
+                ></ul>
+              </div>
             </div>
 
             <div
@@ -559,93 +649,278 @@
                     </label>
                   </div>
                 </div>
-
-                <div class="history" data-js-history>
-                  <h3 class="history__title">История</h3>
-                  <label class="history__hide-row">
-                    <span class="history__hide-text">скрыть</span>
-                    <span class="switch">
-                      <input
-                        class="switch__input"
-                        name="hide-history"
-                        type="checkbox"
-                        data-js-hide-input
-                      />
-                      <span class="switch__slider"></span>
-                    </span>
-                  </label>
-                  <ul
-                    class="history__list history__list--active"
-                    data-js-history-list
-                  ></ul>
-                </div>
               </article>
+
+              <div class="history" data-js-history>
+                <h3 class="history__title">История</h3>
+                <label class="history__hide-row">
+                  <span class="history__hide-text">скрыть</span>
+                  <span class="switch">
+                    <input
+                      class="switch__input"
+                      name="hide-history"
+                      type="checkbox"
+                      data-js-hide-input
+                    />
+                    <span class="switch__slider"></span>
+                  </span>
+                </label>
+                <ul
+                  class="history__list history__list--active"
+                  data-js-history-list
+                ></ul>
+              </div>
             </div>
 
-            <div class="tab tab--craft" data-js-tabs-content>
+            <div class="tab tab--craft" data-js-tabs-content data-js-craft-page>
               <article class="tab-craft">
                 <h2 class="tab__title">Крафт</h2>
 
-                <input class="tab-craft__input" name="test" readonly />
-                <input class="tab-craft__input" name="test" readonly />
-                <input class="tab-craft__input" name="test" readonly />
+                <div class="tab-craft__panel" data-js-craft-panel>
+                  <select
+                    class="tab-craft__select"
+                    name="craft-card"
+                    data-js-select
+                  >
+                    <option value="Выберите эл.карточку">
+                      Выберите эл.карточку
+                    </option>
+                  </select>
 
-                <div class="history" data-js-history>
-                  <h3 class="history__title">История</h3>
-                  <label class="history__hide-row">
-                    <span class="history__hide-text">скрыть</span>
-                    <span class="switch">
+                  <div class="tab-craft__requirements">
+                    <h3 class="tab-craft__requirements-title">
+                      Требующиеся элементы для крафта
+                    </h3>
+
+                    <div class="tab-craft__ingredients">
                       <input
-                        class="switch__input"
-                        name="hide-history"
-                        type="checkbox"
-                        data-js-hide-input
+                        class="tab-craft__ingredient tab-craft__ingredient--active"
+                        name="element-1"
+                        data-js-element="0"
+                        readonly
                       />
-                      <span class="switch__slider"></span>
-                    </span>
-                  </label>
-                  <ul
-                    class="history__list history__list--active"
-                    data-js-history-list
-                  ></ul>
+                      <input
+                        class="tab-craft__ingredient tab-craft__ingredient--active"
+                        name="element-2"
+                        data-js-element="1"
+                        readonly
+                      />
+                      <input
+                        class="tab-craft__ingredient"
+                        name="element-3"
+                        data-js-element="2"
+                        readonly
+                      />
+                    </div>
+                  </div>
                 </div>
               </article>
+
+              <div class="history" data-js-history>
+                <h3 class="history__title">История</h3>
+                <label class="history__hide-row">
+                  <span class="history__hide-text">скрыть</span>
+                  <span class="switch">
+                    <input
+                      class="switch__input"
+                      name="hide-history"
+                      type="checkbox"
+                      data-js-hide-input
+                    />
+                    <span class="switch__slider"></span>
+                  </span>
+                </label>
+                <ul
+                  class="history__list history__list--active"
+                  data-js-history-list
+                ></ul>
+              </div>
             </div>
 
             <div class="tab tab--round" data-js-tabs-content data-js-round-spin>
               <article class="tab-round">
                 <h2 class="tab__title">Раунд</h2>
-                <h3 class="tab__subtitle">Генерация параментров раунда</h3>
+                <h3 class="tab__subtitle">Генерация параметров раунда</h3>
 
-                
+                <form class="tab-round">
+                  <div class="tab-round__generator">
+                    <!-- Поле 1: Дисциплина -->
+                    <div class="tab-round__field" data-js-field="discipline">
+                      <label
+                        class="tab-round__label tab-round__label--discipline"
+                        for="rnd-discipline"
+                      >
+                        Рандомная дисциплина
+                      </label>
+                      <div class="tab-round__control">
+                        <input
+                          class="tab-round__input"
+                          id="rnd-discipline"
+                          name="discipline"
+                          data-js-result
+                          readonly
+                        />
+                        <button
+                          class="button button--spin tab-round__spin"
+                          data-js-spin-button
+                        >
+                          Крутить
+                        </button>
+                      </div>
+                    </div>
 
-                <div class="history" data-js-history>
-                  <h3 class="history__title">История</h3>
-                  <label class="history__hide-row">
-                    <span class="history__hide-text">скрыть</span>
-                    <span class="switch">
-                      <input
-                        class="switch__input"
-                        name="hide-history"
-                        type="checkbox"
-                        data-js-hide-input
-                      />
-                      <span class="switch__slider"></span>
-                    </span>
-                  </label>
-                  <ul
-                    class="history__list history__list--active"
-                    data-js-history-list
-                  ></ul>
-                </div>
+                    <!-- Поле 2: Погода -->
+                    <div class="tab-round__field" data-js-field="weather">
+                      <label
+                        class="tab-round__label tab-round__label--weather"
+                        for="rnd-weather"
+                      >
+                        Погода
+                      </label>
+                      <div class="tab-round__control">
+                        <input
+                          class="tab-round__input"
+                          id="rnd-weather"
+                          name="weather"
+                          data-js-result
+                          readonly
+                        />
+                        <button
+                          class="button button--spin tab-round__spin"
+                          data-js-spin-button
+                        >
+                          Крутить
+                        </button>
+                      </div>
+                    </div>
+
+                    <!-- Поле 3: Рулетка игроков -->
+                    <div class="tab-round__field" data-js-field="player">
+                      <label
+                        class="tab-round__label tab-round__label--player"
+                        for="rnd-player"
+                      >
+                        Рулетка игроков
+                      </label>
+                      <div class="tab-round__control">
+                        <input
+                          class="tab-round__input"
+                          id="rnd-player"
+                          name="player_roulette"
+                          data-js-result
+                          readonly
+                        />
+                        <button
+                          class="button button--spin tab-round__spin"
+                          data-js-spin-button
+                        >
+                          Крутить
+                        </button>
+                      </div>
+                    </div>
+
+                    <!-- Поле 4: Трасса -->
+                    <div class="tab-round__field" data-js-field="track">
+                      <label
+                        class="tab-round__label tab-round__label--track"
+                        for="rnd-track"
+                      >
+                        Рандомная трасса
+                      </label>
+                      <div class="tab-round__control">
+                        <input
+                          class="tab-round__input"
+                          id="rnd-track"
+                          name="track"
+                          data-js-result
+                          readonly
+                        />
+                        <button
+                          class="button button--spin tab-round__spin"
+                          data-js-spin-button
+                        >
+                          Крутить
+                        </button>
+                      </div>
+                    </div>
+
+                    <!-- Поле 5: Список -->
+                    <div
+                      class="tab-round__field tab-round__field"
+                      data-js-field="list"
+                    >
+                      <label
+                        class="tab-round__label tab-round__label--list"
+                        for="rnd-list"
+                      >
+                        Список игроков
+                      </label>
+                      <textarea
+                        class="tab-round__textarea"
+                        id="rnd-list"
+                        name="players_list"
+                        autocomplete="off"
+                        data-js-player-list
+                        placeholder="Игрок-1&#10;Игрок-2"
+                      ></textarea>
+                    </div>
+
+                    <!-- Поле 6: Модификаторы -->
+                    <div class="tab-round__field" data-js-field="modifier">
+                      <label
+                        class="tab-round__label tab-round__label--modifier"
+                        for="rnd-modifier"
+                      >
+                        Рандомный модификатор
+                      </label>
+                      <div class="tab-round__control">
+                        <input
+                          class="tab-round__input"
+                          id="rnd-modifier"
+                          name="modifier"
+                          data-js-result
+                          readonly
+                        />
+                        <button
+                          class="button button--spin tab-round__spin"
+                          data-js-spin-button
+                        >
+                          Крутить
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
               </article>
+
+              <div class="history" data-js-history>
+                <h3 class="history__title">История</h3>
+                <label class="history__hide-row">
+                  <span class="history__hide-text">скрыть</span>
+                  <span class="switch">
+                    <input
+                      class="switch__input"
+                      name="hide-history"
+                      type="checkbox"
+                      data-js-hide-input
+                    />
+                    <span class="switch__slider"></span>
+                  </span>
+                </label>
+                <ul
+                  class="history__list history__list--active"
+                  data-js-history-list
+                ></ul>
+              </div>
             </div>
           </div>
 
           <div class="roulette-content__footer">
             <p class="roulette-content__footer-text">
-              <strong>Written by: flodskii;</strong><br />
-              <strong>Supported by: fyqeki, etc.</strong><br />
+              <strong>Автор идеи и писал правила: flodskii;</strong><br />
+              <strong>Помогал: fyqeki ака DuneFyq и т.д.</strong><br />
+              Сайт с открытым исходным кодом -
+              https://github.com/DuneFyq/car-roullete-v1<br />
               Если у вас появились вопросы к правилам, сайту и т.п. и вопросы
               только к одному - сосите
             </p>
@@ -654,6 +929,20 @@
       </div>
     </main>
 
-    <!-- Пока без это <footer class="tab-footer"></footer> -->
+    <div class="modal" data-js-modal hidden>
+      <div class="modal__overlay"></div>
+      <div class="modal__container">
+        <div class="modal__header">
+          <h2 class="modal__title">Заголовок окна</h2>
+          <button class="modal__close" aria-label="Закрыть">&times;</button>
+        </div>
+        <div class="modal__body">
+          <p>Здесь может быть любой ваш контент.</p>
+        </div>
+        <div class="modal__footer">
+          <button class="button button--primary modal__confirm">Ok</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

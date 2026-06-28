@@ -5,6 +5,7 @@ export const ROOT_SELECTOR = "[data-js-pandora-spin]";
 interface CustomSpinSelectors extends SpinSelectors {
   readonly root: string;
   readonly button: string;
+  readonly result: string;
   readonly bronzeInput: string;
   readonly silverInput: string;
   readonly goldenInput: string;

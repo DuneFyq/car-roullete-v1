@@ -11,7 +11,6 @@
 
   &__nav-heading {
     @include fluid-text(40, 20);
-
     margin-bottom: rem(8);
   }
 
@@ -23,14 +22,17 @@
     font-weight: 600;
     color: var(--color-dark);
 
+    // Добавил &--shop для консистентности,
+    // но если стили для них пока не нужны, этот блок можно вообще удалить.
     &--discipline,
     &--car,
     &--card,
     &--player,
     &--elite-card,
     &--pandora,
-    &--modifier {
-      
+    &--modifier,
+    &--shop {
+      // Специфичные стили для заголовков
     }
   }
 
@@ -42,21 +44,17 @@
   }
 
   &__list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+    // Если нужно добавить маркеры для обычных списков внутри секций,
+    // можно раскомментировать или добавить стили.
+    // По умолчанию маркеры могут быть убраны глобально, тогда добавим их тут:
+    list-style: disc;
+    padding-left: rem(20);
 
-    &--nav {
-      display: flex;
-      flex-direction: column;
-    }
-
+    &--nav,
     &--discipline,
-    &--cards {
-      line-height: 1.6;
-      color: var(--color-dark);
-      padding-left: rem(20);
-      list-style-type: disc;
+    &--shop {
+      list-style: none;
+      padding-left: 0;
     }
   }
 
@@ -94,14 +92,27 @@
   }
 
   &__text {
-    @include fluid-text(18, 14);
-
-    line-height: 1.6;
-    color: var(--color-dark);
     margin-bottom: rem(12);
+    color: var(--color-dark);
+    font-size: fluid-text(18, 14);
+    line-height: 1.6;
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &--important {
+      @include text-block-accent(
+        var(--color-danger, #e53e3e),
+        var(--color-danger-bg, #fff5f5)
+      );
+    }
+
+    &--note {
+      @include text-block-accent(
+        var(--color-warning, #dab05e),
+        var(--color-warning-bg, #fdfcdc)
+      );
     }
   }
 }
