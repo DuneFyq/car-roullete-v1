@@ -1,10 +1,15 @@
 @use "../helpers" as *;
 
 .switch {
+  --circleSize: 24px; // Главный параметр/переменная
+  --padding: 4px;
+  --height: calc(var(--circleSize) + var(--padding) * 2);
+  --width: calc(var(--circleSize) * 2 + var(--padding) * 2);
+
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: var(--width);
+  height: var(--height);
   flex-shrink: 0;
 
   &__input {
@@ -16,13 +21,23 @@
     z-index: 2;
 
     &:focus + .switch__slider {
-      box-shadow: 0 0 0 2px var(--color-accent);
+      box-shadow: 0 0 0 3px rgba(165, 180, 252, 0.3);
     }
 
     &:checked + .switch__slider {
       background-color: var(--color-accent);
+
       &::before {
-        transform: translateX(26px);
+        left: calc(100% - var(--circleSize) - var(--padding));
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+
+      & + .switch__slider {
+        opacity: 0.5;
+        cursor: not-allowed;
       }
     }
   }
@@ -30,22 +45,24 @@
   &__slider {
     position: absolute;
     inset: 0;
-    border-radius: 34px;
-    background-color: #ccc;
+    border-radius: var(--border-radius-full);
+    background-color: var(--color-gray-10);
     cursor: pointer;
-    transition: background-color 0.4s ease;
+    transition: background-color var(--transition-duration)
+      var(--transition-ease);
 
     &::before {
       content: "";
       position: absolute;
-      left: 4px;
-      bottom: 4px;
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
+      top: 50%;
+      left: var(--padding);
+      transform: translateY(-50%);
+      width: var(--circleSize);
+      height: var(--circleSize);
+      border-radius: var(--border-radius-full);
       background-color: var(--color-light);
-      box-shadow: 0 2px 4px rgba(12, 12, 13, 0.05);
-      transition: transform 0.4s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      transition: left var(--transition-duration) var(--transition-ease);
     }
   }
 }

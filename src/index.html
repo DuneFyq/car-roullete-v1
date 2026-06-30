@@ -713,6 +713,13 @@
                       />
                     </div>
                   </div>
+
+                  <textarea
+                    class="tab-craft__description"
+                    name="card-description"
+                    data-js-card-description
+                    readonly
+                  ></textarea>
                 </div>
               </article>
 
@@ -794,19 +801,19 @@
                       </div>
                     </div>
 
-                    <!-- Поле 3: Рулетка игроков -->
-                    <div class="tab-round__field" data-js-field="player">
+                    <!-- Поле 6: Модификаторы -->
+                    <div class="tab-round__field" data-js-field="modifier">
                       <label
-                        class="tab-round__label tab-round__label--player"
-                        for="rnd-player"
+                        class="tab-round__label tab-round__label--modifier"
+                        for="rnd-modifier"
                       >
-                        Рулетка игроков
+                        Рандомный модификатор
                       </label>
                       <div class="tab-round__control">
                         <input
                           class="tab-round__input"
-                          id="rnd-player"
-                          name="player_roulette"
+                          id="rnd-modifier"
+                          name="modifier"
                           data-js-result
                           readonly
                         />
@@ -844,6 +851,31 @@
                       </div>
                     </div>
 
+                    <!-- Поле 3: Рулетка игроков -->
+                    <div class="tab-round__field" data-js-field="player">
+                      <label
+                        class="tab-round__label tab-round__label--player"
+                        for="rnd-player"
+                      >
+                        Рулетка игроков
+                      </label>
+                      <div class="tab-round__control">
+                        <input
+                          class="tab-round__input"
+                          id="rnd-player"
+                          name="player_roulette"
+                          data-js-result
+                          readonly
+                        />
+                        <button
+                          class="button button--spin tab-round__spin"
+                          data-js-spin-button
+                        >
+                          Крутить
+                        </button>
+                      </div>
+                    </div>
+
                     <!-- Поле 5: Список -->
                     <div
                       class="tab-round__field tab-round__field"
@@ -863,31 +895,6 @@
                         data-js-player-list
                         placeholder="Игрок-1&#10;Игрок-2"
                       ></textarea>
-                    </div>
-
-                    <!-- Поле 6: Модификаторы -->
-                    <div class="tab-round__field" data-js-field="modifier">
-                      <label
-                        class="tab-round__label tab-round__label--modifier"
-                        for="rnd-modifier"
-                      >
-                        Рандомный модификатор
-                      </label>
-                      <div class="tab-round__control">
-                        <input
-                          class="tab-round__input"
-                          id="rnd-modifier"
-                          name="modifier"
-                          data-js-result
-                          readonly
-                        />
-                        <button
-                          class="button button--spin tab-round__spin"
-                          data-js-spin-button
-                        >
-                          Крутить
-                        </button>
-                      </div>
                     </div>
                   </div>
                 </form>

@@ -63,7 +63,7 @@
     width: 100%;
     max-height: rem(250);
     text-align: left;
-    background-color: var(--color-gray);
+    background-color: var(--color-bg-secondary);
     border-radius: var(--border-radius);
     border: var(--border);
     padding: rem(10);
@@ -172,12 +172,5 @@
     transition: all 0.2s ease-out;
     background-color: #fff;
     padding: 0 4px;
-
-    .tab-cards__input-name:focus + &,
-    .tab-cards__input-name:not(:placeholder-shown) + & {
-      @include fluid-text(12, 10);
-      top: 0;
-      color: #007bff;
-    }
   }
 }

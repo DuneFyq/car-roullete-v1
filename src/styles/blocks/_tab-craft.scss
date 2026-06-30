@@ -10,10 +10,36 @@
     row-gap: rem(24);
   }
 
+  &__panel {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(16);
+    width: 100%;
+
+    @include mobile {
+      row-gap: rem(20);
+    }
+  }
+
+  &__requirements {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(12);
+    width: 100%;
+  }
+
+  &__requirements-title {
+    @include fluid-text(18, 14);
+    font-weight: 600;
+    color: var(--color-gray-65);
+    margin: 0;
+    text-align: left;
+  }
+
   &__ingredients {
     display: inline-flex;
     align-items: center;
-    gap: rem(12);
+    gap: rem(16);
     width: 100%;
 
     @include tablet {
@@ -24,20 +50,103 @@
 
   &__ingredient {
     display: none;
+    opacity: 0;
+    transform: translateY(rem(8));
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     &--active {
       display: block;
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    @include fluid-text(20, 15);
+    @include fluid-text(20, 12);
     text-align: center;
     border: var(--border-input);
     border-radius: var(--border-radius);
     height: rem(40);
     width: 100%;
+    background-color: var(--color-bg-secondary);
+    color: var(--color-gray-65);
+    font-weight: 500;
+    cursor: default;
+
+    &[readonly] {
+      cursor: default;
+
+      &:hover {
+        border-color: var(--border-color);
+        transform: none;
+      }
+    }
 
     @include mobile {
       height: rem(48);
+    }
+  }
+
+  &__description {
+    @include fluid-text(20, 12);
+    text-align: left;
+    border: var(--border-input);
+    border-radius: var(--border-radius);
+    padding: rem(12) rem(16);
+
+    height: rem(120);
+    min-height: rem(88);
+    width: 100%;
+
+    background-color: var(--color-bg-secondary);
+    color: var(--color-gray-65);
+    line-height: 1.5;
+
+    // Настройки textarea
+    resize: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+
+    outline: none;
+
+    cursor: default;
+
+    &[readonly] {
+      cursor: default;
+
+      scrollbar-width: thin;
+      scrollbar-color: var(--border-color)
+        var(--color-bg-tertiary);
+    }
+
+    &::-webkit-scrollbar {
+      width: rem(6);
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--color-bg-tertiary);
+      border-radius: rem(3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--border-color);
+      border-radius: rem(3);
+      transition: background 0.2s ease;
+
+      &:hover {
+        background: var(--color-accent);
+      }
+    }
+
+    &::placeholder {
+      color: var(--color-50);
+      font-style: italic;
+    }
+
+    @include mobile {
+      height: rem(140);
+      min-height: rem(96);
+      padding: rem(14) rem(18);
     }
   }
 
@@ -46,22 +155,26 @@
     -webkit-appearance: none;
     -moz-appearance: none;
 
-    @include fluid-text(20, 15);
+    @include fluid-text(20, 12);
     text-align: center;
     border: var(--border-input);
     border-radius: var(--border-radius);
-    padding: 0 rem(40) 0 rem(30);
+    padding: 0 rem(48) 0 rem(32);
     height: rem(40);
+    width: 100%;
     background-color: var(--color-light);
+    color: var(--color-gray-65);
+    font-weight: 500;
     cursor: pointer;
+    transition: border-color 0.2s ease;
 
-    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.9201 8.9502L13.4001 15.4702C12.6301 16.2402 11.3701 16.2402 10.6001 15.4702L4.08008 8.9502" stroke="%23000000" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-image: url('data:image/svg+xml;charset=utf-8,<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.9201 8.9502L13.4001 15.4702C12.6301 16.2402 11.3701 16.2402 10.6001 15.4702L4.08008 8.9502" stroke="%23333333" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>');
     background-repeat: no-repeat;
     background-position: right rem(16) center;
-    background-size: rem(16);
+    background-size: rem(18);
 
-    @include mobile {
-      height: rem(48);
+    @include hover {
+      border-color: var(--color-accent);
     }
 
     &:focus {
@@ -69,8 +182,14 @@
       border-color: var(--color-accent);
     }
 
-    option[value=""] {
-      color: #999999;
+    option[value="Выберите эл.карточку"] {
+      color: var(--color-gray-50);
+      font-style: italic;
+    }
+
+    @include mobile {
+      height: rem(48);
+      padding: 0 rem(52) 0 rem(36);
     }
   }
 }

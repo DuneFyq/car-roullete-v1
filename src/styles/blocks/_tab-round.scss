@@ -16,7 +16,8 @@
     gap: rem(20);
 
     @include mobile {
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
     }
   }
 
@@ -37,8 +38,14 @@
 
   &__control {
     display: flex;
-    gap: rem(8);
-    align-items: stretch;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: rem(16);
+
+    @include mobile {
+      flex-direction: column;
+      gap: rem(20);
+    }
   }
 
   &__input,
@@ -52,7 +59,7 @@
 
   &__input {
     text-align: center;
-
+    height: rem(40);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,6 +70,8 @@
 
     @include mobile {
       height: rem(48);
+      width: 100%;
+      flex: none;
     }
   }
 
@@ -77,6 +86,7 @@
     @include flex-center(true);
     flex-shrink: 0;
     width: rem(100);
+    height: rem(40);
     font-size: rem(16);
     font-weight: 600;
     cursor: pointer;
@@ -94,6 +104,7 @@
     }
 
     @include mobile {
+      width: 100%;
       max-width: 100%;
       height: rem(48);
     }

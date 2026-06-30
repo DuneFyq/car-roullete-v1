@@ -13,6 +13,6 @@
   @include mobile-s {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: rem(10);
   }
 }

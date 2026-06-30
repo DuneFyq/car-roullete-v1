@@ -3,6 +3,7 @@ const ROOT_SELECTOR = "[data-js-craft-page]";
 interface SpinSelectors {
   readonly panel: string;
   readonly select: string;
+  readonly description: string;
   readonly elements: readonly string[];
 }
 
@@ -24,6 +25,7 @@ class CraftController {
   private readonly selectors: SpinSelectors = {
     panel: "[data-js-craft-panel]",
     select: "[data-js-select]",
+    description: "[data-js-card-description ]",
     elements: [
       "[data-js-element='0']",
       "[data-js-element='1']",
@@ -36,8 +38,9 @@ class CraftController {
   };
 
   private readonly rootElement: HTMLElement;
-  private readonly panel: HTMLElement;
   private readonly select: HTMLSelectElement;
+  private description: HTMLInputElement;
+  private elementNodes: HTMLInputElement[];
 
   private readonly cards: Record<string, Cards>;
   private readonly abortController: AbortController;
@@ -48,18 +51,32 @@ class CraftController {
     const panel = this.rootElement.querySelector<HTMLElement>(
       this.selectors.panel,
     );
-    const select = panel?.querySelector<HTMLSelectElement>(
+
+    if (!panel) {
+      throw new Error(
+        `CraftController: не найден panel внутри ${ROOT_SELECTOR}`,
+      );
+    }
+
+    const select = panel.querySelector<HTMLSelectElement>(
       this.selectors.select,
     );
+    const description = panel.querySelector<HTMLInputElement>(
+      this.selectors.description,
+    );
+    const elementNodes = this.selectors.elements.map((sel) =>
+      panel.querySelector<HTMLInputElement>(sel),
+    );
 
-    if (!panel || !select) {
+    if (!select || !description || elementNodes.some((node) => !node)) {
       throw new Error(
         `CraftController: не найдены элементы внутри ${ROOT_SELECTOR}`,
       );
     }
 
-    this.panel = panel;
     this.select = select;
+    this.description = description;
+    this.elementNodes = elementNodes as HTMLInputElement[];
     this.cards = cards;
 
     this.abortController = new AbortController();
@@ -82,19 +99,25 @@ class CraftController {
     });
   }
 
+  private setDescription(currentCard: string) {
+    const description = this.cards[currentCard]?.content.action;
+    this.description.value = description;
+  }
+
   private setIngredients() {
-    const elementNodes = this.selectors.elements.map(
-      (sel) => this.panel.querySelector<HTMLInputElement>(sel)!,
-    );
     const currentCard = this.select.value;
     if (currentCard === "Выберите эл.карточку") return;
-    const contentCard = this.cards[currentCard].content.ingredients;
 
-    for (let i = elementNodes.length - 1; i >= 0; i--) {
+    const contentCard = this.cards[currentCard]?.content.ingredients;
+    if (!contentCard) return;
+
+    this.setDescription(currentCard);
+
+    for (let i = this.elementNodes.length - 1; i >= 0; i--) {
       const ingredient = contentCard[i];
 
-      elementNodes[i].value = ingredient || "";
-      elementNodes[i].classList.toggle(
+      this.elementNodes[i].value = ingredient || "";
+      this.elementNodes[i].classList.toggle(
         this.stateClasses.ingredientsActive,
         !!ingredient,
       );
